@@ -1,0 +1,1223 @@
+<!doctype html>
+
+<html
+  lang="en"
+  class="light-style layout-navbar-fixed layout-wide"
+  dir="ltr"
+  data-theme="theme-default"
+  data-assets-path="assets/"
+  data-template="front-pages-no-customizer">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+
+    <title>Bestvoiper Comunicaciones</title>
+
+    <meta name="description" content="" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../assets/img/favicon/favicon.ico" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet" />
+
+    <link rel="stylesheet" href="../assets/vendor/fonts/boxicons.css" />
+
+    <!-- Core CSS -->
+    <link rel="stylesheet" href="../assets/vendor/css/rtl/core.css" />
+    <link rel="stylesheet" href="../assets/vendor/css/rtl/theme-default.css" />
+    <link rel="stylesheet" href="../assets/css/demo.css" />
+    <link rel="stylesheet" href="../assets/vendor/css/pages/front-page.css" />
+    <!-- Vendors CSS -->
+
+    <link rel="stylesheet" href="../assets/vendor/libs/nouislider/nouislider.css" />
+    <link rel="stylesheet" href="../assets/vendor/libs/swiper/swiper.css" />
+
+    <!-- Page CSS -->
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+    <!-- Helpers -->
+    <script src="assets/vendor/js/helpers.js"></script>
+    <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
+    <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
+    <script src="assets/js/front-config.js"></script>
+  </head>
+
+  <body>
+   
+    <script src="../assets/vendor/js/dropdown-hover.js"></script>
+    <script src="../assets/vendor/js/mega-dropdown.js"></script>
+    <script>
+let index = 0;  // Índice del grupo de tres slides visibles
+const slidesToShow = 3;  // Mostrar tres slides a la vez
+
+// Función que mueve el carrusel
+function moveSlide(step) {
+  const slides = document.querySelectorAll('.slide');  // Seleccionamos todos los slides
+  const totalSlides = slides.length;
+
+  // Actualizamos el índice según el paso (avance o retroceso)
+  index += step;
+
+  // Hacer que el índice se mueva cíclicamente
+  if (index < 0) {
+    index = totalSlides - slidesToShow;  // Si el índice es negativo, va al último grupo de tres slides
+  } else if (index >= totalSlides - slidesToShow) {
+    index = 0;  // Si el índice supera el total de grupos de tres slides, va al primer grupo
+  }
+
+  // Cambiar la posición del slider para mostrar el grupo correspondiente de slides
+  const slider = document.querySelector('#slider');
+  slider.style.transform = `translateX(-${index * (100 / slidesToShow)}%)`;
+
+  // Actualizar las clases de los slides para resaltar el primer slide del siguiente grupo
+  updateSlideClasses(slides);
+}
+
+// Función que actualiza las clases de los slides para mostrar el primer slide del siguiente grupo como el más grande
+function updateSlideClasses(slides) {
+  slides.forEach((slide, i) => {
+    const nextSlideIndex = (index + 1) % slides.length;
+
+    if (i === nextSlideIndex) {
+      slide.classList.add('active');  // El siguiente slide será el más grande
+    } else {
+      slide.classList.remove('active');  // Los otros slides se mantienen pequeños
+    }
+  });
+}
+
+
+    </script>
+
+
+<style>
+ 
+.response {
+  display: none;
+}
+#slider-container {
+  position: relative;
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+  margin-top: -200px;
+}
+
+#slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 33.33%; /* Mostrar tres slides a la vez */
+  transition: transform 0.5s ease-in-out;
+  display: block;
+  padding: 10px;
+  transform: scale(0.8); /* Reduce el tamaño de todos los slides inicialmente */
+  opacity: 0.8; /* Hace los slides laterales un poco más transparentes */
+}
+
+/* El siguiente slide será más grande (cuando se mueve al siguiente grupo) */
+.slide.active {
+  transform: scale(1);  /* El siguiente slide será el más grande */
+  opacity: 1; /* Mayor opacidad para el slide activo */
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+/* Estilo general para el contenedor */
+.contenedorToogle {
+ 
+  font-family: 'Open Sans', sans-serif;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* Sombra suave */
+}
+
+/* Título principal */
+h1 {
+  font-size: 2.5em;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* Estilo de los títulos de los toggles */
+.tituloToggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Cambio de color y animación al pasar el mouse por encima */
+.tituloToggle:hover {
+  background-color: #74ac58;  /* Fondo cuando pasa el mouse */
+  transform: translateX(5px);  /* Leve movimiento hacia la derecha */
+}
+
+.tituloToggle:hover .toggleTitulo {
+  color: white;  /* Cambiar el color del texto a blanco cuando pasa el mouse */
+}
+
+.toggleTitulo {
+  font-size: 1.5em;
+  color: #7e7e7e;  /* Color inicial del título */
+  font-weight: bold;
+  margin: 0;
+  transition: color 0.3s ease;  /* Transición suave para el cambio de color */
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.3em;
+}
+
+/* Estilo del icono chevron */
+.chevron {
+  font-size: 1.5em;
+  color: #999;
+  transition: transform 0.3s ease, color 0.3s ease;  /* Agregar transición de color */
+}
+
+/* Cambiar el color del chevron al hacer hover */
+.tituloToggle:hover .chevron {
+  color: white;  /* Cambia el color del chevron cuando se hace hover */
+}
+/* Estilo de los contenidos (por defecto ocultos) */
+.response {
+  display: none;
+  padding: 15px;
+  margin-top: 10px;
+  background-color: #fafafa;
+  border-radius: 8px;
+  border-left: 5px solid #74ac58;  /* Barra azul a la izquierda */
+  color: #555;
+  font-size: 1.1em;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Mostrar los contenidos cuando están visibles */
+.response.active {
+  display: block;
+}
+
+/* Transición suave para el cambio del chevron */
+.tituloToggle.active .chevron {
+  transform: rotate(180deg); /* Rotar el chevron cuando se abre el toggle */
+}
+
+/* Estilo para el texto del contenido */
+.response p {
+  margin: 0;
+}
+
+/* Estilo de los chevrons cuando se abre */
+.tituloToggle.active {
+  background-color: #e3f2fd;
+  border-color: #2196f3;
+}
+#contactForm{
+  margin: 100px auto;
+}
+</style>
+
+    <!-- Navbar: Start -->
+    <nav class="layout-navbar shadow-none py-0">
+     
+        <div class="navbar navbar-expand-lg landing-navbar px-3 px-md-4">
+          <!-- Menu logo wrapper: Start -->
+          <div class="navbar-brand app-brand demo d-flex py-0 me-4">
+            <!-- Mobile menu toggle: Start-->
+            <button
+              class="navbar-toggler border-0 px-0 me-2"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation">
+              <i class="tf-icons bx bx-menu bx-sm align-middle"></i>
+            </button>
+            <!-- Mobile menu toggle: End-->
+            <a href="index.html" class="app-brand-link">
+              <span class="app-brand-logo demo">
+                
+               <img src="../assets/img/branding/LOGOBESTVOIPER.png" width="35"/>
+              </span>
+              <span class="app-brand-text demo menu-text fw-bold ms-2 ps-1">Bestvoiper</span>
+            </a>
+          </div>
+          <!-- Menu logo wrapper: End -->
+          <!-- Menu wrapper: Start -->
+          <div class="collapse navbar-collapse landing-nav-menu" id="navbarSupportedContent">
+            <button
+              class="navbar-toggler border-0 text-heading position-absolute end-0 top-0 scaleX-n1-rtl"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation">
+              <i class="tf-icons bx bx-x bx-sm"></i>
+            </button>
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item">
+                <a class="nav-link fw-medium" aria-current="page" href="index.html#landingHero">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fw-medium" href="index.html#somos">¿Quienes somos?</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fw-medium" href="index.html#productos">Nuestros Productos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fw-medium" href="index.html#landingFAQ">FAQ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fw-medium" href="index.html#landingContact">Contáctanos</a>
+              </li>
+              <li class="nav-item mega-dropdown">
+                <a
+                  href="javascript:void(0);"
+                  class="nav-link dropdown-toggle navbar-ex-14-mega-dropdown mega-dropdown fw-medium"
+                  aria-expanded="false"
+                  data-bs-toggle="mega-dropdown"
+                  data-trigger="hover">
+                  <span data-i18n="Pages">Páginas</span>
+                </a>
+                <div class="dropdown-menu p-4">
+                  <div class="row gy-4">
+                    <div class="col-12 col-lg">
+                      <div class="h6 d-flex align-items-center mb-2 mb-lg-3">
+                        <div class="avatar avatar-sm flex-shrink-0 me-2">
+                          <span class="avatar-initial rounded bg-label-primary"><i class="bx bx-grid-alt"></i></span>
+                        </div>
+                        <span class="ps-1">Other</span>
+                      </div>
+                      <ul class="nav flex-column">
+                        <li class="nav-item">
+                          <a class="nav-link mega-dropdown-link" href="pricing-page.html">
+                            <i class="bx bx-radio-circle me-2"></i>
+                            <span data-i18n="Pricing">Pricing</span>
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link mega-dropdown-link" href="payment-page.html">
+                            <i class="bx bx-radio-circle me-2"></i>
+                            <span data-i18n="Payment">Payment</span>
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link mega-dropdown-link" href="checkout-page.html">
+                            <i class="bx bx-radio-circle me-2"></i>
+                            <span data-i18n="Checkout">Checkout</span>
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link mega-dropdown-link" href="help-center-landing.html">
+                            <i class="bx bx-radio-circle me-2"></i>
+                            <span data-i18n="Help Center">Help Center</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="col-12 col-lg">
+                      <div class="h6 d-flex align-items-center mb-2 mb-lg-3">
+                        <div class="avatar avatar-sm flex-shrink-0 me-2">
+                          <span class="avatar-initial rounded bg-label-primary"><i class="bx bx-lock-open"></i></span>
+                        </div>
+                        <span class="ps-1">Auth Demo</span>
+                      </div>
+                      <ul class="nav flex-column">
+                        <li class="nav-item">
+                          <a
+                            class="nav-link mega-dropdown-link"
+                            href="../vertical-menu-template/auth-login-basic.html"
+                            target="_blank">
+                            <i class="bx bx-radio-circle me-2"></i>
+                            Login (Basic)
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a
+                            class="nav-link mega-dropdown-link"
+                            href="../vertical-menu-template/auth-login-cover.html"
+                            target="_blank">
+                            <i class="bx bx-radio-circle me-2"></i>
+                            Login (Cover)
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a
+                            class="nav-link mega-dropdown-link"
+                            href="../vertical-menu-template/auth-register-basic.html"
+                            target="_blank">
+                            <i class="bx bx-radio-circle me-2"></i>
+                            Register (Basic)
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a
+                            class="nav-link mega-dropdown-link"
+                            href="../vertical-menu-template/auth-register-cover.html"
+                            target="_blank">
+                            <i class="bx bx-radio-circle me-2"></i>
+                            Register (Cover)
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a
+                            class="nav-link mega-dropdown-link"
+                            href="../vertical-menu-template/auth-register-multisteps.html"
+                            target="_blank">
+                            <i class="bx bx-radio-circle me-2"></i>
+                            Register (Multi-steps)
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a
+                            class="nav-link mega-dropdown-link"
+                            href="../vertical-menu-template/auth-forgot-password-basic.html"
+                            target="_blank">
+                            <i class="bx bx-radio-circle me-2"></i>
+                            Forgot Password (Basic)
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a
+                            class="nav-link mega-dropdown-link"
+                            href="../vertical-menu-template/auth-forgot-password-cover.html"
+                            target="_blank">
+                            <i class="bx bx-radio-circle me-2"></i>
+                            Forgot Password (Cover)
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a
+                            class="nav-link mega-dropdown-link"
+                            href="../vertical-menu-template/auth-reset-password-basic.html"
+                            target="_blank">
+                            <i class="bx bx-radio-circle me-2"></i>
+                            Reset Password (Basic)
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a
+                            class="nav-link mega-dropdown-link"
+                            href="../vertical-menu-template/auth-reset-password-cover.html"
+                            target="_blank">
+                            <i class="bx bx-radio-circle me-2"></i>
+                            Reset Password (Cover)
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="col-12 col-lg">
+                      <div class="h6 d-flex align-items-center mb-2 mb-lg-3">
+                        <div class="avatar avatar-sm flex-shrink-0 me-2">
+                          <span class="avatar-initial rounded bg-label-primary"><i class="bx bx-image-alt"></i></span>
+                        </div>
+                        <span class="ps-1">Other</span>
+                      </div>
+                      <ul class="nav flex-column">
+                        <li class="nav-item">
+                          <a
+                            class="nav-link mega-dropdown-link"
+                            href="../vertical-menu-template/pages-misc-error.html"
+                            target="_blank">
+                            <i class="bx bx-radio-circle me-2"></i>
+                            Error
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a
+                            class="nav-link mega-dropdown-link"
+                            href="../vertical-menu-template/pages-misc-under-maintenance.html"
+                            target="_blank">
+                            <i class="bx bx-radio-circle me-2"></i>
+                            Under Maintenance
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a
+                            class="nav-link mega-dropdown-link"
+                            href="../vertical-menu-template/pages-misc-comingsoon.html"
+                            target="_blank">
+                            <i class="bx bx-radio-circle me-2"></i>
+                            Coming Soon
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a
+                            class="nav-link mega-dropdown-link"
+                            href="../vertical-menu-template/pages-misc-not-authorized.html"
+                            target="_blank">
+                            <i class="bx bx-radio-circle me-2"></i>
+                            Not Authorized
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a
+                            class="nav-link mega-dropdown-link"
+                            href="../vertical-menu-template/auth-verify-email-basic.html"
+                            target="_blank">
+                            <i class="bx bx-radio-circle me-2"></i>
+                            Verify Email (Basic)
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a
+                            class="nav-link mega-dropdown-link"
+                            href="../vertical-menu-template/auth-verify-email-cover.html"
+                            target="_blank">
+                            <i class="bx bx-radio-circle me-2"></i>
+                            Verify Email (Cover)
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a
+                            class="nav-link mega-dropdown-link"
+                            href="../vertical-menu-template/auth-two-steps-basic.html"
+                            target="_blank">
+                            <i class="bx bx-radio-circle me-2"></i>
+                            Two Steps (Basic)
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a
+                            class="nav-link mega-dropdown-link"
+                            href="../vertical-menu-template/auth-two-steps-cover.html"
+                            target="_blank">
+                            <i class="bx bx-radio-circle me-2"></i>
+                            Two Steps (Cover)
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="col-lg-4 d-none d-lg-block">
+                      <div class="bg-body nav-img-col p-2">
+                        <img
+                          src="assets/img/front-pages/misc/nav-item-col-img.png"
+                          alt="nav item col image"
+                          class="w-100" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fw-medium" href="../vertical-menu-template/index.html" target="_blank">Admin</a>
+              </li>
+            </ul>
+          </div>
+          <div class="landing-menu-overlay d-lg-none"></div>
+          <!-- Menu wrapper: End -->
+          <!-- Toolbar: Start -->
+          <ul class="navbar-nav flex-row align-items-center ms-auto">
+            <!-- navbar button: Start -->
+            <li>
+              <a href="../vertical-menu-template/auth-login-cover.html" class="btn btn-primary" target="_blank"
+                ><span class="tf-icons bx bx-user me-md-1"></span
+                ><span class="d-none d-md-block">Login/Register</span></a
+              >
+            </li>
+            <!-- navbar button: End -->
+          </ul>
+          <!-- Toolbar: End -->
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar: End -->
+
+    <!-- Sections:Start -->
+
+    <div data-bs-spy="scroll" class="scrollspy-example">
+      <!-- Hero: Start -->
+      <section >
+        
+       
+
+        <div class="container2">
+          <a href="../vertical-menu-template/app-ecommerce-dashboard.html" target="_blank">
+            <img
+              src="../assets/img/front-pages/landing-page/2.png"
+              alt="hero dashboard"
+              class="imagen"
+              data-app-light-img="front-pages/landing-page/2.png"
+              data-app-dark-img="front-pages/landing-page/2.png"
+            />
+          </a>
+        </div>
+
+
+        
+        <div class="landing-hero-blank"></div>
+      </section>
+      <!-- Hero: End -->
+
+      <!-- Useful features: Start -->
+      <section id="somos" class="section-py landing-features">
+        <div class="container">
+          <div class="text-center mb-3 pb-1">
+            <h3 class="primerParrafo" >
+              Herramienta con funciones avanzadas
+            </h3>
+            <p class="text-center mb-3 mb-md-5 pb-3" style="font-size: 2em; font-family: 'Open Sans', sans-serif;">
+              que permite a teleoperadores, asesores o agentes de atención al cliente:
+            </p>
+            
+            <h1 style="font-size: 40px; text-align: center;font-family: 'Open Sans', sans-serif;font-weight: bolder;color:#74ac58; margin-top: 30px;">CARACTERISTICAS</h1>
+
+           
+            <section class="icon-container">
+              <div class="icon-box">
+                <svg class="icon" fill="#adb1ba" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                  <path d="M64 32C28.7 32 0 60.7 0 96L0 416c0 35.3 28.7 64 64 64l320 0c35.3 0 64-28.7 64-64l0-320c0-35.3-28.7-64-64-64L64 32zm64 192c17.7 0 32 14.3 32 32l0 96c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-96c0-17.7 14.3-32 32-32zm64-64c0-17.7 14.3-32 32-32s32 14.3 32 32l0 192c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-192zM320 288c17.7 0 32 14.3 32 32l0 32c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-32c0-17.7 14.3-32 32-32z"/>
+                </svg>
+                <p class="icon-text">Realizar una encuesta</p>
+              </div>
+              <div class="icon-box">
+                <svg class="icon" fill="#adb1ba" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                  <path d="M256 48C141.1 48 48 141.1 48 256l0 40c0 13.3-10.7 24-24 24s-24-10.7-24-24l0-40C0 114.6 114.6 0 256 0S512 114.6 512 256l0 144.1c0 48.6-39.4 88-88.1 88L313.6 488c-8.3 14.3-23.8 24-41.6 24l-32 0c-26.5 0-48-21.5-48-48s21.5-48 48-48l32 0c17.8 0 33.3 9.7 41.6 24l110.4 .1c22.1 0 40-17.9 40-40L464 256c0-114.9-93.1-208-208-208zM144 208l16 0c17.7 0 32 14.3 32 32l0 112c0 17.7-14.3 32-32 32l-16 0c-35.3 0-64-28.7-64-64l0-48c0-35.3 28.7-64 64-64zm224 0c35.3 0 64 28.7 64 64l0 48c0 35.3-28.7 64-64 64l-16 0c-17.7 0-32-14.3-32-32l0-112c0-17.7 14.3-32 32-32l16 0z"/>
+                </svg>
+                <p class="icon-text">Recibir y realizar llamadas a clientes actuales y potenciales con el objetivo de vender un producto.</p>
+              </div>
+              <div class="icon-box">
+                <svg class="icon" fill="#adb1ba" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                  <path d="M72 88a56 56 0 1 1 112 0A56 56 0 1 1 72 88zM64 245.7C54 256.9 48 271.8 48 288s6 31.1 16 42.3l0-84.7zm144.4-49.3C178.7 222.7 160 261.2 160 304c0 34.3 12 65.8 32 90.5l0 21.5c0 17.7-14.3 32-32 32l-64 0c-17.7 0-32-14.3-32-32l0-26.8C26.2 371.2 0 332.7 0 288c0-61.9 50.1-112 112-112l32 0c24 0 46.2 7.5 64.4 20.3zM448 416l0-21.5c20-24.7 32-56.2 32-90.5c0-42.8-18.7-81.3-48.4-107.7C449.8 183.5 472 176 496 176l32 0c61.9 0 112 50.1 112 112c0 44.7-26.2 83.2-64 101.2l0 26.8c0 17.7-14.3 32-32 32l-64 0c-17.7 0-32-14.3-32-32zm8-328a56 56 0 1 1 112 0A56 56 0 1 1 456 88zM576 245.7l0 84.7c10-11.3 16-26.1 16-42.3s-6-31.1-16-42.3zM320 32a64 64 0 1 1 0 128 64 64 0 1 1 0-128zM240 304c0 16.2 6 31 16 42.3l0-84.7c-10 11.3-16 26.1-16 42.3zm144-42.3l0 84.7c10-11.3 16-26.1 16-42.3s-6-31.1-16-42.3zM448 304c0 44.7-26.2 83.2-64 101.2l0 42.8c0 17.7-14.3 32-32 32l-64 0c-17.7 0-32-14.3-32-32l0-42.8c-37.8-18-64-56.5-64-101.2c0-61.9 50.1-112 112-112l32 0c61.9 0 112 50.1 112 112z"/>
+                </svg>
+                <p class="icon-text">Ofrecer un servicio.</p>
+              </div>
+              <div class="icon-box">
+                <svg class="icon2" fill="#adb1ba" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                  <path d="M192 0c-41.8 0-77.4 26.7-90.5 64L64 64C28.7 64 0 92.7 0 128L0 448c0 35.3 28.7 64 64 64l256 0c35.3 0 64-28.7 64-64l0-320c0-35.3-28.7-64-64-64l-37.5 0C269.4 26.7 233.8 0 192 0zm0 64a32 32 0 0 1 32 32l0 64c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32zm-96 64a24 24 0 1 1 48 0 24 24 0 1 1 -48 0zm88 0c0-8.8 7.2-16 16-16l128 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-128 0c-8.8 0-16-7.2-16-16zM72 368a24 24 0 1 1 48 0 24 24 0 1 1 -48 0zm88 0c0-8.8 7.2-16 16-16l128 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-128 0c-8.8 0-16-7.2-16-16z"/>
+                </svg>
+                <p class="icon-text">Recibir llamadas para responder inquietudes y tomar pedidos.</p>
+              </div>
+              <div class="icon-box">
+                <svg class="icon" fill="#adb1ba" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                  <path d="M96 80c0-26.5 21.5-48 48-48l288 0c26.5 0 48 21.5 48 48l0 304L96 384 96 80zm313 47c-9.4-9.4-24.6-9.4-33.9 0l-111 111-47-47c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l64 64c9.4 9.4 24.6 9.4 33.9 0L409 161c9.4-9.4 9.4-24.6 0-33.9zM0 336c0-26.5 21.5-48 48-48l16 0 0 128 448 0 0-128 16 0c26.5 0 48 21.5 48 48l0 96c0 26.5-21.5 48-48 48L48 480c-26.5 0-48-21.5-48-48l0-96z"/>
+                </svg>
+                <p class="icon-text">Registrar reclamos, sondeos, entre otros.</p>
+              </div>
+            </section>
+          </div>
+         <!--<div class="features-icon-wrapper row gx-0 gy-4 g-sm-5">
+            <div class="col-lg-4 col-sm-6 text-center features-icon-box">
+              <div class="text-center mb-3">
+                <img src="assets/img/front-pages/icons/ruedaProductos.svg" alt="laptop charging" />
+              </div>
+              <h5 class="mb-3">Quality Code</h5>
+              <p class="features-icon-description">
+                Code structure that all developers will easily understand and fall in love with.
+              </p>
+            </div>
+            <div class="col-lg-4 col-sm-6 text-center features-icon-box">
+              <div class="text-center mb-3">
+                <img src="assets/img/front-pages/icons/rocket.png" alt="transition up" />
+              </div>
+              <h5 class="mb-3">Continuous Updates</h5>
+              <p class="features-icon-description">
+                Free updates for the next 12 months, including new demos and features.
+              </p>
+            </div>
+            <div class="col-lg-4 col-sm-6 text-center features-icon-box">
+              <div class="text-center mb-3">
+                <img src="assets/img/front-pages/icons/paper.png" alt="edit" />
+              </div>
+              <h5 class="mb-3">Stater-Kit</h5>
+              <p class="features-icon-description">
+                Start your project quickly without having to remove unnecessary features.
+              </p>
+            </div>
+            <div class="col-lg-4 col-sm-6 text-center features-icon-box">
+              <div class="text-center mb-3">
+                <img src="assets/img/front-pages/icons/check.png" alt="3d select solid" />
+              </div>
+              <h5 class="mb-3">API Ready</h5>
+              <p class="features-icon-description">
+                Just change the endpoint and see your own data loaded within seconds.
+              </p>
+            </div>
+            <div class="col-lg-4 col-sm-6 text-center features-icon-box">
+              <div class="text-center mb-3">
+                <img src="assets/img/front-pages/icons/user.png" alt="lifebelt" />
+              </div>
+              <h5 class="mb-3">Excellent Support</h5>
+              <p class="features-icon-description">An easy-to-follow doc with lots of references and code examples.</p>
+            </div>
+            <div class="col-lg-4 col-sm-6 text-center features-icon-box">
+              <div class="text-center mb-3">
+                <img src="assets/img/front-pages/icons/keyboard.png" alt="google docs" />
+              </div>
+              <h5 class="mb-3">Well Documented</h5>
+              <p class="features-icon-description">An easy-to-follow doc with lots of references and code examples.</p>
+            </div>
+          </div>
+        </div>-->
+        <div class="container">
+          <div class="text-center mb-3 pb-1">
+            
+          
+          <h3 class="text-center mb-1" style="font-size: 2em;font-family: 'Open Sans', sans-serif; font-weight: 100;"></h3>
+          <p class="text-center mb-3 mb-md-5 pb-3" style="font-size: 2em;font-family: 'Open Sans', sans-serif;">
+            Nuestro software de call center todo-en-uno te permite establecer una comunicación con tus clientes, proveedores o socios comerciales.
+          </p>
+        
+        </div>
+
+        <h1 style="font-size: 40px; text-align: center;font-family: 'Open Sans', sans-serif;font-weight: bolder;color:#74ac58; margin-top: 30px;margin-bottom: 15%">CARACTERISTICAS</h1>
+        <section id="landingPricing" class="section-py bg-body landing-pricing">
+          <div class="container">
+            <div id="slider-container">
+              <div id="slider">
+                <!-- Duplicar los slides al principio y al final para crear un efecto infinito -->
+                <div class="slide">
+                  <img src="../assets/img/front-pages/landing-page/CARACTERISTICASBESTCALLCENTERPRO1.svg" alt="Imagen 1" style="width: 100%; height: 800px;">
+                </div>
+            
+                <div class="slide">
+                  <img src="../assets/img/front-pages/landing-page/CARACTERISTICASBESTCALLCENTERPRO2.svg" alt="Imagen 2" style="width: 100%; height: 800px;">
+                </div>
+            
+                <div class="slide">
+                  <img src="../assets/img/front-pages/landing-page/CARACTERISTICASBESTCALLCENTERPRO3.svg" alt="Imagen 3" style="width: 100%; height: 800px;">
+                </div>
+            
+                <div class="slide">
+                  <img src="../assets/img/front-pages/landing-page/CARACTERISTICASBESTCALLCENTERPRO4.svg" alt="Imagen 4" style="width: 100%; height: 800px;">
+                </div>
+            
+                <div class="slide">
+                  <img src="../assets/img/front-pages/landing-page/CARACTERISTICASBESTCALLCENTERPRO5.svg" alt="Imagen 5" style="width: 100%; height: 800px;">
+                </div>
+            
+                <!-- Duplicamos los slides para crear un efecto infinito -->
+                <div class="slide">
+                  <img src="../assets/img/front-pages/landing-page/CARACTERISTICASBESTCALLCENTERPRO1.svg" alt="Imagen 1" style="width: 100%; height: 800px;">
+                </div>
+            
+                <div class="slide">
+                  <img src="../assets/img/front-pages/landing-page/CARACTERISTICASBESTCALLCENTERPRO2.svg" alt="Imagen 2" style="width: 100%; height: 800px;">
+                </div>
+            
+                <div class="slide">
+                  <img src="../assets/img/front-pages/landing-page/CARACTERISTICASBESTCALLCENTERPRO3.svg" alt="Imagen 3" style="width: 100%; height: 800px;">
+                </div>
+            
+                <div class="slide">
+                  <img src="../assets/img/front-pages/landing-page/CARACTERISTICASBESTCALLCENTERPRO4.svg" alt="Imagen 4" style="width: 100%; height: 800px;">
+                </div>
+            
+                <div class="slide">
+                  <img src="../assets/img/front-pages/landing-page/CARACTERISTICASBESTCALLCENTERPRO5.svg" alt="Imagen 5" style="width: 100%; height: 800px;">
+                </div>
+              </div>
+            
+              <!-- Botones de navegación -->
+              <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+              <button class="next" onclick="moveSlide(1)">&#10095;</button>
+            </div>
+          </div>
+        </section>
+     
+          </div>
+        
+      <!-- Useful features: End -->
+   
+    
+      
+    
+    <h1 style="font-size: 40px; text-align: center;font-family: 'Open Sans', sans-serif;font-weight: bolder;color:#74ac58">APLICACIONES</h1>
+    <section style="width: 100%; margin: auto;">
+        <div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 20px;">
+            <img src="../assets/img/front-pages/landing-page/APLICACIONES1.svg" style="width: 350px" alt="human image" />
+            <img src="../assets/img/front-pages/landing-page/APLICACIONES2.svg" style="width: 350px" alt="human image" />
+            <img src="../assets/img/front-pages/landing-page/APLICACIONES3.svg" style="width: 350px" alt="human image" />
+            <img src="../assets/img/front-pages/landing-page/APLICACIONES4.svg" style="width: 350px" alt="human image" />
+            <img src="../assets/img/front-pages/landing-page/APLICACIONES5.svg" style="width: 350px" alt="human image" />
+            <img src="../assets/img/front-pages/landing-page/APLICACIONES6.svg" style="width: 350px" alt="human image" />
+            <img src="../assets/img/front-pages/landing-page/APLICACIONES7.svg" style="width: 350px" alt="human image" />
+            <img src="../assets/img/front-pages/landing-page/APLICACIONES8.svg" style="width: 350px" alt="human image" />
+            <img src="../assets/img/front-pages/landing-page/APLICACIONES9.svg" style="width: 350px" alt="human image" />
+            <img src="../assets/img/front-pages/landing-page/APLICACIONES10.svg" style="width: 350px" alt="human image" />
+        </div>
+    </section>
+   
+<div class="container">
+    <div class="contenedorToogle">
+      <h1 style="font-size: 40px; text-align: center;font-family: 'Open Sans', sans-serif;font-weight: bolder;color:#74ac58; margin-top: 100px;background-color: white;">HERRAMIENTAS</h1>
+  
+      <!-- Titulo y contenido de cada toggle -->
+      <div class="tituloToggle" id="toggle1">
+          <p class="toggleTitulo">Discador Automático</p>
+          <span class="chevron">▼</span>
+      </div>
+      <div id="response1" class="response">
+          <p>Marcador inteligente que optimiza el tiempo productivo del agente y aumenta la cantidad de contactos efectivos.</p>
+      </div>
+  
+      <div class="tituloToggle" id="toggle2">
+          <p class="toggleTitulo">Grabación de llamadas</p>
+          <span class="chevron">▼</span>
+      </div>
+      <div id="response2" class="response">
+          <p>Tanto salientes como entrantes, para auditoria y gestión de procesos.</p>
+      </div>
+  
+      <div class="tituloToggle" id="toggle3">
+          <p class="toggleTitulo">ACD</p>
+          <span class="chevron">▼</span>
+      </div>
+      <div id="response3" class="response">
+          <p>Distribuye de forma inteligente las llamadas a los operadores según reglas configurables.</p>
+      </div>
+  
+      <div class="tituloToggle" id="toggle4">
+          <p class="toggleTitulo">API</p>
+          <span class="chevron">▼</span>
+      </div>
+      <div id="response4" class="response">
+          <p>Integración vía webservices a base de datos y sistemas de terceros.</p>
+      </div>
+  
+      <div class="tituloToggle" id="toggle5">
+          <p class="toggleTitulo">IVR</p>
+          <span class="chevron">▼</span>
+      </div>
+      <div id="response5" class="response">
+          <p>Realiza la atención automática de las llamadas entrantes, permitiendo que el cliente autogestione sus consultas.</p>
+      </div>
+  
+      <div class="tituloToggle" id="toggle6">
+          <p class="toggleTitulo">Dashboard</p>
+          <span class="chevron">▼</span>
+      </div>
+      <div id="response6" class="response">
+          <p>Facilita el monitoreo en tiempo real de la gestión y el rendimiento de los agentes y colas de atención.</p>
+      </div>
+  
+      <div class="tituloToggle" id="toggle7">
+          <p class="toggleTitulo">CRM</p>
+          <span class="chevron">▼</span>
+      </div>
+      <div id="response7" class="response">
+          <p>Gestión y administración de bases de datos, campañas y contactos.</p>
+      </div>
+  </div>
+</div>
+      <!-- Contact Us: Start -->
+      <section style="width: 100%; display: flex; justify-content: center; align-items: center; flex-direction: column; margin-top: 30px; padding: 0 15px;">
+        <h1 style="font-size: 2.5rem; text-align: center; font-family: 'Open Sans', sans-serif; font-weight: bolder; color: #74ac58; margin-bottom: 20px;">
+            ADQUIERE BESTCALLCENTER AHORA MISMO
+        </h1>
+        
+        <form class="checkout">
+            <script
+                src="https://checkout.epayco.co/checkout.js"
+                class="epayco-button"
+                data-epayco-key="491d6a0b6e992cf924edd8d3d088aff1"
+                data-epayco-amount="300.000"
+                data-epayco-name="BestCallCenterPro"
+                data-epayco-description="BestIpTrunk"
+                data-epayco-currency="cop"
+                data-epayco-country="co"
+                data-epayco-test="true"
+                data-epayco-button="https://multimedia.epayco.co/epayco-landing/btns/epayco_pago_seguro_gray.png"
+                data-epayco-external="false"
+                data-epayco-response="https://localhost:3000/feedback"
+                data-epayco-confirmation="https://localhost:3000/feedback"
+                data-epayco-methodconfirmation="get">
+            </script>
+        </form>
+    </section>
+    
+      <!-- Contact Us: End -->
+    <div>
+      <form id="contactForm">
+        <p class="tituloForm">CONTÁCTANOS</p>
+        <input
+            id="nombres"
+            type="text"
+            placeholder="Nombre y Apellido"
+            name="nombres"
+            required
+        />
+        <input
+            id="email"
+            type="email"
+            placeholder="Correo"
+            name="email"
+            required
+        />
+        <input
+            id="telefono"
+            type="number"
+            placeholder="Teléfono de Contacto"
+            name="telefono"
+            required
+        />
+        <textarea
+            id="mensaje"
+            placeholder="¿Cómo podemos ayudarte? (opcional)"
+            name="mensaje"
+        ></textarea>
+        <input type="submit" value="ENVIAR MENSAJE" name="enviar" />
+        <div id="respuestaEnviado" style="display: none;">
+            <p id="respuestaTexto"></p>
+        </div>
+        <p class="registro">Teléfonos: (+57)3330333014 || (+57)312 456 0009</p>
+        <p class="olvido">info@bestvoiper.com.co</p>
+    </form>
+    
+    </div>
+
+    <!-- / Sections:End -->
+
+    <!-- Footer: Start -->
+     <div class="container">
+  <footer class="landing-footer bg-body footer-text">
+    <div class="footer-top position-relative overflow-hidden z-1">
+      
+      <div class="container">
+        <div class="row gx-0 gy-4 g-md-5">
+          <div class="col-lg-5">
+            <a href="index.html" class="app-brand-link mb-4">
+              <span class="app-brand-logo demo">
+               <img src="../assets/img/branding/LOGOBESTVOIPER.png" width="35px"/>
+              </span>
+              <span class="app-brand-text demo footer-link fw-bold ms-2 ps-1">Bestvoiper</span>
+            </a>
+            <p class="footer-text footer-logo-description mb-4">
+              Crecemos Juntos
+            </p>
+           
+          </div>
+          <div class="col-lg-2 col-md-4 col-sm-6">
+            <h6 class="footer-title mb-4">Demos</h6>
+            <ul class="list-unstyled">
+              <li class="mb-3">
+                <a href="../vertical-menu-template/" target="_blank" class="footer-link">Vertical Layout</a>
+              </li>
+              <li class="mb-3">
+                <a href="../horizontal-menu-template/" target="_blank" class="footer-link">Horizontal Layout</a>
+              </li>
+              <li class="mb-3">
+                <a href="../vertical-menu-template-bordered/" target="_blank" class="footer-link">Bordered Layout</a>
+              </li>
+              <li class="mb-3">
+                <a href="../vertical-menu-template-semi-dark/" target="_blank" class="footer-link"
+                  >Semi Dark Layout</a
+                >
+              </li>
+              <li class="mb-3">
+                <a href="../vertical-menu-template-dark/" target="_blank" class="footer-link">Dark Layout</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-md-4 col-sm-6">
+            <h6 class="footer-title mb-4">Pages</h6>
+            <ul class="list-unstyled">
+              <li class="mb-3">
+                <a href="pricing-page.html" class="footer-link">Pricing</a>
+              </li>
+              <li class="mb-3">
+                <a href="payment-page.html" class="footer-link"
+                  >Payment<span class="badge rounded bg-primary ms-2 px-2">New</span></a
+                >
+              </li>
+              <li class="mb-3">
+                <a href="checkout-page.html" class="footer-link">Checkout</a>
+              </li>
+              <li class="mb-3">
+                <a href="help-center-landing.html" class="footer-link">Help Center</a>
+              </li>
+              <li class="mb-3">
+                <a href="../vertical-menu-template/auth-login-cover.html" target="_blank" class="footer-link"
+                  >Login/Register</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-4">
+            <h6 class="footer-title mb-4">Download our app</h6>
+            <a href="javascript:void(0);" class="d-block footer-link mb-3 pb-2"
+              ><img src="assets/img/front-pages/landing-page/apple-icon.png" alt="apple icon"
+            /></a>
+            <a href="javascript:void(0);" class="d-block footer-link"
+              ><img src="assets/img/front-pages/landing-page/google-play-icon.png" alt="google play icon"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom py-3">
+      <div
+        class="container d-flex flex-wrap justify-content-between flex-md-row flex-column text-center text-md-start">
+        <div class="mb-2 mb-md-0">
+          <span class="footer-text"
+            >©
+            <script>
+              document.write(new Date().getFullYear());
+            </script>
+          </span>
+          <a href="https://themeselection.com" target="_blank" class="fw-medium text-white footer-link"
+            >ThemeSelection,</a
+          >
+          <span class="footer-text"> @Bestvoiper</span>
+        </div>
+        <div style="display: flex; flex-flow: row nowrap; gap: 10px;">
+          <div>
+              <svg xmlns="http://www.w3.org/2000/svg" width="35px" viewBox="0 0 512 512">
+                  <path d="M459.4 151.7c.3 4.5 .3 9.1 .3 13.6 0 138.7-105.6 298.6-298.6 298.6-59.5 0-114.7-17.2-161.1-47.1 8.4 1 16.6 1.3 25.3 1.3 49.1 0 94.2-16.6 130.3-44.8-46.1-1-84.8-31.2-98.1-72.8 6.5 1 13 1.6 19.8 1.6 9.4 0 18.8-1.3 27.6-3.6-48.1-9.7-84.1-52-84.1-103v-1.3c14 7.8 30.2 12.7 47.4 13.3-28.3-18.8-46.8-51-46.8-87.4 0-19.5 5.2-37.4 14.3-53 51.7 63.7 129.3 105.3 216.4 109.8-1.6-7.8-2.6-15.9-2.6-24 0-57.8 46.8-104.9 104.9-104.9 30.2 0 57.5 12.7 76.7 33.1 23.7-4.5 46.5-13.3 66.6-25.3-7.8 24.4-24.4 44.8-46.1 57.8 21.1-2.3 41.6-8.1 60.4-16.2-14.3 20.8-32.2 39.3-52.6 54.3z"/>
+              </svg>
+          </div>
+          <div>
+              <svg xmlns="http://www.w3.org/2000/svg" width="35px" viewBox="0 0 512 512">
+                  <path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z"/>
+              </svg>
+          </div>
+          <div>
+              <svg xmlns="http://www.w3.org/2000/svg" width="35px" viewBox="0 0 448 512">
+                  <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/>
+              </svg>
+          </div>
+      </div>
+      </div>
+    </div>
+  </footer>
+</div>
+  <!-- Footer: End -->
+
+    <!-- Core JS -->
+    <!-- build:js assets/vendor/js/core.js -->
+    <script src="assets/vendor/libs/popper/popper.js"></script>
+    <script src="assets/vendor/js/bootstrap.js"></script>
+
+    <!-- endbuild -->
+
+    <!-- Vendors JS -->
+    <script src="assets/vendor/libs/nouislider/nouislider.js"></script>
+    <script src="assets/vendor/libs/swiper/swiper.js"></script>
+
+    <!-- Main JS -->
+    <script src="assets/js/front-main.js"></script>
+
+    <!-- Page JS -->
+    <script src="assets/js/front-page-landing.js"></script>
+  </body>
+  <style>
+    #Capa_1 {
+animation-iteration-count: infinite;
+animation-timing-function: linear;
+animation-duration: 50s;
+animation-name: spinner-loading;
+animation-duration: 100s; /* Aumentado para hacer la animación más lenta */
+transform-origin: center;
+transform-box: fill-box;
+width: 80%;
+}
+@keyframes spinner-loading {
+0% {
+  transform: rotate(0deg);
+}
+to {
+  transform: rotate(1turn);
+}
+}
+#Capa_2,
+#Capa_3,
+#Capa_4,
+#Capa_5,
+#Capa_6,
+#Capa_7 {
+animation-iteration-count: infinite;
+animation-timing-function: linear;
+animation-duration: 50s;
+animation-name: spinner-capas;
+animation-duration: 100s; /* Aumentado para hacer la animación más lenta */
+transform-origin: center;
+cursor: pointer;
+}
+@keyframes spinner-capas {
+0% {
+  transform: rotate(0deg);
+}
+to {
+  transform: rotate(1turn);
+}
+}
+
+.rueda {
+width: 45vw;
+height: 45vh;
+box-sizing: border-box;
+}
+.st0{fill:#447ab7}.st1{fill:#89b749}.st2{fill:#798eab}.st3{fill:#fff}
+.contenedor{
+width: 50%;
+margin: auto;
+display: block;
+}
+.PList {
+    display: none; /* Oculta por defecto */
+}
+
+@media (max-width: 1200px) {
+  .PList {
+    display: block; /* Muestra en pantallas pequeñas */
+  }
+
+  /* Ocultar el contenedor cuando la pantalla es pequeña */
+  .contenedor {
+    display: none;
+  }
+
+  /* Centrar las imágenes en filas y que hagan wrap */
+  .listaProductos {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se acomoden en filas */
+    justify-content: center; /* Centra las imágenes horizontalmente */
+    align-items: center; /* Centra las imágenes verticalmente */
+    margin: 0; /* Elimina márgenes por defecto */
+  }
+
+  /* Hacer que las imágenes se ajusten al 100% de la pantalla pero en filas */
+  .listaProductos img {
+    width: 100%; /* Hacer que las imágenes ocupen todo el ancho del contenedor */
+    max-width: 300px; /* Limita el tamaño máximo de cada imagen */
+    height: auto; /* Mantiene la relación de aspecto */
+    margin: 10px; /* Añade un poco de espacio entre las imágenes */
+    object-fit: contain; /* Asegura que las imágenes no se distorsionen */
+  }
+
+  /* Imagen principal, asegurando que ocupe el 100% del ancho */
+  #nuestroProductos {
+    width: 100%;
+    max-width: 100%; /* Asegura que no exceda el ancho de la pantalla */
+    height: auto; /* Mantiene la proporción */
+    margin-top: 10%; /* Añade margen superior para separar un poco de la parte superior de la pantalla */
+  }
+
+  /* Ajustar las imágenes de los productos (se acomoden en filas) */
+  #uno, #dos, #tres, #cuatro, #cinco, #seis {
+    width: 100%; /* Las imágenes ocuparán el 100% del ancho disponible */
+    max-width: 300px; /* Asegura que las imágenes no sean más grandes de 300px */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin-top: 10px; /* Espacio entre las imágenes */
+    object-fit: contain; /* Asegura que la imagen mantenga su proporción */
+  }
+}
+
+
+
+
+
+
+  </style>
+  <script>
+    // Función para mostrar u ocultar el contenido y cambiar el chevron
+function toggleVisibility(id, chevron) {
+  const response = document.getElementById(id);
+  const isVisible = response.style.display === "block"; // Verifica si está visible
+
+  // Mostrar u ocultar el contenido
+  if (isVisible) {
+    response.style.display = "none"; // Si está visible, lo ocultamos
+    chevron.textContent = "▼"; // Cambiar el chevron a su dirección original (abajo)
+  } else {
+    response.style.display = "block"; // Si no está visible, lo mostramos
+    chevron.textContent = "▲"; // Cambiar el chevron hacia arriba
+  }
+}
+
+// Asignamos los eventos de clic a cada título (toggle)
+document.getElementById("toggle1").addEventListener("click", function() {
+  toggleVisibility("response1", this.querySelector(".chevron"));
+});
+
+document.getElementById("toggle2").addEventListener("click", function() {
+  toggleVisibility("response2", this.querySelector(".chevron"));
+});
+
+document.getElementById("toggle3").addEventListener("click", function() {
+  toggleVisibility("response3", this.querySelector(".chevron"));
+});
+
+document.getElementById("toggle4").addEventListener("click", function() {
+  toggleVisibility("response4", this.querySelector(".chevron"));
+});
+
+document.getElementById("toggle5").addEventListener("click", function() {
+  toggleVisibility("response5", this.querySelector(".chevron"));
+});
+
+document.getElementById("toggle6").addEventListener("click", function() {
+  toggleVisibility("response6", this.querySelector(".chevron"));
+});
+
+document.getElementById("toggle7").addEventListener("click", function() {
+  toggleVisibility("response7", this.querySelector(".chevron"));
+});
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault();  // Evitar el envío del formulario
+
+        // Recoger los valores de los campos
+        const nombres = document.getElementById('nombres').value;
+        const email = document.getElementById('email').value;
+        const telefono = document.getElementById('telefono').value;
+        const mensaje = document.getElementById('mensaje').value;
+
+        // Verificar que todos los campos sean válidos antes de enviar
+        if (nombres && email && telefono) {
+            // Lógica para enviar el formulario (aquí puedes enviar datos a un servidor o realizar cualquier acción)
+            enviarFormulario(nombres, email, telefono, mensaje);
+        } else {
+            alert('Por favor, complete todos los campos obligatorios.');
+        }
+    });
+
+    // Función que simula el envío del mensaje
+    function enviarFormulario(nombres, email, telefono, mensaje) {
+        // Aquí puedes agregar la lógica para enviar el correo, por ejemplo, usando AJAX o Fetch API
+        // Para este ejemplo, solo mostramos el mensaje en el frontend.
+
+        // Simulamos el éxito del envío
+        setTimeout(function() {
+            document.getElementById('respuestaTexto').innerText = 'Mensaje enviado correctamente. ¡Gracias por contactarnos!';
+            document.getElementById('respuestaEnviado').style.display = 'block';
+        }, 1000);  // Simulamos que el mensaje se envía después de 1 segundo
+    }
+  </script>
+</html>

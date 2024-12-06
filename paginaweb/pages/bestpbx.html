@@ -1,0 +1,898 @@
+<!doctype html>
+
+<html
+  lang="en"
+  class="light-style layout-navbar-fixed layout-wide"
+  dir="ltr"
+  data-theme="theme-default"
+  data-assets-path="assets/"
+  data-template="front-pages-no-customizer">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+
+    <title>Bestvoiper Comunicaciones</title>
+
+    <meta name="description" content="" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../assets/img/favicon/favicon.ico" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet" />
+
+    <link rel="stylesheet" href="../assets/vendor/fonts/boxicons.css" />
+
+    <!-- Core CSS -->
+    <link rel="stylesheet" href="../assets/vendor/css/rtl/core.css" />
+    <link rel="stylesheet" href="../assets/vendor/css/rtl/theme-default.css" />
+    <link rel="stylesheet" href="../assets/css/demo.css" />
+    <link rel="stylesheet" href="../assets/vendor/css/pages/front-page.css" />
+    <!-- Vendors CSS -->
+
+    <link rel="stylesheet" href="../assets/vendor/libs/nouislider/nouislider.css" />
+    <link rel="stylesheet" href="../assets/vendor/libs/swiper/swiper.css" />
+
+    <!-- Page CSS -->
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+    <!-- Helpers -->
+    <script src="assets/vendor/js/helpers.js"></script>
+    <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
+    <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
+    <script src="assets/js/front-config.js"></script>
+  </head>
+
+  <body>
+   
+    <script src="../assets/vendor/js/dropdown-hover.js"></script>
+    <script src="../assets/vendor/js/mega-dropdown.js"></script>
+    <script>
+      let index = 0;  // Índice del grupo de tres slides visibles
+      const slidesToShow = 3;  // Mostrar tres slides a la vez
+      
+      // Función que mueve el carrusel
+      function moveSlide(step) {
+        const slides = document.querySelectorAll('.slide');  // Seleccionamos todos los slides
+        const totalSlides = slides.length;
+      
+        // Actualizamos el índice según el paso (avance o retroceso)
+        index += step;
+      
+        // Hacer que el índice se mueva cíclicamente
+        if (index < 0) {
+          index = totalSlides - slidesToShow;  // Si el índice es negativo, va al último grupo de tres slides
+        } else if (index >= totalSlides - slidesToShow) {
+          index = 0;  // Si el índice supera el total de grupos de tres slides, va al primer grupo
+        }
+      
+        // Cambiar la posición del slider para mostrar el grupo correspondiente de slides
+        const slider = document.querySelector('#slider');
+        slider.style.transform = `translateX(-${index * (100 / slidesToShow)}%)`;
+      
+        // Actualizar las clases de los slides para resaltar el primer slide del siguiente grupo
+        updateSlideClasses(slides);
+      }
+      
+      // Función que actualiza las clases de los slides para mostrar el primer slide del siguiente grupo como el más grande
+      function updateSlideClasses(slides) {
+        slides.forEach((slide, i) => {
+          const nextSlideIndex = (index + 1) % slides.length;
+      
+          if (i === nextSlideIndex) {
+            slide.classList.add('active');  // El siguiente slide será el más grande
+          } else {
+            slide.classList.remove('active');  // Los otros slides se mantienen pequeños
+          }
+        });
+      }
+      
+          </script>
+      <style>
+      
+        
+      .response {
+        display: none;
+      }
+      #slider-container {
+        position: relative;
+        width: 90%;
+        margin: auto;
+        overflow: hidden;
+        margin-top: -100px;
+      }
+      
+      #slider {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+      }
+      
+      .slide {
+        min-width: 33.33%; /* Mostrar tres slides a la vez */
+        transition: transform 0.5s ease-in-out;
+        display: block;
+        padding: 10px;
+        transform: scale(0.8); /* Reduce el tamaño de todos los slides inicialmente */
+        opacity: 0.8; /* Hace los slides laterales un poco más transparentes */
+      }
+      
+      /* El siguiente slide será más grande (cuando se mueve al siguiente grupo) */
+      .slide.active {
+        transform: scale(1);  /* El siguiente slide será el más grande */
+        opacity: 1; /* Mayor opacidad para el slide activo */
+      }
+      
+      .prev, .next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        padding: 10px;
+        font-size: 24px;
+        cursor: pointer;
+        z-index: 10;
+      }
+      
+      .prev { left: 10px; }
+      .next { right: 10px; }
+      /* Estilo general para el contenedor */
+      </style>
+    <!-- Navbar: Start -->
+    <nav class="layout-navbar shadow-none py-0">
+      <div class="container">
+        <div class="navbar navbar-expand-lg landing-navbar px-3 px-md-4">
+          <!-- Menu logo wrapper: Start -->
+          <div class="navbar-brand app-brand demo d-flex py-0 me-4">
+            <!-- Mobile menu toggle: Start-->
+            <button
+              class="navbar-toggler border-0 px-0 me-2"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation">
+              <i class="tf-icons bx bx-menu bx-sm align-middle"></i>
+            </button>
+            <!-- Mobile menu toggle: End-->
+            <a href="index.html" class="app-brand-link">
+              <span class="app-brand-logo demo">
+                
+               <img src="../assets/img/branding/LOGOBESTVOIPER.png" width="35"/>
+              </span>
+              <span class="app-brand-text demo menu-text fw-bold ms-2 ps-1">Bestvoiper</span>
+            </a>
+          </div>
+          <!-- Menu logo wrapper: End -->
+          <!-- Menu wrapper: Start -->
+          <div class="collapse navbar-collapse landing-nav-menu" id="navbarSupportedContent">
+            <button
+              class="navbar-toggler border-0 text-heading position-absolute end-0 top-0 scaleX-n1-rtl"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation">
+              <i class="tf-icons bx bx-x bx-sm"></i>
+            </button>
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item">
+                <a class="nav-link fw-medium" aria-current="page" href="index.html#landingHero">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fw-medium" href="index.html#somos">¿Quienes somos?</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fw-medium" href="index.html#productos">Nuestros Productos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fw-medium" href="index.html#landingFAQ">FAQ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fw-medium" href="index.html#landingContact">Contáctanos</a>
+              </li>
+              <li class="nav-item mega-dropdown">
+                <a
+                  href="javascript:void(0);"
+                  class="nav-link dropdown-toggle navbar-ex-14-mega-dropdown mega-dropdown fw-medium"
+                  aria-expanded="false"
+                  data-bs-toggle="mega-dropdown"
+                  data-trigger="hover">
+                  <span data-i18n="Pages">Páginas</span>
+                </a>
+                <div class="dropdown-menu p-4">
+                  <div class="row gy-4">
+                    <div class="col-12 col-lg">
+                      <div class="h6 d-flex align-items-center mb-2 mb-lg-3">
+                        <div class="avatar avatar-sm flex-shrink-0 me-2">
+                          <span class="avatar-initial rounded bg-label-primary"><i class="bx bx-grid-alt"></i></span>
+                        </div>
+                        <span class="ps-1">Other</span>
+                      </div>
+                      <ul class="nav flex-column">
+                        <li class="nav-item">
+                          <a class="nav-link mega-dropdown-link" href="pricing-page.html">
+                            <i class="bx bx-radio-circle me-2"></i>
+                            <span data-i18n="Pricing">Pricing</span>
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link mega-dropdown-link" href="payment-page.html">
+                            <i class="bx bx-radio-circle me-2"></i>
+                            <span data-i18n="Payment">Payment</span>
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link mega-dropdown-link" href="checkout-page.html">
+                            <i class="bx bx-radio-circle me-2"></i>
+                            <span data-i18n="Checkout">Checkout</span>
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link mega-dropdown-link" href="help-center-landing.html">
+                            <i class="bx bx-radio-circle me-2"></i>
+                            <span data-i18n="Help Center">Help Center</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="col-12 col-lg">
+                      <div class="h6 d-flex align-items-center mb-2 mb-lg-3">
+                        <div class="avatar avatar-sm flex-shrink-0 me-2">
+                          <span class="avatar-initial rounded bg-label-primary"><i class="bx bx-lock-open"></i></span>
+                        </div>
+                        <span class="ps-1">Auth Demo</span>
+                      </div>
+                      <ul class="nav flex-column">
+                        <li class="nav-item">
+                          <a
+                            class="nav-link mega-dropdown-link"
+                            href="../vertical-menu-template/auth-login-basic.html"
+                            target="_blank">
+                            <i class="bx bx-radio-circle me-2"></i>
+                            Login (Basic)
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a
+                            class="nav-link mega-dropdown-link"
+                            href="../vertical-menu-template/auth-login-cover.html"
+                            target="_blank">
+                            <i class="bx bx-radio-circle me-2"></i>
+                            Login (Cover)
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a
+                            class="nav-link mega-dropdown-link"
+                            href="../vertical-menu-template/auth-register-basic.html"
+                            target="_blank">
+                            <i class="bx bx-radio-circle me-2"></i>
+                            Register (Basic)
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a
+                            class="nav-link mega-dropdown-link"
+                            href="../vertical-menu-template/auth-register-cover.html"
+                            target="_blank">
+                            <i class="bx bx-radio-circle me-2"></i>
+                            Register (Cover)
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a
+                            class="nav-link mega-dropdown-link"
+                            href="../vertical-menu-template/auth-register-multisteps.html"
+                            target="_blank">
+                            <i class="bx bx-radio-circle me-2"></i>
+                            Register (Multi-steps)
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a
+                            class="nav-link mega-dropdown-link"
+                            href="../vertical-menu-template/auth-forgot-password-basic.html"
+                            target="_blank">
+                            <i class="bx bx-radio-circle me-2"></i>
+                            Forgot Password (Basic)
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a
+                            class="nav-link mega-dropdown-link"
+                            href="../vertical-menu-template/auth-forgot-password-cover.html"
+                            target="_blank">
+                            <i class="bx bx-radio-circle me-2"></i>
+                            Forgot Password (Cover)
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a
+                            class="nav-link mega-dropdown-link"
+                            href="../vertical-menu-template/auth-reset-password-basic.html"
+                            target="_blank">
+                            <i class="bx bx-radio-circle me-2"></i>
+                            Reset Password (Basic)
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a
+                            class="nav-link mega-dropdown-link"
+                            href="../vertical-menu-template/auth-reset-password-cover.html"
+                            target="_blank">
+                            <i class="bx bx-radio-circle me-2"></i>
+                            Reset Password (Cover)
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="col-12 col-lg">
+                      <div class="h6 d-flex align-items-center mb-2 mb-lg-3">
+                        <div class="avatar avatar-sm flex-shrink-0 me-2">
+                          <span class="avatar-initial rounded bg-label-primary"><i class="bx bx-image-alt"></i></span>
+                        </div>
+                        <span class="ps-1">Other</span>
+                      </div>
+                      <ul class="nav flex-column">
+                        <li class="nav-item">
+                          <a
+                            class="nav-link mega-dropdown-link"
+                            href="../vertical-menu-template/pages-misc-error.html"
+                            target="_blank">
+                            <i class="bx bx-radio-circle me-2"></i>
+                            Error
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a
+                            class="nav-link mega-dropdown-link"
+                            href="../vertical-menu-template/pages-misc-under-maintenance.html"
+                            target="_blank">
+                            <i class="bx bx-radio-circle me-2"></i>
+                            Under Maintenance
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a
+                            class="nav-link mega-dropdown-link"
+                            href="../vertical-menu-template/pages-misc-comingsoon.html"
+                            target="_blank">
+                            <i class="bx bx-radio-circle me-2"></i>
+                            Coming Soon
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a
+                            class="nav-link mega-dropdown-link"
+                            href="../vertical-menu-template/pages-misc-not-authorized.html"
+                            target="_blank">
+                            <i class="bx bx-radio-circle me-2"></i>
+                            Not Authorized
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a
+                            class="nav-link mega-dropdown-link"
+                            href="../vertical-menu-template/auth-verify-email-basic.html"
+                            target="_blank">
+                            <i class="bx bx-radio-circle me-2"></i>
+                            Verify Email (Basic)
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a
+                            class="nav-link mega-dropdown-link"
+                            href="../vertical-menu-template/auth-verify-email-cover.html"
+                            target="_blank">
+                            <i class="bx bx-radio-circle me-2"></i>
+                            Verify Email (Cover)
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a
+                            class="nav-link mega-dropdown-link"
+                            href="../vertical-menu-template/auth-two-steps-basic.html"
+                            target="_blank">
+                            <i class="bx bx-radio-circle me-2"></i>
+                            Two Steps (Basic)
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a
+                            class="nav-link mega-dropdown-link"
+                            href="../vertical-menu-template/auth-two-steps-cover.html"
+                            target="_blank">
+                            <i class="bx bx-radio-circle me-2"></i>
+                            Two Steps (Cover)
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="col-lg-4 d-none d-lg-block">
+                      <div class="bg-body nav-img-col p-2">
+                        <img
+                          src="assets/img/front-pages/misc/nav-item-col-img.png"
+                          alt="nav item col image"
+                          class="w-100" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fw-medium" href="../vertical-menu-template/index.html" target="_blank">Admin</a>
+              </li>
+            </ul>
+          </div>
+          <div class="landing-menu-overlay d-lg-none"></div>
+          <!-- Menu wrapper: End -->
+          <!-- Toolbar: Start -->
+          <ul class="navbar-nav flex-row align-items-center ms-auto">
+            <!-- navbar button: Start -->
+            <li>
+              <a href="../vertical-menu-template/auth-login-cover.html" class="btn btn-primary" target="_blank"
+                ><span class="tf-icons bx bx-user me-md-1"></span
+                ><span class="d-none d-md-block">Login/Register</span></a
+              >
+            </li>
+            <!-- navbar button: End -->
+          </ul>
+          <!-- Toolbar: End -->
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar: End -->
+
+    <!-- Sections:Start -->
+
+    <div data-bs-spy="scroll" class="scrollspy-example">
+      <!-- Hero: Start -->
+      <section id="hero-animation">
+        <div class="container2">
+          <a href="../vertical-menu-template/app-ecommerce-dashboard.html" target="_blank">
+            <img
+              src="../assets/img/front-pages/landing-page/5.png"
+              alt="hero dashboard"
+              class="imagen"
+              data-app-light-img="front-pages/landing-page/5.png"
+              data-app-dark-img="front-pages/landing-page/5.png"
+            />
+          </a>
+        </div>
+        <div class="landing-hero-blank"></div>
+      </section>
+      <!-- Hero: End -->
+
+      <!-- Useful features: Start -->
+      <section id="somos" class="section-py landing-features">
+        <div class="container">
+          <div class="text-center mb-3 pb-1">
+            
+          </div>
+          <p class="text-center mb-3 mb-md-5 pb-3" style="font-size: 2em;font-family: 'Open Sans', sans-serif;">
+           Sistema para pequeñas empresas que deben grabar llamadas y autogestionar sus extensiones.
+          </p>
+         <!--<div class="features-icon-wrapper row gx-0 gy-4 g-sm-5">
+            <div class="col-lg-4 col-sm-6 text-center features-icon-box">
+              <div class="text-center mb-3">
+                <img src="assets/img/front-pages/icons/ruedaProductos.svg" alt="laptop charging" />
+              </div>
+              <h5 class="mb-3">Quality Code</h5>
+              <p class="features-icon-description">
+                Code structure that all developers will easily understand and fall in love with.
+              </p>
+            </div>
+            <div class="col-lg-4 col-sm-6 text-center features-icon-box">
+              <div class="text-center mb-3">
+                <img src="assets/img/front-pages/icons/rocket.png" alt="transition up" />
+              </div>
+              <h5 class="mb-3">Continuous Updates</h5>
+              <p class="features-icon-description">
+                Free updates for the next 12 months, including new demos and features.
+              </p>
+            </div>
+            <div class="col-lg-4 col-sm-6 text-center features-icon-box">
+              <div class="text-center mb-3">
+                <img src="assets/img/front-pages/icons/paper.png" alt="edit" />
+              </div>
+              <h5 class="mb-3">Stater-Kit</h5>
+              <p class="features-icon-description">
+                Start your project quickly without having to remove unnecessary features.
+              </p>
+            </div>
+            <div class="col-lg-4 col-sm-6 text-center features-icon-box">
+              <div class="text-center mb-3">
+                <img src="assets/img/front-pages/icons/check.png" alt="3d select solid" />
+              </div>
+              <h5 class="mb-3">API Ready</h5>
+              <p class="features-icon-description">
+                Just change the endpoint and see your own data loaded within seconds.
+              </p>
+            </div>
+            <div class="col-lg-4 col-sm-6 text-center features-icon-box">
+              <div class="text-center mb-3">
+                <img src="assets/img/front-pages/icons/user.png" alt="lifebelt" />
+              </div>
+              <h5 class="mb-3">Excellent Support</h5>
+              <p class="features-icon-description">An easy-to-follow doc with lots of references and code examples.</p>
+            </div>
+            <div class="col-lg-4 col-sm-6 text-center features-icon-box">
+              <div class="text-center mb-3">
+                <img src="assets/img/front-pages/icons/keyboard.png" alt="google docs" />
+              </div>
+              <h5 class="mb-3">Well Documented</h5>
+              <p class="features-icon-description">An easy-to-follow doc with lots of references and code examples.</p>
+            </div>
+          </div>
+        </div>-->
+     
+       
+          </div>
+        
+      </section>
+      <!-- Useful features: End -->
+      <h1 style="font-size: 40px; text-align: center;font-family: 'Open Sans', sans-serif;font-weight: bolder;color:#74ac58; margin-top: 30px;">CON NUESTRO AGENTE VIRTUAL PUEDES:</h1>
+      <section id="landingPricing" class="section-py bg-body landing-pricing">
+        <div class="container">
+          <div id="slider-container">
+            <div id="slider">
+              <!-- Duplicar los slides al principio y al final para crear un efecto infinito -->
+              <div class="slide">
+                <img src="../assets/img/front-pages/landing-page/PBX1.svg" alt="Imagen 1" style="width: 100%; height: 800px;">
+              </div>
+          
+              <div class="slide">
+                <img src="../assets/img/front-pages/landing-page/PBX2.svg" alt="Imagen 2" style="width: 100%; height: 800px;">
+              </div>
+          
+              <div class="slide">
+                <img src="../assets/img/front-pages/landing-page/PBX3.svg" alt="Imagen 3" style="width: 100%; height: 800px;">
+              </div>
+          
+              <div class="slide">
+                <img src="../assets/img/front-pages/landing-page/PBX4.svg" alt="Imagen 4" style="width: 100%; height: 800px;">
+              </div>
+          
+              <div class="slide">
+                <img src="../assets/img/front-pages/landing-page/PBX5.svg" alt="Imagen 5" style="width: 100%; height: 800px;">
+              </div>
+          
+              <!-- Duplicamos los slides para crear un efecto infinito -->
+              <div class="slide">
+                <img src="../assets/img/front-pages/landing-page/PBX6.svg" alt="Imagen 1" style="width: 100%; height: 800px;">
+              </div>
+          
+              <div class="slide">
+                <img src="../assets/img/front-pages/landing-page/PBX7.svg" alt="Imagen 2" style="width: 100%; height: 800px;">
+              </div>
+          
+             
+            </div>
+          
+            <!-- Botones de navegación -->
+            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="next" onclick="moveSlide(1)">&#10095;</button>
+          </div>
+        </div>
+      </section>
+
+
+      <section style="width: 100%; display: flex; justify-content: center; align-items: center; flex-direction: column; margin: 0;">
+        <h1 style="font-size: 40px; text-align: center; font-family: 'Open Sans', sans-serif; font-weight: bolder; color: #74ac58; margin-bottom: 20px;">
+            ADQUIERE BESTIPTRUNK AHORA MISMO
+        </h1>
+        
+        <form className="checkout" >
+            <script
+                src="https://checkout.epayco.co/checkout.js"
+                class="epayco-button"
+                data-epayco-key="491d6a0b6e992cf924edd8d3d088aff1"
+                data-epayco-amount="300.000"
+                data-epayco-name="BestCallCenterPro"
+                data-epayco-description="BestIpTrunk"
+                data-epayco-currency="cop"
+                data-epayco-country="co"
+                data-epayco-test="true"
+                data-epayco-button="https://multimedia.epayco.co/epayco-landing/btns/epayco_pago_seguro_gray.png"
+                data-epayco-external="false"
+                data-epayco-response="https://localhost:3000/feedback"
+                data-epayco-confirmation="https://localhost:3000/feedback"
+                data-epayco-methodconfirmation="get">
+            </script>
+        </form>
+    </section>
+      <!-- Contact Us: End -->
+    <div>
+      <form id="contactForm" style="margin: 10px auto">
+        <p class="tituloForm">CONTÁCTANOS</p>
+        <input
+            id="nombres"
+            type="text"
+            placeholder="Nombre y Apellido"
+            name="nombres"
+            required
+        />
+        <input
+            id="email"
+            type="email"
+            placeholder="Correo"
+            name="email"
+            required
+        />
+        <input
+            id="telefono"
+            type="number"
+            placeholder="Teléfono de Contacto"
+            name="telefono"
+            required
+        />
+        <textarea
+            id="mensaje"
+            placeholder="¿Cómo podemos ayudarte? (opcional)"
+            name="mensaje"
+        ></textarea>
+        <input type="submit" value="ENVIAR MENSAJE" name="enviar" />
+        <div id="respuestaEnviado" style="display: none;">
+            <p id="respuestaTexto"></p>
+        </div>
+        <p class="registro">Teléfonos: (+57)3330333014 || (+57)312 456 0009</p>
+        <p class="olvido">info@bestvoiper.com.co</p>
+    </form>
+    
+    </div>
+  <!-- / Sections:End -->
+
+  <!-- Footer: Start -->
+  <footer class="landing-footer bg-body footer-text">
+    <div class="footer-top position-relative overflow-hidden z-1">
+      
+      <div class="container">
+        <div class="row gx-0 gy-4 g-md-5">
+          <div class="col-lg-5">
+            <a href="index.html" class="app-brand-link mb-4">
+              <span class="app-brand-logo demo">
+               <img src="../assets/img/branding/LOGOBESTVOIPER.png" width="35px"/>
+              </span>
+              <span class="app-brand-text demo footer-link fw-bold ms-2 ps-1">Bestvoiper</span>
+            </a>
+            <p class="footer-text footer-logo-description mb-4">
+              Crecemos Juntos
+            </p>
+           
+          </div>
+          <div class="col-lg-2 col-md-4 col-sm-6">
+            <h6 class="footer-title mb-4">Demos</h6>
+            <ul class="list-unstyled">
+              <li class="mb-3">
+                <a href="../vertical-menu-template/" target="_blank" class="footer-link">Vertical Layout</a>
+              </li>
+              <li class="mb-3">
+                <a href="../horizontal-menu-template/" target="_blank" class="footer-link">Horizontal Layout</a>
+              </li>
+              <li class="mb-3">
+                <a href="../vertical-menu-template-bordered/" target="_blank" class="footer-link">Bordered Layout</a>
+              </li>
+              <li class="mb-3">
+                <a href="../vertical-menu-template-semi-dark/" target="_blank" class="footer-link"
+                  >Semi Dark Layout</a
+                >
+              </li>
+              <li class="mb-3">
+                <a href="../vertical-menu-template-dark/" target="_blank" class="footer-link">Dark Layout</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-md-4 col-sm-6">
+            <h6 class="footer-title mb-4">Pages</h6>
+            <ul class="list-unstyled">
+              <li class="mb-3">
+                <a href="pricing-page.html" class="footer-link">Pricing</a>
+              </li>
+              <li class="mb-3">
+                <a href="payment-page.html" class="footer-link"
+                  >Payment<span class="badge rounded bg-primary ms-2 px-2">New</span></a
+                >
+              </li>
+              <li class="mb-3">
+                <a href="checkout-page.html" class="footer-link">Checkout</a>
+              </li>
+              <li class="mb-3">
+                <a href="help-center-landing.html" class="footer-link">Help Center</a>
+              </li>
+              <li class="mb-3">
+                <a href="../vertical-menu-template/auth-login-cover.html" target="_blank" class="footer-link"
+                  >Login/Register</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-4">
+            <h6 class="footer-title mb-4">Download our app</h6>
+            <a href="javascript:void(0);" class="d-block footer-link mb-3 pb-2"
+              ><img src="assets/img/front-pages/landing-page/apple-icon.png" alt="apple icon"
+            /></a>
+            <a href="javascript:void(0);" class="d-block footer-link"
+              ><img src="assets/img/front-pages/landing-page/google-play-icon.png" alt="google play icon"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom py-3">
+      <div
+        class="container d-flex flex-wrap justify-content-between flex-md-row flex-column text-center text-md-start">
+        <div class="mb-2 mb-md-0">
+          <span class="footer-text"
+            >©
+            <script>
+              document.write(new Date().getFullYear());
+            </script>
+          </span>
+          <a href="https://themeselection.com" target="_blank" class="fw-medium text-white footer-link"
+            >ThemeSelection,</a
+          >
+          <span class="footer-text"> @Bestvoiper</span>
+        </div>
+        <div style="display: flex; flex-flow: row nowrap; gap: 10px;">
+          <div>
+              <svg xmlns="http://www.w3.org/2000/svg" width="35px" viewBox="0 0 512 512">
+                  <path d="M459.4 151.7c.3 4.5 .3 9.1 .3 13.6 0 138.7-105.6 298.6-298.6 298.6-59.5 0-114.7-17.2-161.1-47.1 8.4 1 16.6 1.3 25.3 1.3 49.1 0 94.2-16.6 130.3-44.8-46.1-1-84.8-31.2-98.1-72.8 6.5 1 13 1.6 19.8 1.6 9.4 0 18.8-1.3 27.6-3.6-48.1-9.7-84.1-52-84.1-103v-1.3c14 7.8 30.2 12.7 47.4 13.3-28.3-18.8-46.8-51-46.8-87.4 0-19.5 5.2-37.4 14.3-53 51.7 63.7 129.3 105.3 216.4 109.8-1.6-7.8-2.6-15.9-2.6-24 0-57.8 46.8-104.9 104.9-104.9 30.2 0 57.5 12.7 76.7 33.1 23.7-4.5 46.5-13.3 66.6-25.3-7.8 24.4-24.4 44.8-46.1 57.8 21.1-2.3 41.6-8.1 60.4-16.2-14.3 20.8-32.2 39.3-52.6 54.3z"/>
+              </svg>
+          </div>
+          <div>
+              <svg xmlns="http://www.w3.org/2000/svg" width="35px" viewBox="0 0 512 512">
+                  <path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z"/>
+              </svg>
+          </div>
+          <div>
+              <svg xmlns="http://www.w3.org/2000/svg" width="35px" viewBox="0 0 448 512">
+                  <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/>
+              </svg>
+          </div>
+      </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Footer: End -->
+
+  <!-- Core JS -->
+  <!-- build:js assets/vendor/js/core.js -->
+  <script src="assets/vendor/libs/popper/popper.js"></script>
+  <script src="assets/vendor/js/bootstrap.js"></script>
+
+  <!-- endbuild -->
+
+  <!-- Vendors JS -->
+  <script src="assets/vendor/libs/nouislider/nouislider.js"></script>
+  <script src="assets/vendor/libs/swiper/swiper.js"></script>
+
+  <!-- Main JS -->
+  <script src="assets/js/front-main.js"></script>
+
+  <!-- Page JS -->
+  <script src="assets/js/front-page-landing.js"></script>
+  </body>
+  <style>
+    #Capa_1 {
+animation-iteration-count: infinite;
+animation-timing-function: linear;
+animation-duration: 50s;
+animation-name: spinner-loading;
+animation-duration: 100s; /* Aumentado para hacer la animación más lenta */
+transform-origin: center;
+transform-box: fill-box;
+width: 80%;
+}
+@keyframes spinner-loading {
+0% {
+  transform: rotate(0deg);
+}
+to {
+  transform: rotate(1turn);
+}
+}
+#Capa_2,
+#Capa_3,
+#Capa_4,
+#Capa_5,
+#Capa_6,
+#Capa_7 {
+animation-iteration-count: infinite;
+animation-timing-function: linear;
+animation-duration: 50s;
+animation-name: spinner-capas;
+animation-duration: 100s; /* Aumentado para hacer la animación más lenta */
+transform-origin: center;
+cursor: pointer;
+}
+@keyframes spinner-capas {
+0% {
+  transform: rotate(0deg);
+}
+to {
+  transform: rotate(1turn);
+}
+}
+
+.rueda {
+width: 45vw;
+height: 45vh;
+box-sizing: border-box;
+}
+.st0{fill:#447ab7}.st1{fill:#89b749}.st2{fill:#798eab}.st3{fill:#fff}
+.contenedor{
+width: 50%;
+margin: auto;
+display: block;
+}
+.PList {
+    display: none; /* Oculta por defecto */
+}
+
+@media (max-width: 1200px) {
+  .PList {
+    display: block; /* Muestra en pantallas pequeñas */
+  }
+
+  /* Ocultar el contenedor cuando la pantalla es pequeña */
+  .contenedor {
+    display: none;
+  }
+
+  /* Centrar las imágenes en filas y que hagan wrap */
+  .listaProductos {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se acomoden en filas */
+    justify-content: center; /* Centra las imágenes horizontalmente */
+    align-items: center; /* Centra las imágenes verticalmente */
+    margin: 0; /* Elimina márgenes por defecto */
+  }
+
+  /* Hacer que las imágenes se ajusten al 100% de la pantalla pero en filas */
+  .listaProductos img {
+    width: 100%; /* Hacer que las imágenes ocupen todo el ancho del contenedor */
+    max-width: 300px; /* Limita el tamaño máximo de cada imagen */
+    height: auto; /* Mantiene la relación de aspecto */
+    margin: 10px; /* Añade un poco de espacio entre las imágenes */
+    object-fit: contain; /* Asegura que las imágenes no se distorsionen */
+  }
+
+  /* Imagen principal, asegurando que ocupe el 100% del ancho */
+  #nuestroProductos {
+    width: 100%;
+    max-width: 100%; /* Asegura que no exceda el ancho de la pantalla */
+    height: auto; /* Mantiene la proporción */
+    margin-top: 10%; /* Añade margen superior para separar un poco de la parte superior de la pantalla */
+  }
+
+  /* Ajustar las imágenes de los productos (se acomoden en filas) */
+  #uno, #dos, #tres, #cuatro, #cinco, #seis {
+    width: 100%; /* Las imágenes ocuparán el 100% del ancho disponible */
+    max-width: 300px; /* Asegura que las imágenes no sean más grandes de 300px */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin-top: 10px; /* Espacio entre las imágenes */
+    object-fit: contain; /* Asegura que la imagen mantenga su proporción */
+  }
+}
+
+
+
+
+
+
+  </style>
+</html>
