@@ -340,13 +340,13 @@ button.list-group-item-primary.active {
 }
 
 .btn-label-primary {
-  color: #696cff;
+  color: white;
   border-color: transparent;
-  background: #e7e7ff;
+  background: #74ac58;
 }
 .btn-label-primary:hover {
   border-color: transparent !important;
-  background: #5f61e6 !important;
+  background: #476936 !important;
   color: #fff !important;
   box-shadow: 0 0.125rem 0.25rem 0 rgba(105, 108, 255, 0.4) !important;
   transform: translateY(-1px) !important;
