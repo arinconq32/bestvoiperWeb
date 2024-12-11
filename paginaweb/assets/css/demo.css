@@ -46,7 +46,7 @@
 /* Text styling */
 .icon-text {
   font-size: 1.5em;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Montserrat', 'sans-serif'; font-weight: 200;
   font-weight: 200;
   text-align: center;
 }
@@ -874,8 +874,8 @@ video {
   padding-bottom: 30px;
 }
 .textoRobot p {
-  font-size: 1.8em;
-  font-family: "Roboto", sans-serif;
+  
+  font-family: 'Montserrat', 'sans-serif'; font-weight: 200;font-size: 1.8em;
   text-align: justify;
   color: white;
   margin: 5%;
@@ -1003,7 +1003,7 @@ video {
 }
 
 .slide img {
-  width: 30vw;
+  width: 40vw;
   margin: 0 auto;
 }
 
@@ -1083,7 +1083,7 @@ video {
 .cajaHorizontal1 p {
   width: 35vw;
   color: white;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Montserrat', 'sans-serif'; font-weight: 200;
   font-size: 1em;
   text-align: center;
   align-self: center;
@@ -1092,7 +1092,7 @@ video {
 .cajaHorizontal1 p:first-child {
   width: 35vw;
   color: white;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Montserrat', 'sans-serif'; font-weight: 200;
   font-size: 1em;
   text-align: justify;
   padding: 10px;
@@ -1107,7 +1107,7 @@ video {
 .cajaHorizontal2 p {
   width: 35vw;
   color: white;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Montserrat', 'sans-serif'; font-weight: 200;
   font-size: 1.3em;
   text-align: center;
   align-self: center;
@@ -1132,7 +1132,7 @@ video {
 .TiposMensajes p:first-child {
   background-color: #9ab856;
   color: white;
-  font-family: "Mitr";
+  font-family: 'Montserrat', 'sans-serif'; font-weight: 200;
   font-size: 2em;
   padding: 20px;
   border-radius: 20px;
@@ -1140,7 +1140,7 @@ video {
 .TiposMensajes p:nth-child(2) {
   background-color: #5579b7;
   color: white;
-  font-family: "Mitr";
+  font-family: 'Montserrat', 'sans-serif'; font-weight: 200;
   font-size: 2em;
   padding: 20px;
   border-radius: 20px;
@@ -1148,7 +1148,7 @@ video {
 .TiposMensajes p:nth-child(3) {
   background-color: #9ab856;
   color: white;
-  font-family: "Mitr";
+  font-family: 'Montserrat', 'sans-serif'; font-weight: 200;
   font-size: 2em;
   padding: 20px;
   border-radius: 20px;
@@ -1156,7 +1156,7 @@ video {
 .TiposMensajes p:nth-child(4) {
   background-color: #5579b7;
   color: white;
-  font-family: "Mitr";
+  font-family: 'Montserrat', 'sans-serif'; font-weight: 200;
   font-size: 2em;
   padding: 20px;
   border-radius: 20px;
@@ -1203,7 +1203,7 @@ video {
 .contenido {
   width: 30vw;
   color: black;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Montserrat', 'sans-serif'; font-weight: 200;
   font-size: 1.5em;
   text-align: center;
   align-self: center;
@@ -1211,7 +1211,7 @@ video {
 .contenidoM {
   width: 30vw;
   color: black;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Montserrat', 'sans-serif'; font-weight: 200;
   font-size: 1.5em;
   text-align: center;
   align-self: center;
@@ -1219,7 +1219,7 @@ video {
 .contenidoM2 {
   width: 30vw;
   color: #000;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Montserrat', 'sans-serif'; font-weight: 200;
   font-size: 1.5em;
   text-align: center;
   align-self: center;
@@ -1227,7 +1227,7 @@ video {
 .contenidoMf {
   width: 40vw;
   color: black;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Montserrat', 'sans-serif'; font-weight: 200;
   font-size: 1.3em;
   text-align: justify;
   align-self: center;
@@ -1259,6 +1259,7 @@ video {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
+  font-family: 'Montserrat', 'sans-serif'; font-weight: 200;
 }
 .tituloToggle2 {
   background-color: #9ab856;
@@ -1268,6 +1269,7 @@ video {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
+  font-family: 'Montserrat', 'sans-serif'; font-weight: 200;
 }
 .tituloToggle3 {
   background-color: #5579b7;
@@ -1277,6 +1279,7 @@ video {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
+  font-family: 'Montserrat', 'sans-serif'; font-weight: 200;
 }
 .tituloToggle4 {
   background-color: #9ab856;
@@ -1286,9 +1289,11 @@ video {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
+  font-family: 'Montserrat', 'sans-serif'; font-weight: 200;
 }
 .toggleTitulo{
   color: black;
+  font-family: 'Montserrat', 'sans-serif'; font-weight: 200;
 }
 .tituloToggle5 {
   background-color: #5579b7;
@@ -1298,6 +1303,7 @@ video {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
+  font-family: 'Montserrat', 'sans-serif'; font-weight: 200;
 }
 .tituloToggle6 {
   background-color: #9ab856;
@@ -1307,6 +1313,7 @@ video {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
+  font-family: 'Montserrat', 'sans-serif'; font-weight: 200;
 }
 .tituloToggle7 {
   background-color: #5579b7;
@@ -1316,40 +1323,41 @@ video {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
+  font-family: 'Montserrat', 'sans-serif'; font-weight: 200;
 }
 #response1 {
   display: none;
-  font-family: "Roboto";
+  font-family: 'Montserrat', 'sans-serif'; font-weight: 200;
   padding: 10px;
 }
 #response2 {
   display: none;
-  font-family: "Roboto";
+  font-family: 'Montserrat', 'sans-serif'; font-weight: 200;
   padding: 10px;
 }
 #response3 {
   display: none;
-  font-family: "Roboto";
+  font-family: 'Montserrat', 'sans-serif'; font-weight: 200;
   padding: 10px;
 }
 #response4 {
   display: none;
-  font-family: "Roboto";
+  font-family: 'Montserrat', 'sans-serif'; font-weight: 200;
   padding: 10px;
 }
 #response5 {
   display: none;
-  font-family: "Roboto";
+  font-family: 'Montserrat', 'sans-serif'; font-weight: 200;
   padding: 10px;
 }
 #response6 {
   display: none;
-  font-family: "Roboto";
+  font-family: 'Montserrat', 'sans-serif'; font-weight: 200;
   padding: 10px;
 }
 #response7 {
   display: none;
-  font-family: "Roboto";
+  font-family: 'Montserrat', 'sans-serif'; font-weight: 200;
   padding: 10px;
 }
 .chevron {
@@ -1383,7 +1391,7 @@ video {
 }
 .containerCanales p{
   color: white;
-  font-family: "Roboto";
+  font-family: 'Montserrat', 'sans-serif'; font-weight: 200;
   font-size: 1.5em;
   text-align: center;
 
@@ -1404,7 +1412,7 @@ video {
 }
 .contenidoDid {
   color: white;
-  font-family: "Roboto";
+  font-family: 'Montserrat', 'sans-serif'; font-weight: 200;
   font-size: 1.5em;
   width: 40%;
 }
@@ -1427,7 +1435,7 @@ video {
 }
 .contenidoIP {
   color: white;
-  font-family: "Roboto";
+  font-family: 'Montserrat', 'sans-serif'; font-weight: 200;
   font-size: 1.3em;
   width: 40%;
   align-self: center;
@@ -1447,7 +1455,7 @@ video {
 }
 .contenidoPBX{
  color: white;
- font-family: "Roboto";
+ font-family: 'Montserrat', 'sans-serif'; font-weight: 200;
  font-size: 1.5em;
  width: 50vw;
  align-self: center;
@@ -1514,20 +1522,21 @@ form input[type=email]{
   background-color: white;
   padding: 10px;
   border: 0px solid transparent;
-  font-family: "Roboto";
+  font-family: 'Montserrat', 'sans-serif'; font-weight: 200;
+
 }
 form input[type=text]{
   background-color: white;
   padding: 10px;
   border: 0px solid transparent;
-  font-family: "Roboto";
+  font-family: 'Montserrat', 'sans-serif'; font-weight: 200;
   
 }
 form input[type=number]{
   background-color: white;
   padding: 10px;
   border: 0px solid transparent;
-  font-family: "Roboto";
+  font-family: 'Montserrat', 'sans-serif'; font-weight: 200;
   
 }
 form textarea{
@@ -1535,21 +1544,20 @@ form textarea{
   padding: 10px;
   border: 0px solid transparent;
   margin: 6px;
-  font-family: "Roboto";
+  font-family: 'Montserrat', 'sans-serif'; font-weight: 200;
 }
 form input[type=password]{
   background-color: white;
   padding: 10px;
   border: 0px solid transparent;
-  font-family: "Roboto";
+  font-family: 'Montserrat', 'sans-serif'; font-weight: 200;
   
 }
 form input[type=submit]{
   background-color: #5579b7;
   color: white;
   border: 0px solid transparent;
-  font-family: "Mitr";
-  padding: 10px;
+  font-family: 'Montserrat', 'sans-serif'; font-weight: 200;  padding: 10px;
   
 }
 form input[type=submit]:hover{
@@ -1574,21 +1582,22 @@ form input[type=submit]:hover{
 }
 .tituloForm{
   color: white;
-  font-family: "Mitr";
+  font-family: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   text-align: center;
   font-size: 1.5em;
+
 }
 .registro{
   color: white;
   text-align: center;
-  font-family: "Roboto";
+  font-family: 'Montserrat', 'sans-serif'; font-weight: 200;
   font-size: 0.7em;
   text-decoration: none;
 }
 .olvido{
   color: white;
   text-align: center;
-  font-family: "Roboto";
+  font-family: 'Montserrat', 'sans-serif'; font-weight: 200;
   font-size: 0.7em;
   margin-top: 0px;
   
@@ -1600,15 +1609,13 @@ form input[type=submit]:hover{
 .tituloTutoriales{
   text-align: center;
   color: #5579b7;
-  font-family: "Mitr";
-  font-size: 2em;
+  font-family: 'Montserrat', 'sans-serif'; font-weight: 200;  font-size: 2em;
   margin: 10px;
 }
 .user{
   text-align: center;
   color: black;
-  font-family: "Roboto";
-  font-size: 1.5em;
+  font-family: 'Montserrat', 'sans-serif'; font-weight: 200;  font-size: 1.5em;
   margin: 10px;
 }
 .tutoriales{
@@ -1669,8 +1676,7 @@ form input[type=submit]:hover{
 }
 .contenedorMenu ul li p{
   color: white;
-  font-family: "Roboto";
-  font-weight: bold;
+  font-family: 'Montserrat', 'sans-serif'; font-weight: 200;  font-weight: bold;
   text-align: center;
   font-size: 2em;
 }
@@ -1688,17 +1694,17 @@ form input[type=submit]:hover{
 }
 .subtitle{
   font-size: 1.5em;
-  font-family: "Mitr";
+  font-family: 'Montserrat', 'sans-serif'; font-weight: 200;
   color: #7e8dab;
   
 }
 .subtituloContenidos{
   font-size: 1.5em;
-  font-family: "Mitr";
+  font-family: 'Montserrat', 'sans-serif'; font-weight: 200;
   color: #7e8dab;
 }
 .contenidoPoliticas{
-  font-family: "Roboto", sans-serif;
+  font-family: 'Montserrat', 'sans-serif'; font-weight: 200;
   color: gray;
   font-size: 1.3em;
   text-align: justify;
@@ -1706,23 +1712,23 @@ form input[type=submit]:hover{
 }
 .clave{
   font-size: 1.3em;
-  font-family: "Mitr";
+  font-family: 'Montserrat', 'sans-serif'; font-weight: 200;
   color: #7e8dab;
 }
 .numerales{
-  font-family: "Mitr";
+  font-family: 'Montserrat', 'sans-serif'; font-weight: 200;
   color: #7e8dab;
   margin-right: 10px;
   font-size: 0.9em;
 }
 b{
   font-size: 1em;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Montserrat', 'sans-serif'; font-weight: 200;
   text-align: justify;
 }
 p{
   font-size: 1.3em;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Montserrat', 'sans-serif'; font-weight: 200;
   text-align: justify;
   color: gray;
 }
@@ -1868,7 +1874,7 @@ p{
 .imagenDesarrollo::before{
   content: "Compañía latinoamericana de desarrollo de software y comunicaciones.";
   font-size: 2em;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Montserrat', 'sans-serif'; font-weight: 200;
   text-align: center;
   margin-top: 50%;
 }
@@ -2027,14 +2033,14 @@ form{
 .registro{
   color: white;
   text-align: center;
-  font-family: "Roboto";
+  font-family: 'Montserrat', 'sans-serif'; font-weight: 200;
   font-size: 1.2em;
   text-decoration: none;
 }
 .olvido{
   color: white;
   text-align: center;
-  font-family: "Roboto";
+  font-family: 'Montserrat', 'sans-serif'; font-weight: 200;
   font-size: 1.2em;
   margin-top: 0px;
   
@@ -2561,7 +2567,7 @@ form input[type=password]{
   width: 100%;
 }
 .primerParrafo{
-  font-size: 2em; font-family: 'Open Sans', sans-serif; font-weight: 100;
+  font-family: 'Montserrat', 'sans-serif'; font-weight: 200;font-size: 1.8em;
 }
 .container2 {
   width: 100%;  /* 100% del ancho de la pantalla */

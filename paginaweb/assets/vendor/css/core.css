@@ -4054,14 +4054,17 @@ textarea.form-control-lg {
   color: var(--bs-accordion-color);
   background-color: var(--bs-accordion-bg);
   border: var(--bs-accordion-border-width) solid var(--bs-accordion-border-color);
+  font-family: 'Montserrat', 'sans-serif'; font-weight: 200;
 }
 .accordion-item:first-of-type {
   border-top-left-radius: var(--bs-accordion-border-radius);
   border-top-right-radius: var(--bs-accordion-border-radius);
+  font-family: 'Montserrat', 'sans-serif'; font-weight: 200;
 }
 .accordion-item:first-of-type .accordion-button {
   border-top-left-radius: var(--bs-accordion-inner-border-radius);
   border-top-right-radius: var(--bs-accordion-inner-border-radius);
+  font-family: 'Montserrat', 'sans-serif'; font-weight: 200;
 }
 .accordion-item:not(:first-of-type) {
   border-top: 0;
@@ -4069,6 +4072,7 @@ textarea.form-control-lg {
 .accordion-item:last-of-type {
   border-bottom-right-radius: var(--bs-accordion-border-radius);
   border-bottom-left-radius: var(--bs-accordion-border-radius);
+  font-family: 'Montserrat', 'sans-serif'; font-weight: 200;
 }
 .accordion-item:last-of-type .accordion-button.collapsed {
   border-bottom-right-radius: var(--bs-accordion-inner-border-radius);
@@ -4081,6 +4085,7 @@ textarea.form-control-lg {
 
 .accordion-body {
   padding: var(--bs-accordion-body-padding-y) var(--bs-accordion-body-padding-x);
+  font-family: 'Montserrat', 'sans-serif'; font-weight: 200;
 }
 
 .accordion-flush .accordion-collapse {

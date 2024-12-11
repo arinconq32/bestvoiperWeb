@@ -307,14 +307,14 @@ button.list-group-item-primary.active {
 
 .btn-primary {
   color: #fff;
-  background-color: #696cff;
-  border-color: #696cff;
+  background-color: #7eb83b;
+  border-color: #7eb83b;
   box-shadow: 0 0.125rem 0.25rem 0 rgba(105, 108, 255, 0.4);
 }
 .btn-primary:hover {
   color: #fff !important;
-  background-color: #5f61e6 !important;
-  border-color: #5f61e6 !important;
+  background-color: #5c862c !important;
+  border-color: #5c862c !important;
   transform: translateY(-1px) !important;
 }
 .btn-check:focus + .btn-primary, .btn-primary:focus, .btn-primary.focus {
@@ -334,8 +334,8 @@ button.list-group-item-primary.active {
 }
 .btn-primary.disabled, .btn-primary:disabled {
   color: #fff !important;
-  background-color: #696cff !important;
-  border-color: #696cff !important;
+  background-color: #5c862c !important;
+  border-color: #5c862c !important;
   box-shadow: none !important;
 }
 
@@ -346,9 +346,9 @@ button.list-group-item-primary.active {
 }
 .btn-label-primary:hover {
   border-color: transparent !important;
-  background: #476936 !important;
+  background: #7eb83b !important;
   color: #fff !important;
-  box-shadow: 0 0.125rem 0.25rem 0 rgba(105, 108, 255, 0.4) !important;
+  box-shadow: 0 0.125rem 0.25rem 0 #7eb83b(105, 108, 255, 0.4) !important;
   transform: translateY(-1px) !important;
 }
 .btn-label-primary:focus, .btn-label-primary.focus {
@@ -437,11 +437,11 @@ button.list-group-item-primary.active {
 }
 
 .nav .nav-link:hover, .nav .nav-link:focus {
-  color: #5f61e6;
+  color: #7eb83b;
 }
 
 .nav-pills .nav-link.active, .nav-pills .nav-link.active:hover, .nav-pills .nav-link.active:focus {
-  background-color: #696cff;
+  background-color: #7eb83b;
   color: #fff;
   box-shadow: 0 2px 4px 0 rgba(105, 108, 255, 0.4);
 }
@@ -1232,7 +1232,7 @@ li.ui-timepicker-selected,
 .navbar.landing-navbar .navbar-nav .nav-link.show,
 .navbar.landing-navbar .navbar-nav .nav-link.active,
 .navbar.landing-navbar .navbar-nav .nav-link:hover {
-  color: #696cff !important;
+  color: #7eb83b !important;
 }
 
 .landing-features .features-icon-wrapper .features-icon-box .features-icon {
