@@ -1748,7 +1748,8 @@ p{
 
 /*MEDIAQUERIES*/
 @media (max-width:420px) {
- 
+  
+  
   .hamburguer {
     text-align: center;
     padding: 15px;
@@ -2497,7 +2498,7 @@ form input[type=password]{
 
 
 @media (max-width:800px) and (orientation: landscape) {
- 
+  
   .bienvenida video{
     width: 100%;
     height: 100%;
@@ -2632,6 +2633,12 @@ form input[type=password]{
     margin-top: -10%;
     
   }
+  .imagenC img{
+    width: 60%;
+    margin: auto;
+  }
+ 
+  
   .slide{
     margin-top: -45%;
   }
@@ -2696,8 +2703,13 @@ form input[type=password]{
   #slider-container {
     height: 50vh;  /* Ajustamos la altura del slider en pantallas pequeñas */
   }
-  
-  
+  .CRMtitle{
+    color:white;
+  }
+  .imagenC img{
+    width: 60%;
+    margin: auto;
+  }
   .slide {
     min-width: 100%; /* Mostrar un solo slide a la vez */
     transform: scale(1); /* Los slides no se redimensionan en pantallas pequeñas */
@@ -2734,18 +2746,29 @@ form input[type=password]{
   .textoPagos, .imagenPagos {
     width: 100%; /* En pantallas pequeñas, ambos elementos ocupan el 100% del espacio */
   }
+  .imagenC img{
+    width: 100%;
+    margin: auto;
+  }
 }
 
 @media (min-width: 800px) and (max-width: 1200px) {
   .textoPagos, .imagenPagos {
     width: 100%; /* En pantallas pequeñas, ambos elementos ocupan el 100% del espacio */
   }
+  .imagenC img{
+    width: 100%;
+    margin: auto;
+  }
 }
 
 
 /* Pantallas de más de 1024px */
 @media (min-width: 1024px) {
- 
+ .imagen{
+  margin-top: -7%;
+  margin-bottom: -7%;
+ }
 
   .adornoProductos {
     display: none;
@@ -2763,5 +2786,148 @@ form input[type=password]{
     flex-wrap: wrap;
     justify-content: space-around;
   }
+  .imagenC img{
+    width: 100%;
+    margin: auto;
+  }
+}
+
+.contenedorCRM {
+  display: flex;
+  justify-content: center;
+  width: 100%; /* Cambié a 100% en lugar de 80vw para que ocupe todo el ancho disponible */
+  flex-wrap: wrap; /* Permite que los elementos se ajusten y se muevan a una nueva fila si es necesario */
+  gap: 20px; /* Espacio entre los elementos */
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center;     /* Centra verticalmente */
+}
+
+.imagenCRM, .descripcionCRM {
+  flex: 1 1 45%; /* Esto asegura que los elementos ocupen 45% del contenedor pero puedan reducir su tamaño si es necesario */
+  min-width: 250px; /* Evita que los elementos se hagan demasiado pequeños */
+}
+
+.botonCRM {
+  width: 100%; /* Asegura que el botón ocupe todo el ancho disponible */
+  margin-top: 20px; /* Añade un margen superior para separarlo del contenido */
+}
+
+.descripcionCRM h1{
+  font-size: 1.5em;
+  font-family: 'Montserrat', 'sans-serif'; 
+  font-weight: bolder;
+  text-align: justify;
+}
+.descripcionCRM h2{
+  font-size: 1.3em;
+  font-family: 'Montserrat', 'sans-serif'; 
+  font-weight: 500;
+  text-align: justify;
+}
+.descripcionCRM ul li{
+  font-family: 'Montserrat', 'sans-serif'; 
+  font-size: 1.3em;
+  font-weight: 200;
+}
+.descripcionCRM a p{
+  background-color: #7eb83b;
+  text-align: center;
+  color: white;
+  font-family: 'Montserrat', 'sans-serif'; 
+  font-weight: bolder;
+  border-radius: 50px;
+  padding: 10px;
+}
+.descripcionCRM a p:hover{
+  background-color: #60ad07;
+  transform: scale(1);
+}
+
+
+/* Estilo general para cada sección */
+.fixed-container {
+  position: fixed;
+  top:100px;
+  left:0px;
+  right: 0px;
+  bottom: 0px;
+  width: 100%;
+  z-index: 1000; /* Asegura que se quede arriba de otros elementos */
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  margin-top: 0px;
+  
+  
+}
+
+.fixed-container.end {
+  position: absolute;
+    bottom: 0; /* Coloca el contenedor en la parte inferior de la página */
+    top: auto; /* Se elimina el top para que no se superponga */
+    margin-bottom: 0;
+  
+}
+/* Estilo para las secciones de contenido */
+.section {
+  margin: 100px 0;
+  padding: 40px;
+  min-height: 100vh; /* Cada sección ocupa al menos toda la altura de la ventana */
+}
+
+.descripcionC p {
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+  font-size: 1.2rem;
+  color: #000;
+  font-weight: 300;
+  line-height: 1em;
+}
+
+.descripcionC h1{
+  font-size: 1.3rem;
+  font-family: 'Montserrat', 'sans-serif'; 
+  font-weight: bolder;
+  text-align: center;
+}
+.descripcionC h2{
+  font-size: 1.2rem;
+  font-family: 'Montserrat', 'sans-serif'; 
+  font-weight: 500;
+  text-align: center;
+}
+.descripcionC h3{
+  font-size: 1.2rem;
+  font-family: 'Montserrat', 'sans-serif'; 
+  font-weight: 500;
+  text-align: center;
+}
+.imagenC img{
+  width: 80%;
+  margin: auto;
+}
+
+/* La clase visible hace que el párrafo se vea */
+.descripcionC p.visible {
+  opacity: 1;
+  transition: opacity 1s ease-out, transform 1s ease-out; 
+}
+body.fixed-content {
+  margin-bottom: -300vh; /* Ajusta el margen inferior si se usa un contenedor fijo */
+}
+
+.contenedorC {
+  display: flex;
+  justify-content: center;
+  width: 100%; 
+  flex-wrap: wrap; 
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center;     /* Centra verticalmente */
+ 
+  padding: 5% 0;
+}
+
+.imagenC, .descripcionC {
+  flex: 1 1 20%; 
+  min-width: 200px; 
 }
 
