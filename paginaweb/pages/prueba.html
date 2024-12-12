@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+  
+.carousel-container {
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  margin: auto;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slide {
+  display: flex;
+}
+
+.slide-image {
+  flex: 0 0 33.333%;  /* En pantallas grandes, cada imagen ocupa un 33.333% */
+  height: 100%;
+  overflow: hidden;
+}
+
+.slide-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Estilo de los botones de navegación */
+button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+/* Responsividad sin media queries */
+@supports (--css: variables) {
+  .carousel {
+    flex-wrap: nowrap;  /* Los slides no se envuelven, se mantienen en línea */
+  }
+
+  .slide {
+    flex: 0 0 auto; /* Cada slide ocupa el 100% de la vista */
+  }
+
+  .slide-image {
+    flex: 0 0 100%;  /* En pantallas pequeñas, cada imagen ocupa el 100% del ancho */
+  }
+
+  .slide-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Se asegura de que las imágenes no se distorsionen */
+  }
+}
+  </style>
+<body>
+    <div class="carousel-container">
+        <div class="carousel">
+          <div class="slide">
+            <div class="slide-image"> <img src="../assets/img/front-pages/landing-page/CARACTERISTICASMASIVOS3.svg" alt="Imagen 3" style="width: 100%; height: 800px;"></div>
+            <div class="slide-image"> <img src="../assets/img/front-pages/landing-page/CARACTERISTICASMASIVOS3.svg" alt="Imagen 3" style="width: 100%; height: 800px;"></div>
+            <div class="slide-image"> <img src="../assets/img/front-pages/landing-page/CARACTERISTICASMASIVOS3.svg" alt="Imagen 3" style="width: 100%; height: 800px;"></div>
+          </div>
+          <div class="slide">
+            <div class="slide-image"> <img src="../assets/img/front-pages/landing-page/CARACTERISTICASMASIVOS3.svg" alt="Imagen 3" style="width: 100%; height: 800px;"></div>
+            <div class="slide-image"> <img src="../assets/img/front-pages/landing-page/CARACTERISTICASMASIVOS3.svg" alt="Imagen 3" style="width: 100%; height: 800px;"></div>
+            <div class="slide-image"> <img src="../assets/img/front-pages/landing-page/CARACTERISTICASMASIVOS3.svg" alt="Imagen 3" style="width: 100%; height: 800px;"></div>
+          </div>
+          <!-- Agregar más slides según sea necesario -->
+        </div>
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+      </div>
+</body>
+<script>
+   let currentIndex = 0;
+const slides = document.querySelectorAll('.slide');
+const carousel = document.querySelector('.carousel');
+const totalSlides = slides.length;
+
+// Función para cambiar el slider
+function updateCarousel() {
+  const slideWidth = slides[0].offsetWidth;  // Obtiene el ancho del slide
+  carousel.style.transform = `translateX(-${currentIndex * slideWidth}px)`;  // Desplaza el carousel
+}
+
+// Función para manejar el botón de "siguiente"
+document.querySelector('.next').addEventListener('click', function() {
+  currentIndex = (currentIndex + 1) % totalSlides;  // Ciclo entre los slides
+  updateCarousel();
+});
+
+// Función para manejar el botón de "anterior"
+document.querySelector('.prev').addEventListener('click', function() {
+  currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;  // Ciclo entre los slides
+  updateCarousel();
+});
+
+// Llamada inicial para actualizar el carousel
+updateCarousel();
+
+// También actualizamos el carousel cuando el tamaño de la ventana cambie
+window.addEventListener('resize', updateCarousel);
+</script>
+</html>

@@ -62,97 +62,243 @@
     <script src="../assets/vendor/js/dropdown-hover.js"></script>
     <script src="../assets/vendor/js/mega-dropdown.js"></script>
     <script>
-let index = 0;  // Índice del grupo de tres slides visibles
-const slidesToShow = 3;  // Mostrar tres slides a la vez
+ let index = 0;  
+let slidesToShow = 3;  // Este será el valor por defecto para pantallas grandes
 
-// Función que mueve el carrusel
+// Función para mover el slide (con base en el tamaño de la pantalla)
 function moveSlide(step) {
-  const slides = document.querySelectorAll('.slide');  // Seleccionamos todos los slides
+  const slides = document.querySelectorAll('.slide');  
   const totalSlides = slides.length;
-
-  // Actualizamos el índice según el paso (avance o retroceso)
-  index += step;
-
-  // Hacer que el índice se mueva cíclicamente
-  if (index < 0) {
-    index = totalSlides - slidesToShow;  // Si el índice es negativo, va al último grupo de tres slides
-  } else if (index >= totalSlides - slidesToShow) {
-    index = 0;  // Si el índice supera el total de grupos de tres slides, va al primer grupo
+  
+  // Determinar el número de slides a mostrar en función del tamaño de la pantalla
+  if (window.innerWidth <= 850) {
+    slidesToShow = 1;  // En pantallas móviles, mostramos solo 1 slide a la vez
+  } else {
+    slidesToShow = 3;  // En pantallas grandes, mostramos 3 slides a la vez
   }
 
-  // Cambiar la posición del slider para mostrar el grupo correspondiente de slides
+  // Actualizamos el índice según la dirección del desplazamiento
+  index += step;
+  
+  // Ajustar el índice cuando se sale de los límites
+  if (index < 0) {
+    index = totalSlides - slidesToShow;  
+  } else if (index >= totalSlides - slidesToShow) {
+    index = 0;  
+  }
+  
+  // Desplazamos el slider
   const slider = document.querySelector('#slider');
   slider.style.transform = `translateX(-${index * (100 / slidesToShow)}%)`;
-
-  // Actualizar las clases de los slides para resaltar el primer slide del siguiente grupo
+  
+  // Actualizamos las clases de los slides
   updateSlideClasses(slides);
 }
 
-// Función que actualiza las clases de los slides para mostrar el primer slide del siguiente grupo como el más grande
+// Actualizamos las clases activas de los slides
 function updateSlideClasses(slides) {
   slides.forEach((slide, i) => {
     const nextSlideIndex = (index + 1) % slides.length;
-
+    
     if (i === nextSlideIndex) {
-      slide.classList.add('active');  // El siguiente slide será el más grande
+      slide.classList.add('active');  // Añadimos la clase 'active' al siguiente slide
     } else {
-      slide.classList.remove('active');  // Los otros slides se mantienen pequeños
+      slide.classList.remove('active');  // Removemos la clase 'active' a los demás
     }
   });
 }
 
+// Escuchar el evento de redimensionar la ventana para actualizar el número de slides visibles
+window.addEventListener('resize', () => {
+  // Actualizar el número de slides a mostrar cada vez que se cambia el tamaño de la pantalla
+  if (window.innerWidth <= 850) {
+    slidesToShow = 1;  // Pantallas pequeñas
+  } else {
+    slidesToShow = 3;  // Pantallas grandes
+  }
+});
+
     </script>
 <style>
 
- 
-.response {
-  display: none;
-}
-#slider-container {
-  position: relative;
-  width: 90%;
-  margin: auto;
-  overflow: hidden;
-  margin-top: -100px;
-}
-
-#slider {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-}
-
-.slide {
-  min-width: 33.33%; /* Mostrar tres slides a la vez */
-  transition: transform 0.5s ease-in-out;
-  display: block;
-  padding: 10px;
-  transform: scale(0.8); /* Reduce el tamaño de todos los slides inicialmente */
-  opacity: 0.8; /* Hace los slides laterales un poco más transparentes */
-}
-
-/* El siguiente slide será más grande (cuando se mueve al siguiente grupo) */
-.slide.active {
-  transform: scale(1);  /* El siguiente slide será el más grande */
-  opacity: 1; /* Mayor opacidad para el slide activo */
-}
-
-.prev, .next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  padding: 10px;
-  font-size: 24px;
-  cursor: pointer;
-  z-index: 10;
-}
-
-.prev { left: 10px; }
-.next { right: 10px; }
-/* Estilo general para el contenedor */
-</style>
+  
+  .response {
+    display: none;
+  }
+  #slider-container {
+    position: relative;
+    width: 90%;
+    height: auto;
+    margin: auto;
+    overflow: hidden;
+    margin: 30px auto;
+  }
+  
+  #slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  
+  .slide {
+    min-width: 33.33%; /* Mostrar tres slides a la vez */
+    transition: transform 0.5s ease-in-out;
+    display: block;
+    padding: 10px;
+    transform: scale(0.8); /* Reduce el tamaño de todos los slides inicialmente */
+    opacity: 0.8; /* Hace los slides laterales un poco más transparentes */
+  }
+  
+  /* El siguiente slide será más grande (cuando se mueve al siguiente grupo) */
+  .slide.active {
+    transform: scale(1);  /* El siguiente slide será el más grande */
+    opacity: 1; /* Mayor opacidad para el slide activo */
+  }
+  
+  .prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10;
+  }
+  
+  .prev { left: 10px; }
+  .next { right: 10px; }
+  
+  /**/
+  #slider-container1 {
+    position: relative;
+    width: 90%;
+    height: auto;
+    margin: auto;
+    overflow: hidden;
+    margin: 30px auto;
+  }
+  
+  #slider1 {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  
+  .slide1 {
+    min-width: 33.33%; /* Mostrar tres slides a la vez */
+    transition: transform 0.5s ease-in-out;
+    display: block;
+    padding: 10px;
+    transform: scale(0.8); /* Reduce el tamaño de todos los slides inicialmente */
+    opacity: 0.8; /* Hace los slides laterales un poco más transparentes */
+  }
+  
+  /* El siguiente slide será más grande (cuando se mueve al siguiente grupo) */
+  .slide1.active {
+    transform: scale(1);  /* El siguiente slide será el más grande */
+    opacity: 1; /* Mayor opacidad para el slide activo */
+  }
+  
+  .prev1, .next1 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10;
+  }
+  
+  .prev1 { left: 10px; }
+  .next1 { right: 10px; }
+  
+  /* Pantallas pequeñas (móviles) */
+  @media (max-width: 850px) {
+    body {
+      background-color: lightblue;
+    }
+    .slide {
+    min-width: 100%; /* Mostrar tres slides a la vez */
+    transition: transform 0.5s ease-in-out;
+    display: block;
+    padding: 10px;
+    transform: scale(0.8); /* Reduce el tamaño de todos los slides inicialmente */
+    opacity: 0.8; /* Hace los slides laterales un poco más transparentes */
+  }
+  .slide1 {
+    min-width: 100%; /* Mostrar tres slides a la vez */
+    transition: transform 0.5s ease-in-out;
+    display: block;
+    padding: 10px;
+    transform: scale(0.8); /* Reduce el tamaño de todos los slides inicialmente */
+    opacity: 0.8; /* Hace los slides laterales un poco más transparentes */
+  }
+  #slider-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin-top: -100px;
+  }
+  #slider-container1 {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin-top: -100px;
+  }
+  }
+  
+  /* Pantallas medianas (tablets) */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    body {
+      background-color: lightgreen;
+    }
+    .slide {
+    min-width: 33.33%; /* Mostrar tres slides a la vez */
+    transition: transform 0.5s ease-in-out;
+    display: block;
+    padding: 10px;
+    transform: scale(0.8); /* Reduce el tamaño de todos los slides inicialmente */
+    opacity: 0.8; /* Hace los slides laterales un poco más transparentes */
+  }
+  .slide1 {
+    min-width: 33.33%; /* Mostrar tres slides a la vez */
+    transition: transform 0.5s ease-in-out;
+    display: block;
+    padding: 10px;
+    transform: scale(0.8); /* Reduce el tamaño de todos los slides inicialmente */
+    opacity: 0.8; /* Hace los slides laterales un poco más transparentes */
+  }
+  }
+  
+  /* Pantallas grandes (escritorios, laptops) */
+  @media (min-width: 1025px) {
+    body {
+      background-color: lightcoral;
+    }
+    .slide {
+    min-width: 33.33%; /* Mostrar tres slides a la vez */
+    transition: transform 0.5s ease-in-out;
+    display: block;
+    padding: 10px;
+    transform: scale(0.8); /* Reduce el tamaño de todos los slides inicialmente */
+    opacity: 0.8; /* Hace los slides laterales un poco más transparentes */
+  }
+  .slide1 {
+    min-width: 33.33%; /* Mostrar tres slides a la vez */
+    transition: transform 0.5s ease-in-out;
+    display: block;
+    padding: 10px;
+    transform: scale(0.8); /* Reduce el tamaño de todos los slides inicialmente */
+    opacity: 0.8; /* Hace los slides laterales un poco más transparentes */
+  }
+  }
+  </style>
     <!-- Navbar: Start -->
     <nav class="layout-navbar shadow-none py-0">
       <div class="container">
@@ -489,9 +635,9 @@ function updateSlideClasses(slides) {
       <section id="somos" class="section-py landing-features">
         <div class="container">
           <div class="text-center mb-3 pb-1">
-          <h3 class="primerParrafo" >
+          <p>
             Es un sistema profesional que centraliza todos los canales de comunicación cliente-empresa, y empresa-cliente.
-          </h3>
+          </p>
           <div>
         
           
@@ -575,9 +721,7 @@ function updateSlideClasses(slides) {
       <!-- Useful features: End -->
    
 
-      <h1 style="font-size: 40px; text-align: center; font-family: 'Open Sans', sans-serif; font-weight: bolder; color: #74ac58; margin-bottom: 20px;">
-        FUNCIONALIDADES
-    </h1>
+      <h1 class="text-center mb-1" style="color: #74ac58; font-weight: bolder;">FUNCIONALIDADES</h1>
       <section style="width: 70%; margin: auto;">
         <div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 20px;">
           <a href="funcionalidades/funcionalidadesGenerales.html">
@@ -625,40 +769,46 @@ function updateSlideClasses(slides) {
         </div>
       </section>
      
-<div class="bloquePagos">
-<div class="textoPagos">
+<div class="container">
+<div class="contenedorCRM">
+<div class="descripcionCRM">
 <h1 style="font-size: 3em; text-align: center; font-family: 'Open Sans', sans-serif; font-weight: bolder; color: #74ac58; margin-bottom: 20px;">PAGOS</h1>
-<p style="color: #8592a3; font-family: 'Montserrat', 'sans-serif'; font-weight: 200;font-size: 1.8em;">Nuestro sistema de integra a pasarelas de pago, para mejorar la experiencia de usuario y aumentar la efectividad de cierre de ventas. 
+<p >Nuestro sistema de integra a pasarelas de pago, para mejorar la experiencia de usuario y aumentar la efectividad de cierre de ventas. 
   El usuario mantiene la experiencia en el chatbot y recibe el comprobante de la transacción en este canal.</p>
 </div>
-<div class="imagenPagos">
+<div class="imagenCRM">
   <lottie-player src="https://lottie.host/ad62a7b7-e5f9-48c6-a734-3cd6d840b536/b4pGlLeT0g.json" background="##ffffff" 
   speed="1" style="width: 100%; height: 100%" loop  autoplay direction="1" mode="normal"></lottie-player>
 </div>
 </div>
+</div>
 
-<div class="bloquePagos">
-  <div class="textoPagos">
+<div class="container">
+  <div class="contenedorCRM">
+  <div class="descripcionCRM">
   <h1 style="font-size: 3em; text-align: center; font-family: 'Open Sans', sans-serif; font-weight: bolder; color: #74ac58; margin-bottom: 20px;">GEOLOCALIZACIÓN DE PUNTOS DE ATENCIÓN</h1>
-  <p style="color: #8592a3; font-family: 'Montserrat', 'sans-serif'; font-weight: 200;font-size: 1.8em;">A través del asistente puede compartir con sus clientes información de la ubicación GPS del
+  <p >A través del asistente puede compartir con sus clientes información de la ubicación GPS del
      teléfono móvil.En pocos segundos el usuario conocerá en un mapa los puntos más cercanos y detalles de su ubicación.</p>
   </div>
-  <div class="imagenPagos">
+  <div class="imagenCRM">
     <lottie-player src="https://lottie.host/b4f99d07-7ecc-4019-a7ef-b9ae833cf293/HCFL2P8P5u.json" background="##FFFFFF" 
     speed="1" style="width: 100%; height: 100%" loop autoplay direction="1" mode="normal"></lottie-player>
   </div>
+</div>
   </div>
 
-  <div class="bloquePagos">
-    <div class="textoPagos">
+  <div class="container">
+    <div class="contenedorCRM">
+    <div class="descripcionCRM">
     <h1 style="font-size: 3em; text-align: center; font-family: 'Open Sans', sans-serif; font-weight: bolder; color: #74ac58; margin-bottom: 20px;">RASTREO DE PEDIDOS</h1>
-    <p style="color: #8592a3; font-family: 'Montserrat', 'sans-serif'; font-weight: 200;font-size: 1.8em;">El asistente cuenta con el módulo de gestión de pedidos, el cual hace seguimiento al ciclo 
+    <p >El asistente cuenta con el módulo de gestión de pedidos, el cual hace seguimiento al ciclo 
       de vida del producto o servicio hasta su entrega final. Mantiene al usuario informado de cada cambio de estado.</p>
     </div>
-    <div class="imagenPagos">
+    <div class="imagenCRM">
       <lottie-player src="https://lottie.host/4cac5aaf-6990-4531-9920-eca80246254e/EtRbvR187Y.json" background="##FFFFFF" speed="1" 
       style="width: 100%; height: 100%" loop  autoplay direction="1" mode="normal"></lottie-player>
     </div>
+  </div>
     </div>
 
       <h1 style="font-size: 3em; text-align: center; font-family: 'Open Sans', sans-serif; font-weight: bolder; color: #74ac58; margin-bottom: 20px;">
@@ -692,9 +842,8 @@ function updateSlideClasses(slides) {
 
 
       
-      <h1 style="font-size: 40px; text-align: center;font-family: 'Open Sans', sans-serif;font-weight: bolder;color:#74ac58; margin-top: 30px;">CON NUESTRO AGENTE VIRTUAL PUEDES:</h1>
-      <section id="landingPricing" class="section-py bg-body landing-pricing">
-        <div class="container">
+    <h1 class="text-center mb-1" style="color: #74ac58; font-weight: bolder;">CON NUESTRO AGENTE VIRTUAL PUEDES:</h1>
+     
           <div id="slider-container">
             <div id="slider">
               <!-- Duplicar los slides al principio y al final para crear un efecto infinito -->
@@ -744,8 +893,7 @@ function updateSlideClasses(slides) {
             <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
             <button class="next" onclick="moveSlide(1)">&#10095;</button>
           </div>
-        </div>
-      </section>
+       
       
       <div class="robot">
         <div class="imagenRobot">
@@ -897,113 +1045,5 @@ function updateSlideClasses(slides) {
   <!-- Page JS -->
   <script src="assets/js/front-page-landing.js"></script>
   </body>
-  <style>
-    #Capa_1 {
-animation-iteration-count: infinite;
-animation-timing-function: linear;
-animation-duration: 50s;
-animation-name: spinner-loading;
-animation-duration: 100s; /* Aumentado para hacer la animación más lenta */
-transform-origin: center;
-transform-box: fill-box;
-width: 80%;
-}
-@keyframes spinner-loading {
-0% {
-  transform: rotate(0deg);
-}
-to {
-  transform: rotate(1turn);
-}
-}
-#Capa_2,
-#Capa_3,
-#Capa_4,
-#Capa_5,
-#Capa_6,
-#Capa_7 {
-animation-iteration-count: infinite;
-animation-timing-function: linear;
-animation-duration: 50s;
-animation-name: spinner-capas;
-animation-duration: 100s; /* Aumentado para hacer la animación más lenta */
-transform-origin: center;
-cursor: pointer;
-}
-@keyframes spinner-capas {
-0% {
-  transform: rotate(0deg);
-}
-to {
-  transform: rotate(1turn);
-}
-}
-
-.rueda {
-width: 45vw;
-height: 45vh;
-box-sizing: border-box;
-}
-.st0{fill:#447ab7}.st1{fill:#89b749}.st2{fill:#798eab}.st3{fill:#fff}
-.contenedor{
-width: 50%;
-margin: auto;
-display: block;
-}
-.PList {
-    display: none; /* Oculta por defecto */
-}
-
-@media (max-width: 1200px) {
-  .PList {
-    display: block; /* Muestra en pantallas pequeñas */
-  }
-
-  /* Ocultar el contenedor cuando la pantalla es pequeña */
-  .contenedor {
-    display: none;
-  }
-
-  /* Centrar las imágenes en filas y que hagan wrap */
-  .listaProductos {
-    display: flex;
-    flex-wrap: wrap; /* Permite que los elementos se acomoden en filas */
-    justify-content: center; /* Centra las imágenes horizontalmente */
-    align-items: center; /* Centra las imágenes verticalmente */
-    margin: 0; /* Elimina márgenes por defecto */
-  }
-
-  /* Hacer que las imágenes se ajusten al 100% de la pantalla pero en filas */
-  .listaProductos img {
-    width: 100%; /* Hacer que las imágenes ocupen todo el ancho del contenedor */
-    max-width: 300px; /* Limita el tamaño máximo de cada imagen */
-    height: auto; /* Mantiene la relación de aspecto */
-    margin: 10px; /* Añade un poco de espacio entre las imágenes */
-    object-fit: contain; /* Asegura que las imágenes no se distorsionen */
-  }
-
-  /* Imagen principal, asegurando que ocupe el 100% del ancho */
-  #nuestroProductos {
-    width: 100%;
-    max-width: 100%; /* Asegura que no exceda el ancho de la pantalla */
-    height: auto; /* Mantiene la proporción */
-    margin-top: 10%; /* Añade margen superior para separar un poco de la parte superior de la pantalla */
-  }
-
-  /* Ajustar las imágenes de los productos (se acomoden en filas) */
-  #uno, #dos, #tres, #cuatro, #cinco, #seis {
-    width: 100%; /* Las imágenes ocuparán el 100% del ancho disponible */
-    max-width: 300px; /* Asegura que las imágenes no sean más grandes de 300px */
-    height: auto; /* Mantiene la proporción de la imagen */
-    margin-top: 10px; /* Espacio entre las imágenes */
-    object-fit: contain; /* Asegura que la imagen mantenga su proporción */
-  }
-}
-
-
-
-
-
-
-  </style>
+  
 </html>

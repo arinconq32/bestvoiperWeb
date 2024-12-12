@@ -864,7 +864,7 @@ video {
 .imagenRobot {
   width: 40vw;
   height: 40vh;
-  
+  margin-bottom: 0px;
   
 }
 .textoRobot {
@@ -874,12 +874,11 @@ video {
   padding-bottom: 30px;
 }
 .textoRobot p {
-  
-  font-family: 'Montserrat', 'sans-serif'; font-weight: 200;font-size: 1.8em;
+  font-family: 'Montserrat', 'sans-serif'; font-weight: 200;
   text-align: justify;
   color: white;
   margin: 5%;
-}
+  }
 .grafica1 {
   margin: 0 auto;
   width: 70vw;
@@ -1002,16 +1001,7 @@ video {
   height: 50%;
 }
 
-.slide img {
-  width: 40vw;
-  margin: 0 auto;
-}
 
-.slide {
-  transform: scale(0.5);
-  transition: transform 300ms;
-  opacity: 0.5;
-}
 .activeSlide {
   transform: scale(0.7);
   opacity: 1;
@@ -1727,7 +1717,7 @@ b{
   text-align: justify;
 }
 p{
-  font-size: 1.3em;
+  font-size: 2.6vh;
   font-family: 'Montserrat', 'sans-serif'; font-weight: 200;
   text-align: justify;
   color: gray;
@@ -1961,6 +1951,9 @@ p{
   display: block;
   
 }
+#productos{
+  display: none;
+}
 .listaProductos{
 display: flex;
 flex-flow: column wrap;
@@ -2161,22 +2154,7 @@ form input[type=email]{
 
 }
 
-.slide img {
-  width: 100vw;
-  margin-left: -115%;
- 
-}
 
-.slide {
-  transform: scale(1);
-  transition: transform 300ms;
-  opacity: 0;
-}
-.activeSlide {
-  transform: scale(1);
-  opacity: 1;
-  margin-left: -30%;
-}
 .arrow {
   background-color: #fff;
   position: absolute;
@@ -2590,29 +2568,30 @@ form input[type=password]{
   padding: 3%;
   width: 80%;
   display: flex; /* Alinea los elementos hijos horizontalmente */
- flex-flow: row wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
- margin: auto;
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan cuando el espacio sea pequeño */
+  margin: auto;
 }
 
 .textoPagos {
-  width: 50%; /* Ocupa el 50% del espacio en pantallas grandes */
+  flex: 1 1 50%; /* Ocupará el 50% del espacio, pero podrá reducirse si es necesario */
   height: 40%;
   text-align: center;
-  padding:20px;
- 
-}
-.textoPagos p{
-  color: black;
+  padding: 20px;
 }
 
 .imagenPagos {
-  width: 50%; /* Ocupa el 50% del espacio en pantallas grandes */
+  flex: 1 1 50%; /* Ocupará el 50% del espacio, pero podrá reducirse si es necesario */
   height: 40%;
   /* Centrado de la imagen usando flexbox */
   display: flex;
   justify-content: center; /* Centra horizontalmente */
   align-items: center; /* Centra verticalmente */
 }
+.textoPagos p{
+  color: black;
+}
+
+
 
 .imagenPagos img { /* Esto asume que tienes una imagen dentro de .imagenPagos */
   max-width: 100%; /* La imagen nunca será más ancha que su contenedor */
@@ -2624,27 +2603,7 @@ form input[type=password]{
 
 /* Media query para pantallas muy pequeñas (320px o más) */
 @media (min-width: 320px) and (max-width: 750px) {
-  #slider-container {
-    position: relative;
-    width: 100%;
-   height: 40vh;
-    overflow: hidden;
-    margin-bottom: -10%;
-    margin-top: -10%;
-    
-  }
-  .imagenC img{
-    width: 60%;
-    margin: auto;
-  }
- 
-  
-  .slide{
-    margin-top: -45%;
-  }
-  .slide1{
-    margin-top: -45%;
-  }
+
   .robot {
     display: flex;
     flex-flow: column wrap;
@@ -2655,8 +2614,7 @@ form input[type=password]{
   }
   .imagenRobot {
     width: 100vw;
-    height: 70vh;
-    
+    height: auto;
     
   }
   .textoRobot {
@@ -2664,12 +2622,13 @@ form input[type=password]{
     
   }
   .textoRobot p {
-    font-size: 1.8em;
-    font-family: "Roboto", sans-serif;
+    font-family: 'Montserrat', 'sans-serif'; ;
     text-align: justify;
     color: white;
-    
-  }
+    margin: 5%;
+   line-height: 1.8rem;
+    padding: 20px;
+    }
 
 
   .textoPagos, .imagenPagos {
@@ -2700,9 +2659,7 @@ form input[type=password]{
 
 /* Tablet media query (entre 750px y 800px) */
 @media (min-width: 751px) and (max-width: 799px) {
-  #slider-container {
-    height: 50vh;  /* Ajustamos la altura del slider en pantallas pequeñas */
-  }
+  
   .CRMtitle{
     color:white;
   }
@@ -2710,24 +2667,8 @@ form input[type=password]{
     width: 60%;
     margin: auto;
   }
-  .slide {
-    min-width: 100%; /* Mostrar un solo slide a la vez */
-    transform: scale(1); /* Los slides no se redimensionan en pantallas pequeñas */
-    opacity: 1; /* No hay opacidad en los slides laterales */
-  }
-
-  #slider {
-    display: block; /* Los slides se mostrarán uno debajo del otro */
-  }
-  .slide1 {
-    min-width: 100%; /* Mostrar un solo slide a la vez */
-    transform: scale(1); /* Los slides no se redimensionan en pantallas pequeñas */
-    opacity: 1; /* No hay opacidad en los slides laterales */
-  }
-
-  #slider1 {
-    display: block; /* Los slides se mostrarán uno debajo del otro */
-  }
+  
+ 
   section > div {
     display: flex;
     flex-direction: column;
@@ -2766,8 +2707,8 @@ form input[type=password]{
 /* Pantallas de más de 1024px */
 @media (min-width: 1024px) {
  .imagen{
-  margin-top: -7%;
-  margin-bottom: -7%;
+  margin-top: -4%;
+ 
  }
 
   .adornoProductos {
@@ -2801,6 +2742,7 @@ form input[type=password]{
   justify-content: center; /* Centra horizontalmente */
   align-items: center;     /* Centra verticalmente */
 }
+
 
 .imagenCRM, .descripcionCRM {
   flex: 1 1 45%; /* Esto asegura que los elementos ocupen 45% del contenedor pero puedan reducir su tamaño si es necesario */
