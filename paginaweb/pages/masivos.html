@@ -686,7 +686,7 @@ window.addEventListener('resize', () => {
         </div>
         <div class="imagenCRM">
           
-          <div id="lottie"  style="width: 100%; height: 100%;"></div>
+          <div id="lottie"  style="width: 80%; height: 80%;margin: auto;"></div>
         </div>
       </div>
         </div>
@@ -697,7 +697,7 @@ window.addEventListener('resize', () => {
           
           <div class="imagenCRM">
             
-            <div id="lottie2"  style="width: 100%; height: 100%;"></div>
+            <div id="lottie2"  style="width: 80%; height: 80%;margin: auto;"></div>
           </div>
           <div class="descripcionCRM">
          
@@ -715,7 +715,7 @@ window.addEventListener('resize', () => {
                 </div>
             <div class="imagenCRM">
               
-              <div id="lottie3" style="width: 100%; height: 100%;"></div>
+              <div id="lottie3" style="width: 80%; height: 80%;margin: auto;"></div>
             </div>
          
           </div>
@@ -920,7 +920,7 @@ window.addEventListener('resize', () => {
       
     </div>
     <div class="imagenCRM">
-      <img  src="../assets/img/front-pages/landing-page/flash.png" alt="Imagen Flash" >
+      <img class="flash" src="../assets/img/front-pages/landing-page/flash.svg" alt="Imagen Flash" >
     </div>
  
 </div>
@@ -937,7 +937,7 @@ MENSAJES STANDARD</span>
 
   <div class="contenedorCRM">
   <div class="imagenCRM">
-  <img class="flash" src="../assets/img/front-pages/landing-page/transaccionales.png" alt="Imagen Flash" >
+  <img class="flash" src="../assets/img/front-pages/landing-page/standar.svg" alt="Imagen Flash" >
 </div>
   <div class="descripcionCRM">
 
@@ -983,7 +983,7 @@ MENSAJES STANDARD</span>
       
     </div>
     <div class="imagenCRM">
-      <img class="flash" src="../assets/img/front-pages/landing-page/transaccionales.png" alt="Imagen Flash" >
+      <img class="flash" src="../assets/img/front-pages/landing-page/doblevia.svg" alt="Imagen Flash" >
     </div>
  
 </div>
@@ -997,7 +997,7 @@ MENSAJES STANDARD</span>
   </div>
 <div class="contenedorCRM">
   <div class="imagenCRM">
-  <img class="flash" src="../assets/img/front-pages/landing-page/transaccionales.png" alt="Imagen Flash" >
+  <img class="flash" src="../assets/img/front-pages/landing-page/transaccionales.svg" alt="Imagen Flash" >
 </div>
   <div class="descripcionCRM">
 
@@ -1021,62 +1021,50 @@ MENSAJES STANDARD</span>
     ADQUIERE SMS MASIVOS AHORA MISMO</span>
     </div>
     
-    <form className="checkout" >
-        <script
-            src="https://checkout.epayco.co/checkout.js"
-            class="epayco-button"
-            data-epayco-key="491d6a0b6e992cf924edd8d3d088aff1"
-            data-epayco-amount="300.000"
-            data-epayco-name="BestCallCenterPro"
-            data-epayco-description="BestIpTrunk"
-            data-epayco-currency="cop"
-            data-epayco-country="co"
-            data-epayco-test="true"
-            data-epayco-button="https://multimedia.epayco.co/epayco-landing/btns/epayco_pago_seguro_gray.png"
-            data-epayco-external="false"
-            data-epayco-response="https://localhost:3000/feedback"
-            data-epayco-confirmation="https://localhost:3000/feedback"
-            data-epayco-methodconfirmation="get">
-        </script>
-    </form>
+    
 </section>
   <!-- Contact Us: End -->
-<div>
-  <form id="contactForm" style="margin: 10px auto">
-    <p class="tituloForm">CONTÁCTANOS</p>
-    <input
-        id="nombres"
-        type="text"
-        placeholder="Nombre y Apellido"
-        name="nombres"
-        required
-    />
-    <input
-        id="email"
-        type="email"
-        placeholder="Correo"
-        name="email"
-        required
-    />
-    <input
-        id="telefono"
-        type="number"
-        placeholder="Teléfono de Contacto"
-        name="telefono"
-        required
-    />
-    <textarea
-        id="mensaje"
-        placeholder="¿Cómo podemos ayudarte? (opcional)"
-        name="mensaje"
-    ></textarea>
-    <input type="submit" value="ENVIAR MENSAJE" name="enviar" />
-    <div id="respuestaEnviado" style="display: none;">
-        <p id="respuestaTexto"></p>
+  <div>
+    <div class="imagenContacto">
+      <img src="../assets/img/front-pages/landing-page/contacto.svg"/>
     </div>
-    <p class="registro">Teléfonos: (+57)3330333014 || (+57)312 456 0009</p>
-    <p class="olvido">info@bestvoiper.com.co</p>
-</form>
+    <form action="../mail/enviarMail.php" method="POST" id="contactForm">
+     
+      <input type="hidden" name="product_name" value="SMS Masivos">
+      <input
+          id="nombres"
+          type="text"
+          placeholder="Nombre y Apellido"
+          name="nombres"
+          required
+      />
+      <input
+          id="email"
+          type="email"
+          placeholder="Correo"
+          name="email"
+          required
+      />
+      <input
+          id="telefono"
+          type="number"
+          placeholder="Teléfono de Contacto"
+          name="telefono"
+          required
+      />
+      <textarea
+          id="mensaje"
+          placeholder="¿Cómo podemos ayudarte? (opcional)"
+          name="mensaje"
+      ></textarea>
+      <input type="submit" value="ENVIAR MENSAJE" name="enviar" />
+      <div id="respuestaEnviado" style="display: none;">
+          <p id="respuestaTexto"></p>
+      </div>
+      <p class="registro">Teléfonos: (+57)3330333014 || (+57)312 456 0009</p>
+      <p class="olvido">info@bestvoiper.com.co</p>
+  </form>
+  
 
 </div>
 <!-- / Sections:End -->

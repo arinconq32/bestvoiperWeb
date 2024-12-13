@@ -194,7 +194,7 @@ window.addEventListener('resize', () => {
     overflow: hidden;
     margin-top: -100px;
   }
-
+ 
   }
   
   /* Pantallas medianas (tablets) */
@@ -272,15 +272,17 @@ h1 {
 }
 
 .toggleTitulo {
-  font-size: 1.5em;
+
   color: #7e7e7e;  /* Color inicial del título */
   font-weight: bold;
   margin: 0;
   transition: color 0.3s ease;  /* Transición suave para el cambio de color */
   font-family: 'Montserrat', 'sans-serif'; font-weight: bolder;
-  font-size: 1.3em;
+  font-size: 1.1rem;
 }
-
+.response p{
+  font-size: 1.1rem;
+}
 /* Estilo del icono chevron */
 .chevron {
   font-size: 1.5em;
@@ -674,95 +676,21 @@ h1 {
             <p class="text-center mb-3 mb-md-5 pb-3" >
               Herramienta con funciones avanzadas que permite a teleoperadores, asesores o agentes de atención al cliente:            </p>
             
-            <h1 style="font-size: 40px; text-align: center;font-family: 'Open Sans', sans-serif;font-weight: bolder;color:#74ac58; margin-top: 30px;">CARACTERISTICAS</h1>
-
-           
-            <section class="icon-container">
-              <div class="icon-box">
-                <svg class="icon" fill="#adb1ba" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                  <path d="M64 32C28.7 32 0 60.7 0 96L0 416c0 35.3 28.7 64 64 64l320 0c35.3 0 64-28.7 64-64l0-320c0-35.3-28.7-64-64-64L64 32zm64 192c17.7 0 32 14.3 32 32l0 96c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-96c0-17.7 14.3-32 32-32zm64-64c0-17.7 14.3-32 32-32s32 14.3 32 32l0 192c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-192zM320 288c17.7 0 32 14.3 32 32l0 32c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-32c0-17.7 14.3-32 32-32z"/>
-                </svg>
-                <p class="icon-text">Realizar una encuesta</p>
-              </div>
-              <div class="icon-box">
-                <svg class="icon" fill="#adb1ba" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                  <path d="M256 48C141.1 48 48 141.1 48 256l0 40c0 13.3-10.7 24-24 24s-24-10.7-24-24l0-40C0 114.6 114.6 0 256 0S512 114.6 512 256l0 144.1c0 48.6-39.4 88-88.1 88L313.6 488c-8.3 14.3-23.8 24-41.6 24l-32 0c-26.5 0-48-21.5-48-48s21.5-48 48-48l32 0c17.8 0 33.3 9.7 41.6 24l110.4 .1c22.1 0 40-17.9 40-40L464 256c0-114.9-93.1-208-208-208zM144 208l16 0c17.7 0 32 14.3 32 32l0 112c0 17.7-14.3 32-32 32l-16 0c-35.3 0-64-28.7-64-64l0-48c0-35.3 28.7-64 64-64zm224 0c35.3 0 64 28.7 64 64l0 48c0 35.3-28.7 64-64 64l-16 0c-17.7 0-32-14.3-32-32l0-112c0-17.7 14.3-32 32-32l16 0z"/>
-                </svg>
-                <p class="icon-text">Recibir y realizar llamadas a clientes actuales y potenciales con el objetivo de vender un producto.</p>
-              </div>
-              <div class="icon-box">
-                <svg class="icon" fill="#adb1ba" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
-                  <path d="M72 88a56 56 0 1 1 112 0A56 56 0 1 1 72 88zM64 245.7C54 256.9 48 271.8 48 288s6 31.1 16 42.3l0-84.7zm144.4-49.3C178.7 222.7 160 261.2 160 304c0 34.3 12 65.8 32 90.5l0 21.5c0 17.7-14.3 32-32 32l-64 0c-17.7 0-32-14.3-32-32l0-26.8C26.2 371.2 0 332.7 0 288c0-61.9 50.1-112 112-112l32 0c24 0 46.2 7.5 64.4 20.3zM448 416l0-21.5c20-24.7 32-56.2 32-90.5c0-42.8-18.7-81.3-48.4-107.7C449.8 183.5 472 176 496 176l32 0c61.9 0 112 50.1 112 112c0 44.7-26.2 83.2-64 101.2l0 26.8c0 17.7-14.3 32-32 32l-64 0c-17.7 0-32-14.3-32-32zm8-328a56 56 0 1 1 112 0A56 56 0 1 1 456 88zM576 245.7l0 84.7c10-11.3 16-26.1 16-42.3s-6-31.1-16-42.3zM320 32a64 64 0 1 1 0 128 64 64 0 1 1 0-128zM240 304c0 16.2 6 31 16 42.3l0-84.7c-10 11.3-16 26.1-16 42.3zm144-42.3l0 84.7c10-11.3 16-26.1 16-42.3s-6-31.1-16-42.3zM448 304c0 44.7-26.2 83.2-64 101.2l0 42.8c0 17.7-14.3 32-32 32l-64 0c-17.7 0-32-14.3-32-32l0-42.8c-37.8-18-64-56.5-64-101.2c0-61.9 50.1-112 112-112l32 0c61.9 0 112 50.1 112 112z"/>
-                </svg>
-                <p class="icon-text">Ofrecer un servicio.</p>
-              </div>
-              <div class="icon-box">
-                <svg class="icon2" fill="#adb1ba" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
-                  <path d="M192 0c-41.8 0-77.4 26.7-90.5 64L64 64C28.7 64 0 92.7 0 128L0 448c0 35.3 28.7 64 64 64l256 0c35.3 0 64-28.7 64-64l0-320c0-35.3-28.7-64-64-64l-37.5 0C269.4 26.7 233.8 0 192 0zm0 64a32 32 0 0 1 32 32l0 64c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32zm-96 64a24 24 0 1 1 48 0 24 24 0 1 1 -48 0zm88 0c0-8.8 7.2-16 16-16l128 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-128 0c-8.8 0-16-7.2-16-16zM72 368a24 24 0 1 1 48 0 24 24 0 1 1 -48 0zm88 0c0-8.8 7.2-16 16-16l128 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-128 0c-8.8 0-16-7.2-16-16z"/>
-                </svg>
-                <p class="icon-text">Recibir llamadas para responder inquietudes y tomar pedidos.</p>
-              </div>
-              <div class="icon-box">
-                <svg class="icon" fill="#adb1ba" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                  <path d="M96 80c0-26.5 21.5-48 48-48l288 0c26.5 0 48 21.5 48 48l0 304L96 384 96 80zm313 47c-9.4-9.4-24.6-9.4-33.9 0l-111 111-47-47c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l64 64c9.4 9.4 24.6 9.4 33.9 0L409 161c9.4-9.4 9.4-24.6 0-33.9zM0 336c0-26.5 21.5-48 48-48l16 0 0 128 448 0 0-128 16 0c26.5 0 48 21.5 48 48l0 96c0 26.5-21.5 48-48 48L48 480c-26.5 0-48-21.5-48-48l0-96z"/>
-                </svg>
-                <p class="icon-text">Registrar reclamos, sondeos, entre otros.</p>
-              </div>
-            </section>
+              <h1 style="font-size: 40px; text-align: center;font-family: 'Open Sans', sans-serif;font-weight: bolder;color:#74ac58">
+                CARACTERISTICAS</h1>
+              <section style="width: 100%; margin: auto;">
+                  <div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 20px;">
+                      <img src="../assets/img/front-pages/landing-page/call1.svg" style="width: 450px" alt="human image" />
+                      <img src="../assets/img/front-pages/landing-page/call2.svg" style="width: 450px" alt="human image" />
+                      <img src="../assets/img/front-pages/landing-page/call3.svg" style="width: 450px" alt="human image" />
+                      <img src="../assets/img/front-pages/landing-page/call4.svg" style="width: 450px" alt="human image" />
+                      <img src="../assets/img/front-pages/landing-page/call5.svg" style="width: 450px" alt="human image" />
+                 
+                  </div>
+              </section>
+             
           </div>
-         <!--<div class="features-icon-wrapper row gx-0 gy-4 g-sm-5">
-            <div class="col-lg-4 col-sm-6 text-center features-icon-box">
-              <div class="text-center mb-3">
-                <img src="assets/img/front-pages/icons/ruedaProductos.svg" alt="laptop charging" />
-              </div>
-              <h5 class="mb-3">Quality Code</h5>
-              <p class="features-icon-description">
-                Code structure that all developers will easily understand and fall in love with.
-              </p>
-            </div>
-            <div class="col-lg-4 col-sm-6 text-center features-icon-box">
-              <div class="text-center mb-3">
-                <img src="assets/img/front-pages/icons/rocket.png" alt="transition up" />
-              </div>
-              <h5 class="mb-3">Continuous Updates</h5>
-              <p class="features-icon-description">
-                Free updates for the next 12 months, including new demos and features.
-              </p>
-            </div>
-            <div class="col-lg-4 col-sm-6 text-center features-icon-box">
-              <div class="text-center mb-3">
-                <img src="assets/img/front-pages/icons/paper.png" alt="edit" />
-              </div>
-              <h5 class="mb-3">Stater-Kit</h5>
-              <p class="features-icon-description">
-                Start your project quickly without having to remove unnecessary features.
-              </p>
-            </div>
-            <div class="col-lg-4 col-sm-6 text-center features-icon-box">
-              <div class="text-center mb-3">
-                <img src="assets/img/front-pages/icons/check.png" alt="3d select solid" />
-              </div>
-              <h5 class="mb-3">API Ready</h5>
-              <p class="features-icon-description">
-                Just change the endpoint and see your own data loaded within seconds.
-              </p>
-            </div>
-            <div class="col-lg-4 col-sm-6 text-center features-icon-box">
-              <div class="text-center mb-3">
-                <img src="assets/img/front-pages/icons/user.png" alt="lifebelt" />
-              </div>
-              <h5 class="mb-3">Excellent Support</h5>
-              <p class="features-icon-description">An easy-to-follow doc with lots of references and code examples.</p>
-            </div>
-            <div class="col-lg-4 col-sm-6 text-center features-icon-box">
-              <div class="text-center mb-3">
-                <img src="assets/img/front-pages/icons/keyboard.png" alt="google docs" />
-              </div>
-              <h5 class="mb-3">Well Documented</h5>
-              <p class="features-icon-description">An easy-to-follow doc with lots of references and code examples.</p>
-            </div>
-          </div>
-        </div>-->
+      
       
           <div class="text-center mb-3 pb-1">
             
@@ -913,37 +841,24 @@ h1 {
       </div>
   </div>
 </div>
-
+</div>
+</div>
+</div>
+</div>
       <!-- Contact Us: Start -->
       <section style="width: 100%; display: flex; justify-content: center; align-items: center; flex-direction: column; margin-top: 30px; padding: 0 15px;">
         <h1 style="font-size: 2.5rem; text-align: center; font-family: 'Open Sans', sans-serif; font-weight: bolder; color: #74ac58; margin-bottom: 20px;">
             ADQUIERE BESTCALLCENTER AHORA MISMO
         </h1>
-        
-        <form class="checkout">
-            <script
-                src="https://checkout.epayco.co/checkout.js"
-                class="epayco-button"
-                data-epayco-key="491d6a0b6e992cf924edd8d3d088aff1"
-                data-epayco-amount="300.000"
-                data-epayco-name="BestCallCenterPro"
-                data-epayco-description="BestIpTrunk"
-                data-epayco-currency="cop"
-                data-epayco-country="co"
-                data-epayco-test="true"
-                data-epayco-button="https://multimedia.epayco.co/epayco-landing/btns/epayco_pago_seguro_gray.png"
-                data-epayco-external="false"
-                data-epayco-response="https://localhost:3000/feedback"
-                data-epayco-confirmation="https://localhost:3000/feedback"
-                data-epayco-methodconfirmation="get">
-            </script>
-        </form>
+      
     </section>
-    
-      <!-- Contact Us: End -->
     <div>
-      <form id="contactForm">
-        <p class="tituloForm">CONTÁCTANOS</p>
+      <div class="imagenContacto" style="margin-bottom: -100px;">
+        <img src="../assets/img/front-pages/landing-page/contacto.svg"/>
+      </div>
+      <form action="../mail/enviarMail.php" method="POST" id="contactForm">
+       
+        <input type="hidden" name="product_name" value="Best Call Center">
         <input
             id="nombres"
             type="text"
@@ -978,7 +893,10 @@ h1 {
         <p class="olvido">info@bestvoiper.com.co</p>
     </form>
     
-    </div>
+
+  </div>
+      <!-- Contact Us: End -->
+      
 
     <!-- / Sections:End -->
 
@@ -1050,115 +968,12 @@ h1 {
     <!-- Page JS -->
     <script src="assets/js/front-page-landing.js"></script>
   </body>
-  <style>
-    #Capa_1 {
-animation-iteration-count: infinite;
-animation-timing-function: linear;
-animation-duration: 50s;
-animation-name: spinner-loading;
-animation-duration: 100s; /* Aumentado para hacer la animación más lenta */
-transform-origin: center;
-transform-box: fill-box;
-width: 80%;
-}
-@keyframes spinner-loading {
-0% {
-  transform: rotate(0deg);
-}
-to {
-  transform: rotate(1turn);
-}
-}
-#Capa_2,
-#Capa_3,
-#Capa_4,
-#Capa_5,
-#Capa_6,
-#Capa_7 {
-animation-iteration-count: infinite;
-animation-timing-function: linear;
-animation-duration: 50s;
-animation-name: spinner-capas;
-animation-duration: 100s; /* Aumentado para hacer la animación más lenta */
-transform-origin: center;
-cursor: pointer;
-}
-@keyframes spinner-capas {
-0% {
-  transform: rotate(0deg);
-}
-to {
-  transform: rotate(1turn);
-}
-}
-
-.rueda {
-width: 45vw;
-height: 45vh;
-box-sizing: border-box;
-}
-.st0{fill:#447ab7}.st1{fill:#89b749}.st2{fill:#798eab}.st3{fill:#fff}
-.contenedor{
-width: 50%;
-margin: auto;
-display: block;
-}
-.PList {
-    display: none; /* Oculta por defecto */
-}
-
-@media (max-width: 1200px) {
-  .PList {
-    display: block; /* Muestra en pantallas pequeñas */
-  }
-
-  /* Ocultar el contenedor cuando la pantalla es pequeña */
-  .contenedor {
-    display: none;
-  }
-
-  /* Centrar las imágenes en filas y que hagan wrap */
-  .listaProductos {
-    display: flex;
-    flex-wrap: wrap; /* Permite que los elementos se acomoden en filas */
-    justify-content: center; /* Centra las imágenes horizontalmente */
-    align-items: center; /* Centra las imágenes verticalmente */
-    margin: 0; /* Elimina márgenes por defecto */
-  }
-
-  /* Hacer que las imágenes se ajusten al 100% de la pantalla pero en filas */
-  .listaProductos img {
-    width: 100%; /* Hacer que las imágenes ocupen todo el ancho del contenedor */
-    max-width: 300px; /* Limita el tamaño máximo de cada imagen */
-    height: auto; /* Mantiene la relación de aspecto */
-    margin: 10px; /* Añade un poco de espacio entre las imágenes */
-    object-fit: contain; /* Asegura que las imágenes no se distorsionen */
-  }
-
-  /* Imagen principal, asegurando que ocupe el 100% del ancho */
-  #nuestroProductos {
-    width: 100%;
-    max-width: 100%; /* Asegura que no exceda el ancho de la pantalla */
-    height: auto; /* Mantiene la proporción */
-    margin-top: 10%; /* Añade margen superior para separar un poco de la parte superior de la pantalla */
-  }
-
-  /* Ajustar las imágenes de los productos (se acomoden en filas) */
-  #uno, #dos, #tres, #cuatro, #cinco, #seis {
-    width: 100%; /* Las imágenes ocuparán el 100% del ancho disponible */
-    max-width: 300px; /* Asegura que las imágenes no sean más grandes de 300px */
-    height: auto; /* Mantiene la proporción de la imagen */
-    margin-top: 10px; /* Espacio entre las imágenes */
-    object-fit: contain; /* Asegura que la imagen mantenga su proporción */
-  }
-}
+  
 
 
 
 
 
-
-  </style>
   <script>
     // Función para mostrar u ocultar el contenido y cambiar el chevron
 function toggleVisibility(id, chevron) {

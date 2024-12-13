@@ -1476,31 +1476,42 @@ video {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
-  width: 80vw;
+  width: 95%;
   margin: auto 0;
 }
 .formularioContacto {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
-  width: 80vw;
+  width: 95%;
   margin: 5px auto;
 }
 .formularioContacto img {
-  width: 40vw;
-  margin: 20px;
+  width: 40%;
+
 }
 .formulario img {
-  width: 40vw;
-  margin: 20px;
+  width: 40%;
+
+}
+
+.imagenContacto{
+  width: 350px;
+  justify-content: center;
+  margin: -20px auto;
+  
+}
+.imagenContacto img{
+  width: 100%;
 }
 form {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
-  width: 60vw;
-  
-  background-color: #7e8dab;
+  width: 80vw;
+  margin: auto;
+  box-shadow: 2px 2px 2px 1px rgb(0 0 0 / 20%);
+  background-color: white;
   padding: 20px;
   border-radius: 20px;
   align-self: center;
@@ -1509,59 +1520,97 @@ form input{
   margin: 5px;
 }
 form input[type=email]{
-  background-color: white;
+  background-color: rgba(164, 193, 242, 0.299);
   padding: 10px;
+  border-radius: 100px;
+  font-family: 'Montserrat', 'sans-serif'; 
   border: 0px solid transparent;
-  font-family: 'Montserrat', 'sans-serif'; font-weight: 200;
+  color: black;
+  outline: none; 
+}
 
+input[type=email]:focus {
+  border: 1px solid #3d5785;  
+  outline: none;
 }
 form input[type=text]{
-  background-color: white;
+  background-color: rgba(197, 218, 254, 0.229);
   padding: 10px;
+  border-radius: 100px;
+  font-family: 'Montserrat', 'sans-serif'; 
   border: 0px solid transparent;
-  font-family: 'Montserrat', 'sans-serif'; font-weight: 200;
+  color: black;
+  outline: none; 
   
+}
+input[type=text]:focus {
+  border: 1px solid #3d5785;  
+  outline: none;
 }
 form input[type=number]{
-  background-color: white;
+  background-color: rgba(104, 144, 212, 0.274);
   padding: 10px;
+  border-radius: 100px;
+  font-family: 'Montserrat', 'sans-serif'; 
   border: 0px solid transparent;
-  font-family: 'Montserrat', 'sans-serif'; font-weight: 200;
-  
+  color: black;
+  outline: none; 
+}
+input[type=number]:focus {
+  border: 1px solid #3d5785;  
+  outline: none;
 }
 form textarea{
-  background-color: white;
+  background-color: rgba(91, 126, 186, 0.355);
   padding: 10px;
+  border-radius: 20px;
+  font-family: 'Montserrat', 'sans-serif'; 
   border: 0px solid transparent;
-  margin: 6px;
-  font-family: 'Montserrat', 'sans-serif'; font-weight: 200;
+  color: black;
+  outline: none; 
+  margin: 5px;
 }
+form textarea:focus{
+  border: 1px solid #3d5785;  
+  outline: none;
+}
+
+
 form input[type=password]{
-  background-color: white;
+  background-color: rgba(91, 126, 186, 0.355);
   padding: 10px;
   border: 0px solid transparent;
-  font-family: 'Montserrat', 'sans-serif'; font-weight: 200;
+  font-family: 'Montserrat', 'sans-serif'; 
+  font-weight: normal;
+  border-radius: 100px;
   
 }
 form input[type=submit]{
   background-color: #5579b7;
   color: white;
   border: 0px solid transparent;
-  font-family: 'Montserrat', 'sans-serif'; font-weight: 200;  padding: 10px;
+  font-family: 'Montserrat', 'sans-serif'; 
+  font-weight: bolder;  
+  padding: 10px;
+  border-radius: 5px;
   
 }
 form input[type=submit]:hover{
   background-color: #3d5785;
   cursor: pointer;
+  font-family: 'Montserrat', 'sans-serif'; 
 }
+
+
+
 .google{
   background-color: #3d5785;
   cursor: pointer;
   color: white;
-  font-size: 0.8em;
+  font-size: 1.1em;
   border: 0px solid transparent;
   padding: 10px;
-  font-family: "Mitr";
+  font-family: 'Montserrat', 'sans-serif'; font-weight: bolder;
   margin: 5px;
   
 
@@ -1571,25 +1620,27 @@ form input[type=submit]:hover{
   cursor: pointer;
 }
 .tituloForm{
-  color: white;
-  font-family: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  text-align: center;
+  color: #5579b7;
+  font-family: 'Montserrat', 'sans-serif';  text-align: center;
+  font-weight: bolder; 
   font-size: 1.5em;
 
 }
 .registro{
-  color: white;
+  color: #5579b7;
   text-align: center;
-  font-family: 'Montserrat', 'sans-serif'; font-weight: 200;
-  font-size: 0.7em;
+  font-family: 'Montserrat', 'sans-serif'; 
+  font-size: 1em;
   text-decoration: none;
+  font-weight: normal;
 }
 .olvido{
-  color: white;
+  color: #5579b7;
   text-align: center;
-  font-family: 'Montserrat', 'sans-serif'; font-weight: 200;
-  font-size: 0.7em;
+  font-family: 'Montserrat', 'sans-serif'; 
+  font-size: 1em;
   margin-top: 0px;
+  font-weight: normal;
   
 }
 .noUnderline{
@@ -1599,7 +1650,7 @@ form input[type=submit]:hover{
 .tituloTutoriales{
   text-align: center;
   color: #5579b7;
-  font-family: 'Montserrat', 'sans-serif'; font-weight: 200;  font-size: 2em;
+  font-family: 'Montserrat', 'sans-serif'; font-weight: bolder;  font-size: 2em;
   margin: 10px;
 }
 .user{
@@ -1619,7 +1670,7 @@ form input[type=submit]:hover{
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
-  margin: 10px
+  margin: 10px;
 }
 .itemTutorial video{
   width: 400px;
@@ -1717,10 +1768,11 @@ b{
   text-align: justify;
 }
 p{
-  font-size: 2.6vh;
-  font-family: 'Montserrat', 'sans-serif'; font-weight: 200;
+  font-size: 2.7vh;
+  font-family: 'Montserrat', 'sans-serif'; font-weight:300;
   text-align: justify;
   color: gray;
+  line-height: 1em;
 }
 .interlineadoBase{
   margin-top: 5px;
@@ -2019,8 +2071,9 @@ form{
 }
 
 .tituloForm{
-  color: white;
-  font-family: "Mitr";
+  color: #5579b7;
+  font-family: 'Montserrat', 'sans-serif';  text-align: center;
+  font-weight: bolder;
   text-align: center;
   font-size: 1.5em;
 }
@@ -2040,16 +2093,25 @@ form{
   
 }
 .tituloForm{
-  font-size: 2em;
+  color: #5579b7;
+  font-family: 'Montserrat', 'sans-serif';  text-align: center;
+  font-weight: bolder; 
+  font-size: 1.5em;
 }
 form input[type=submit]{
   font-size: 1.2em;
+  font-family: 'Montserrat', 'sans-serif'; font-weight: 200;  text-align: center;
+  font-weight: bolder; 
 }
 form input[type=password]{
+  background-color: rgba(91, 126, 186, 0.355);
   font-size: 1.2em;
+  font-family: 'Montserrat', 'sans-serif'; 
+  border-radius: 100px;
 }
 form input[type=email]{
-  font-size: 1.2em;
+
+  font-family: 'Montserrat', 'sans-serif'; 
 }
 .tituloTutoriales{
   margin-top: 10%;
@@ -2437,37 +2499,39 @@ font-size: 2em;
 
 }
 form input[type=email]{
-  background-color: white;
+  background-color: rgba(164, 193, 242, 0.299);
   padding: 10px;
   border: 0px solid transparent;
-  font-family: "Roboto";
+  font-family: 'Montserrat', 'sans-serif'; 
+  
 }
 form input[type=text]{
-  background-color: white;
+  background-color: rgba(197, 218, 254, 0.229);
   padding: 10px;
   border: 0px solid transparent;
-  font-family: "Roboto";
+  font-family: 'Montserrat', 'sans-serif'; 
   
 }
 form input[type=number]{
-  background-color: white;
+  background-color: rgba(104, 144, 212, 0.274);
   padding: 10px;
   border: 0px solid transparent;
-  font-family: "Roboto";
+  font-family: 'Montserrat', 'sans-serif'; 
   
 }
 form textarea{
-  background-color: white;
+  background-color: rgba(91, 126, 186, 0.355);
   padding: 10px;
   border: 0px solid transparent;
   margin: 6px;
-  font-family: "Roboto";
+  font-family: 'Montserrat', 'sans-serif'; 
 }
 form input[type=password]{
-  background-color: white;
+  background-color: rgba(91, 126, 186, 0.355);
   padding: 10px;
   border: 0px solid transparent;
-  font-family: "Roboto";
+  font-family: 'Montserrat', 'sans-serif'; 
+  border-radius: 100px;
   
 }
 

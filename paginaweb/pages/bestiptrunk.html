@@ -398,22 +398,23 @@
         </div>
         <div class="imagenCRM">
           
-          <div id="lottie"  style="width: 100%; height: 100%;"></div>
+          <div id="lottie"  style="width: 80%; height: 80%;margin: auto;"></div>
         </div>
       </div>
         </div>
         
         <div class="container">
           <div class="contenedorCRM">
+            <div class="imagenCRM">
+              <lottie-player src="https://lottie.host/aef4e26c-5f1e-44df-be11-66e3000e54f6/Pwe3Mh7xSf.json" background="##FFFFFF" speed="1" 
+              style="width: 80%; height: 80%; margin: auto;" loop autoplay direction="1" mode="normal"></lottie-player>
+            </div>
           <div class="descripcionCRM" >
          
           <p>Soportamos tráfico masivo y retail para las necesidades de PBXs, campañas corporativas, campañas de 
             TeleMarketing y CallCenter. Nuestros planes van desde un canal hasta cientos y pueden ser ilimitados o con cobros por minuto, de acuerdo a los requerimientos de su negocio.</p>
           </div>
-          <div class="imagenCRM">
-            <lottie-player src="https://lottie.host/aef4e26c-5f1e-44df-be11-66e3000e54f6/Pwe3Mh7xSf.json" background="##FFFFFF" speed="1" 
-            style="width: 100%; height: 100%" loop autoplay direction="1" mode="normal"></lottie-player>
-          </div>
+          
         </div>
           </div>
         
@@ -521,7 +522,7 @@
         <h1 style="font-size: 40px; text-align: center; font-family: 'Open Sans', sans-serif; font-weight: bolder; color: #74ac58; margin-bottom: 20px;">
             ADQUIERE BESTIPTRUNK AHORA MISMO
         </h1>
-        
+        <!--
         <form className="checkout" >
             <script
                 src="https://checkout.epayco.co/checkout.js"
@@ -540,46 +541,55 @@
                 data-epayco-methodconfirmation="get">
             </script>
         </form>
+        -->
     </section>
       <!-- Contact Us: End -->
-    <div>
-      <form id="contactForm" style="margin: 10px auto">
-        <p class="tituloForm">CONTÁCTANOS</p>
-        <input
-            id="nombres"
-            type="text"
-            placeholder="Nombre y Apellido"
-            name="nombres"
-            required
-        />
-        <input
-            id="email"
-            type="email"
-            placeholder="Correo"
-            name="email"
-            required
-        />
-        <input
-            id="telefono"
-            type="number"
-            placeholder="Teléfono de Contacto"
-            name="telefono"
-            required
-        />
-        <textarea
-            id="mensaje"
-            placeholder="¿Cómo podemos ayudarte? (opcional)"
-            name="mensaje"
-        ></textarea>
-        <input type="submit" value="ENVIAR MENSAJE" name="enviar" />
-        <div id="respuestaEnviado" style="display: none;">
-            <p id="respuestaTexto"></p>
-        </div>
-        <p class="registro">Teléfonos: (+57)3330333014 || (+57)312 456 0009</p>
-        <p class="olvido">info@bestvoiper.com.co</p>
-    </form>
-    
-    </div>
+      <div>
+        <div>
+          <div class="imagenContacto">
+            <img src="../assets/img/front-pages/landing-page/contacto.svg"/>
+          </div>
+          <form action="../mail/enviarMail.php" method="POST" id="contactForm">
+           
+            <input type="hidden" name="product_name" value="Best IPTrunk">
+            <input
+                id="nombres"
+                type="text"
+                placeholder="Nombre y Apellido"
+                name="nombres"
+                required
+            />
+            <input
+                id="email"
+                type="email"
+                placeholder="Correo"
+                name="email"
+                required
+            />
+            <input
+                id="telefono"
+                type="number"
+                placeholder="Teléfono de Contacto"
+                name="telefono"
+                required
+            />
+            <textarea
+                id="mensaje"
+                placeholder="¿Cómo podemos ayudarte? (opcional)"
+                name="mensaje"
+            ></textarea>
+            <input type="submit" value="ENVIAR MENSAJE" name="enviar" />
+            <div id="respuestaEnviado" style="display: none;">
+                <p id="respuestaTexto"></p>
+            </div>
+            <p class="registro">Teléfonos: (+57)3330333014 || (+57)312 456 0009</p>
+            <p class="olvido">info@bestvoiper.com.co</p>
+        </form>
+        
+  
+      </div>
+        <!-- Contact Us: End -->
+      </div>
   <!-- / Sections:End -->
 
   <!-- Footer: Start -->
@@ -648,115 +658,7 @@
   <!-- Page JS -->
   <script src="assets/js/front-page-landing.js"></script>
   </body>
-  <style>
-    #Capa_1 {
-animation-iteration-count: infinite;
-animation-timing-function: linear;
-animation-duration: 50s;
-animation-name: spinner-loading;
-animation-duration: 100s; /* Aumentado para hacer la animación más lenta */
-transform-origin: center;
-transform-box: fill-box;
-width: 80%;
-}
-@keyframes spinner-loading {
-0% {
-  transform: rotate(0deg);
-}
-to {
-  transform: rotate(1turn);
-}
-}
-#Capa_2,
-#Capa_3,
-#Capa_4,
-#Capa_5,
-#Capa_6,
-#Capa_7 {
-animation-iteration-count: infinite;
-animation-timing-function: linear;
-animation-duration: 50s;
-animation-name: spinner-capas;
-animation-duration: 100s; /* Aumentado para hacer la animación más lenta */
-transform-origin: center;
-cursor: pointer;
-}
-@keyframes spinner-capas {
-0% {
-  transform: rotate(0deg);
-}
-to {
-  transform: rotate(1turn);
-}
-}
-
-.rueda {
-width: 45vw;
-height: 45vh;
-box-sizing: border-box;
-}
-.st0{fill:#447ab7}.st1{fill:#89b749}.st2{fill:#798eab}.st3{fill:#fff}
-.contenedor{
-width: 50%;
-margin: auto;
-display: block;
-}
-.PList {
-    display: none; /* Oculta por defecto */
-}
-
-@media (max-width: 1200px) {
-  .PList {
-    display: block; /* Muestra en pantallas pequeñas */
-  }
-
-  /* Ocultar el contenedor cuando la pantalla es pequeña */
-  .contenedor {
-    display: none;
-  }
-
-  /* Centrar las imágenes en filas y que hagan wrap */
-  .listaProductos {
-    display: flex;
-    flex-wrap: wrap; /* Permite que los elementos se acomoden en filas */
-    justify-content: center; /* Centra las imágenes horizontalmente */
-    align-items: center; /* Centra las imágenes verticalmente */
-    margin: 0; /* Elimina márgenes por defecto */
-  }
-
-  /* Hacer que las imágenes se ajusten al 100% de la pantalla pero en filas */
-  .listaProductos img {
-    width: 100%; /* Hacer que las imágenes ocupen todo el ancho del contenedor */
-    max-width: 300px; /* Limita el tamaño máximo de cada imagen */
-    height: auto; /* Mantiene la relación de aspecto */
-    margin: 10px; /* Añade un poco de espacio entre las imágenes */
-    object-fit: contain; /* Asegura que las imágenes no se distorsionen */
-  }
-
-  /* Imagen principal, asegurando que ocupe el 100% del ancho */
-  #nuestroProductos {
-    width: 100%;
-    max-width: 100%; /* Asegura que no exceda el ancho de la pantalla */
-    height: auto; /* Mantiene la proporción */
-    margin-top: 10%; /* Añade margen superior para separar un poco de la parte superior de la pantalla */
-  }
-
-  /* Ajustar las imágenes de los productos (se acomoden en filas) */
-  #uno, #dos, #tres, #cuatro, #cinco, #seis {
-    width: 100%; /* Las imágenes ocuparán el 100% del ancho disponible */
-    max-width: 300px; /* Asegura que las imágenes no sean más grandes de 300px */
-    height: auto; /* Mantiene la proporción de la imagen */
-    margin-top: 10px; /* Espacio entre las imágenes */
-    object-fit: contain; /* Asegura que la imagen mantenga su proporción */
-  }
-}
-
-
-
-
-
-
-  </style>
+  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.9.4/lottie.min.js"></script>
   <script>
     var animation = lottie.loadAnimation({

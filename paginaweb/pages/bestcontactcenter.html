@@ -778,22 +778,23 @@ window.addEventListener('resize', () => {
 </div>
 <div class="imagenCRM">
   <lottie-player src="https://lottie.host/ad62a7b7-e5f9-48c6-a734-3cd6d840b536/b4pGlLeT0g.json" background="##ffffff" 
-  speed="1" style="width: 100%; height: 100%" loop  autoplay direction="1" mode="normal"></lottie-player>
+  speed="1" style="width: 80%; height: 80%;margin: auto;" loop  autoplay direction="1" mode="normal"></lottie-player>
 </div>
 </div>
 </div>
 
 <div class="container">
   <div class="contenedorCRM">
+    <div class="imagenCRM">
+      <lottie-player src="https://lottie.host/b4f99d07-7ecc-4019-a7ef-b9ae833cf293/HCFL2P8P5u.json" background="##FFFFFF" 
+      speed="1" style="width: 80%; height: 80%;margin: auto;" loop autoplay direction="1" mode="normal"></lottie-player>
+    </div>
   <div class="descripcionCRM">
   <h1 style="font-size: 3em; text-align: center; font-family: 'Open Sans', sans-serif; font-weight: bolder; color: #74ac58; margin-bottom: 20px;">GEOLOCALIZACIÓN DE PUNTOS DE ATENCIÓN</h1>
   <p >A través del asistente puede compartir con sus clientes información de la ubicación GPS del
      teléfono móvil.En pocos segundos el usuario conocerá en un mapa los puntos más cercanos y detalles de su ubicación.</p>
   </div>
-  <div class="imagenCRM">
-    <lottie-player src="https://lottie.host/b4f99d07-7ecc-4019-a7ef-b9ae833cf293/HCFL2P8P5u.json" background="##FFFFFF" 
-    speed="1" style="width: 100%; height: 100%" loop autoplay direction="1" mode="normal"></lottie-player>
-  </div>
+ 
 </div>
   </div>
 
@@ -806,7 +807,7 @@ window.addEventListener('resize', () => {
     </div>
     <div class="imagenCRM">
       <lottie-player src="https://lottie.host/4cac5aaf-6990-4531-9920-eca80246254e/EtRbvR187Y.json" background="##FFFFFF" speed="1" 
-      style="width: 100%; height: 100%" loop  autoplay direction="1" mode="normal"></lottie-player>
+      style="width: 80%; height: 80%;margin: auto;" loop  autoplay direction="1" mode="normal"></lottie-player>
     </div>
   </div>
     </div>
@@ -939,43 +940,48 @@ window.addEventListener('resize', () => {
         -->
     </section>
       <!-- Contact Us: End -->
-    <div>
-      <form id="contactForm" style="margin: 10px auto">
-        <p class="tituloForm">CONTÁCTANOS</p>
-        <input
-            id="nombres"
-            type="text"
-            placeholder="Nombre y Apellido"
-            name="nombres"
-            required
-        />
-        <input
-            id="email"
-            type="email"
-            placeholder="Correo"
-            name="email"
-            required
-        />
-        <input
-            id="telefono"
-            type="number"
-            placeholder="Teléfono de Contacto"
-            name="telefono"
-            required
-        />
-        <textarea
-            id="mensaje"
-            placeholder="¿Cómo podemos ayudarte? (opcional)"
-            name="mensaje"
-        ></textarea>
-        <input type="submit" value="ENVIAR MENSAJE" name="enviar" />
-        <div id="respuestaEnviado" style="display: none;">
-            <p id="respuestaTexto"></p>
+      <div>
+        <div class="imagenContacto">
+          <img src="../assets/img/front-pages/landing-page/contacto.svg"/>
         </div>
-        <p class="registro">Teléfonos: (+57)3330333014 || (+57)312 456 0009</p>
-        <p class="olvido">info@bestvoiper.com.co</p>
-    </form>
-    
+        <form action="../mail/enviarMail.php" method="POST" id="contactForm">
+         
+          <input type="hidden" name="product_name" value="Best Contact Center">
+          <input
+              id="nombres"
+              type="text"
+              placeholder="Nombre y Apellido"
+              name="nombres"
+              required
+          />
+          <input
+              id="email"
+              type="email"
+              placeholder="Correo"
+              name="email"
+              required
+          />
+          <input
+              id="telefono"
+              type="number"
+              placeholder="Teléfono de Contacto"
+              name="telefono"
+              required
+          />
+          <textarea
+              id="mensaje"
+              placeholder="¿Cómo podemos ayudarte? (opcional)"
+              name="mensaje"
+          ></textarea>
+          <input type="submit" value="ENVIAR MENSAJE" name="enviar" />
+          <div id="respuestaEnviado" style="display: none;">
+              <p id="respuestaTexto"></p>
+          </div>
+          <p class="registro">Teléfonos: (+57)3330333014 || (+57)312 456 0009</p>
+          <p class="olvido">info@bestvoiper.com.co</p>
+      </form>
+      
+
     </div>
   <!-- / Sections:End -->
 

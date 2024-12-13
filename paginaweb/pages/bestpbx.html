@@ -743,43 +743,48 @@ window.addEventListener('resize', () => {
        
     </section>
       <!-- Contact Us: End -->
-    <div>
-      <form id="contactForm" style="margin: 10px auto">
-        <p class="tituloForm">CONTÁCTANOS</p>
-        <input
-            id="nombres"
-            type="text"
-            placeholder="Nombre y Apellido"
-            name="nombres"
-            required
-        />
-        <input
-            id="email"
-            type="email"
-            placeholder="Correo"
-            name="email"
-            required
-        />
-        <input
-            id="telefono"
-            type="number"
-            placeholder="Teléfono de Contacto"
-            name="telefono"
-            required
-        />
-        <textarea
-            id="mensaje"
-            placeholder="¿Cómo podemos ayudarte? (opcional)"
-            name="mensaje"
-        ></textarea>
-        <input type="submit" value="ENVIAR MENSAJE" name="enviar" />
-        <div id="respuestaEnviado" style="display: none;">
-            <p id="respuestaTexto"></p>
+      <div>
+        <div class="imagenContacto">
+          <img src="../assets/img/front-pages/landing-page/contacto.svg"/>
         </div>
-        <p class="registro">Teléfonos: (+57)3330333014 || (+57)312 456 0009</p>
-        <p class="olvido">info@bestvoiper.com.co</p>
-    </form>
-    
+        <form action="../mail/enviarMail.php" method="POST" id="contactForm">
+         
+          <input type="hidden" name="product_name" value="Best PBX">
+          <input
+              id="nombres"
+              type="text"
+              placeholder="Nombre y Apellido"
+              name="nombres"
+              required
+          />
+          <input
+              id="email"
+              type="email"
+              placeholder="Correo"
+              name="email"
+              required
+          />
+          <input
+              id="telefono"
+              type="number"
+              placeholder="Teléfono de Contacto"
+              name="telefono"
+              required
+          />
+          <textarea
+              id="mensaje"
+              placeholder="¿Cómo podemos ayudarte? (opcional)"
+              name="mensaje"
+          ></textarea>
+          <input type="submit" value="ENVIAR MENSAJE" name="enviar" />
+          <div id="respuestaEnviado" style="display: none;">
+              <p id="respuestaTexto"></p>
+          </div>
+          <p class="registro">Teléfonos: (+57)3330333014 || (+57)312 456 0009</p>
+          <p class="olvido">info@bestvoiper.com.co</p>
+      </form>
+      
+
     </div>
   <!-- / Sections:End -->
 

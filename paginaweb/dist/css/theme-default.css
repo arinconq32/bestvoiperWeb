@@ -307,20 +307,20 @@ button.list-group-item-primary.active {
 
 .btn-primary {
   color: #fff;
-  background-color: #696cff;
-  border-color: #696cff;
-  box-shadow: 0 0.125rem 0.25rem 0 rgba(105, 108, 255, 0.4);
+  background-color: #9ab856;
+  border-color: #9ab856;
+  box-shadow: 0 0.125rem 0.25rem 0 rgba(105, 255, 178, 0.4);
 }
 .btn-primary:hover {
   color: #fff !important;
-  background-color: #5f61e6 !important;
-  border-color: #5f61e6 !important;
+  background-color: #7e9645 !important;
+  border-color: #7e9645 !important;
   transform: translateY(-1px) !important;
 }
 .btn-check:focus + .btn-primary, .btn-primary:focus, .btn-primary.focus {
   color: #fff;
-  background-color: #5f61e6;
-  border-color: #5f61e6;
+  background-color: #7e9645;
+  border-color: #7e9645;
   transform: translateY(0);
   box-shadow: none;
 }
@@ -340,7 +340,7 @@ button.list-group-item-primary.active {
 }
 
 .btn-label-primary {
-  color: #696cff;
+  color: #9ab856;
   border-color: transparent;
   background: #e7e7ff;
 }
@@ -1232,7 +1232,7 @@ li.ui-timepicker-selected,
 .navbar.landing-navbar .navbar-nav .nav-link.show,
 .navbar.landing-navbar .navbar-nav .nav-link.active,
 .navbar.landing-navbar .navbar-nav .nav-link:hover {
-  color: #696cff !important;
+  color: #9ab856!important;
 }
 
 .landing-features .features-icon-wrapper .features-icon-box .features-icon {
