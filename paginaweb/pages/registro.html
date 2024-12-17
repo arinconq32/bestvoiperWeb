@@ -111,8 +111,56 @@
                 <li class="nav-item">
                   <a class="nav-link fw-medium" href="index.html#somos">¿Quienes somos?</a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link fw-medium" href="index.html#productos">Nuestros Productos</a>
+                <li class="nav-item mega-dropdown">
+                  <a
+                    href="javascript:void(0);"
+                    class="nav-link dropdown-toggle navbar-ex-14-mega-dropdown mega-dropdown fw-medium"
+                    aria-expanded="false"
+                    data-bs-toggle="mega-dropdown"
+                    data-trigger="hover">
+                    <span data-i18n="Pages">Nuestros Productos</span>
+                  </a>
+                  <div class="dropdown-menu p-4">
+                    <div class="row gy-4">
+                      <div class="col-12 col-lg">
+                        
+                        <ul class="nav flex-column">
+                          <li class="nav-item">
+                            <a class="nav-link mega-dropdown-link" href="pages/bestcontactcenter.html">
+                              <i class="bx bx-radio-circle me-2"></i>
+                              <span data-i18n="Pricing">Best Contact Center Pro</span>
+                            </a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link mega-dropdown-link" href="pages/bestcallcenter.html">
+                              <i class="bx bx-radio-circle me-2"></i>
+                              <span data-i18n="Payment">Best Call Center Pro</span>
+                            </a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link mega-dropdown-link" href="pages/bestdid.html">
+                              <i class="bx bx-radio-circle me-2"></i>
+                              <span data-i18n="Checkout">Best DID</span>
+                            </a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link mega-dropdown-link" href="pages/bestiptrunk.html">
+                              <i class="bx bx-radio-circle me-2"></i>
+                              <span data-i18n="Help Center">Best IpTrunk</span>
+                            </a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link mega-dropdown-link" href="pages/masivos.html">
+                              <i class="bx bx-radio-circle me-2"></i>
+                              <span data-i18n="Help Center">SMS Masivos</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                     
+                     
+                    </div>
+                  </div>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link fw-medium" href="index.html#landingFAQ">FAQ</a>
@@ -132,8 +180,8 @@
             <ul class="navbar-nav flex-row align-items-center ms-auto">
               <!-- navbar button: Start -->
               <li>
-                <a href="../vertical-menu-template/auth-login-cover.html" class="btn btn-primary" target="_blank"
-                  ><span class="tf-icons bx bx-user me-md-1"></span
+                <a href="pages/admin.html" class="btn btn-primary" style="background-color: #74ac58;border: 1px solid #74ac58;" target="_blank">
+                  <span class="tf-icons bx bx-user me-md-1"></span
                   ><span class="d-none d-md-block">Login/Register</span></a
                 >
               </li>
@@ -144,75 +192,96 @@
         </div>
       </nav>
 
-      <div style="margin-top: 10%;">
-    
-        <div class="imagenContacto">
-          <img src="../assets/img/front-pages/landing-page/registro.svg"/>
+   
+      
+      <section style="width: 100%; display: flex; justify-content: center; align-items: center; margin-top: 10%;">
+        <div>
+          <div class="imagenContacto">
+            <img src="../assets/img/front-pages/landing-page/registro.svg" />
+          </div>
+          <div>
+            <br />
+            <h4 class="mb-1 text-center" style="font-size: 3vh;">REGISTRATE</h4>
+            <p class="mb-4 text-center" style="width: 90%; margin: auto; margin-bottom: 10px;">
+              <br class="d-none d-lg-block" />
+            </p>
+            <form id="contactForm" action="../mail/registrarse.php" method="POST" onsubmit="return validateForm()">
+              <input type="hidden" name="product_name" value="Home Page">
+      
+              <input
+                id="email"
+                type="email"
+                placeholder="Correo"
+                name="correo"
+                style="width: 100%; min-width: 380px;"
+                required
+              />
+      
+              <input
+                id="pass"
+                type="password"
+                placeholder="Contraseña"
+                name="pass"
+                style="width: 100%;"
+                required
+              />
+      
+              <input
+                id="passConfirm"
+                type="password"
+                placeholder="Repite la contraseña"
+                name="passConfirm"
+                style="width: 100%;"
+                required
+              />
+      
+              <input type="submit" value="REGISTRARSE" name="registrarse" />
+              <div id="respuestaEnviado" style="display: none;">
+                <p id="respuestaTexto"></p>
+              </div>
+              <div style="text-align: center;">
+                <a href="admin.html" style="cursor: pointer;color:#5579b7; text-decoration: none;">Iniciar sesión</a>
+                <br />
+                <a href="reset.html" style="cursor: pointer;color:#5579b7; text-decoration: none;">Olvidé Contraseña</a>
+              </div>
+            </form>
+          </div>
         </div>
-
-
-        <form action="../mail/enviarMail.php" method="POST" id="contactForm" >
-         
-                <p class="tituloForm">REGISTRATE</p>
-                
-                <input
-                  onchange="handle(event)"
-                  type="email"
-                  placeholder="correo"
-                  name="email"
-                />
-                
-                <input
-                  onchange="handle(event)"
-                  type="password"
-                  placeholder="Contraseña"
-                  name="pass"
-                />
-                
-                <input
-                  onchange="handle(event)"
-                  type="password"
-                  placeholder="Contraseña"
-                  name="pass2"
-                />
-                
-                <p id="error-message" class="error" style="display: none;"></p>
-                
-                <input type="submit" value="REGISTRARSE" name="enviar" />
-                
-                <a href="/login" class="noUnderline">
-                  <p class="registro">Iniciar Sesión</p>
-                </a>
-              </form>
-        
-
-
-    </div>
+      </section>
+      
 
 
 
   <script src="login.js"></script>
   <script>
-   
-  function send(event) {
-    event.preventDefault(); // Prevent the form from submitting
-    const email = document.querySelector('[name="email"]').value;
-    const pass = document.querySelector('[name="pass"]').value;
-    const pass2 = document.querySelector('[name="pass2"]').value;
+   function validateForm() {
+    var email = document.getElementById('email').value;
+    var pass = document.getElementById('pass').value;
+    var passConfirm = document.getElementById('passConfirm').value;
+    var emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/; // Expresión regular para validar el email
 
-    // Validate the passwords
-    if (pass !== pass2) {
-      document.getElementById("error-message").innerText = "Las contraseñas no coinciden";
-      document.getElementById("error-message").style.display = "block";
-    } else {
-      document.getElementById("error-message").style.display = "none";
-      // Submit form or proceed with other actions
+    // Validar el correo
+    if (!emailRegex.test(email)) {
+      alert("Por favor ingresa un correo electrónico válido.");
+      return false; // Detener el envío del formulario
     }
-  }
 
-  function handle(event) {
-    // Handle change events for input fields
+    // Validar la contraseña
+    if (pass.length < 6) {
+      alert("La contraseña debe tener al menos 6 caracteres.");
+      return false; // Detener el envío del formulario
+    }
+
+    // Validar que las contraseñas coincidan
+    if (pass !== passConfirm) {
+      alert("Las contraseñas no coinciden.");
+      return false; // Detener el envío del formulario
+    }
+
+    // Si todas las validaciones pasan, permite el envío del formulario
+    return true;
   }
+  
 </script>
  
 

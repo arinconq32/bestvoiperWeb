@@ -79,7 +79,7 @@
               <i class="tf-icons bx bx-menu bx-sm align-middle"></i>
             </button>
             <!-- Mobile menu toggle: End-->
-            <a href="index.html" class="app-brand-link">
+            <a href="/paginaweb/paginaweb/index.html" class="app-brand-link">
               <span class="app-brand-logo demo">
                 
                <img src="assets/img/branding/LOGOBESTVOIPER.png" width="35"/>
@@ -107,8 +107,62 @@
               <li class="nav-item">
                 <a class="nav-link fw-medium" href="index.html#somos">¿Quienes somos?</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link fw-medium" href="index.html#productos">Nuestros Productos</a>
+              <li class="nav-item mega-dropdown">
+                <a
+                href="index.html#productos"
+                  class="nav-link dropdown-toggle navbar-ex-14-mega-dropdown mega-dropdown fw-medium"
+                  aria-expanded="false"
+                  data-bs-toggle="mega-dropdown"
+                  data-trigger="hover">
+                  <span data-i18n="Pages">Nuestros Productos</span>
+                </a>
+                <div class="dropdown-menu p-4">
+                  <div class="row gy-4">
+                    <div class="col-12 col-lg">
+                      
+                      <ul class="nav flex-column">
+                        <li class="nav-item">
+                          <a class="nav-link mega-dropdown-link" href="pages/bestcontactcenter.html">
+                            <i class="bx bx-radio-circle me-2"></i>
+                            <span data-i18n="Pricing">Best Contact Center Pro</span>
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link mega-dropdown-link" href="pages/bestcallcenter.html">
+                            <i class="bx bx-radio-circle me-2"></i>
+                            <span data-i18n="Payment">Best Call Center Pro</span>
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link mega-dropdown-link" href="pages/bestdid.html">
+                            <i class="bx bx-radio-circle me-2"></i>
+                            <span data-i18n="Checkout">Best DID</span>
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link mega-dropdown-link" href="pages/bestiptrunk.html">
+                            <i class="bx bx-radio-circle me-2"></i>
+                            <span data-i18n="Help Center">Best IpTrunk</span>
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link mega-dropdown-link" href="pages/masivos.html">
+                            <i class="bx bx-radio-circle me-2"></i>
+                            <span data-i18n="Help Center">SMS Masivos</span>
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link mega-dropdown-link" href="pages/bestpbx.html">
+                            <i class="bx bx-radio-circle me-2"></i>
+                            <span data-i18n="Help Center">Best PBX</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                   
+                   
+                  </div>
+                </div>
               </li>
               <li class="nav-item">
                 <a class="nav-link fw-medium" href="index.html#landingFAQ">FAQ</a>
@@ -128,8 +182,8 @@
           <ul class="navbar-nav flex-row align-items-center ms-auto">
             <!-- navbar button: Start -->
             <li>
-              <a href="../vertical-menu-template/auth-login-cover.html" class="btn btn-primary" target="_blank"
-                ><span class="tf-icons bx bx-user me-md-1"></span
+              <a href="pages/admin.html" class="btn btn-primary" style="background-color: #74ac58;border: 1px solid #74ac58;" target="_blank">
+                <span class="tf-icons bx bx-user me-md-1"></span
                 ><span class="d-none d-md-block">Login/Register</span></a
               >
             </li>
@@ -179,12 +233,17 @@
               sans-serif;font-weight: bolder;color: #7eb83b !important;text-align: center;line-height: 1.3rem;">
               ¿QUIENES SOMOS?</span>
               </div>
-              <h1 style="text-align: left;">Compañía latinoamericana de desarrollo de software y comunicaciones
+              <h1 style="text-align: left;">Compañía latinoamericana especialista en comunicaciones
               </h1>
               <h2>Proveemos servicios y soluciones VoIP para empresas en Colombia</h2>
                <p> Contamos con amplia experiencia en la implementación de soluciones de telefonía IP en ambientes corporativos, 
-                gubernamentales u oficiales, con servicios de llamadas locales, nacionales e 
-                internacionales con excelente calidad de audio y a precios altamente competitivos.</p>
+                gubernamentales u oficiales, con servicios de:</p>
+                <ul>
+                  <li>Llamadas locales</li>
+                  <li>Llamadas nacionales</li>
+                  <li>Llamadas internacionales</li>
+                </ul>
+                <p>Excelente calidad de audio, a precios altamente competitivos.</p>
                 
             </div>
             <div class="imagenCRM">
@@ -209,7 +268,7 @@
               <img src="assets/img/front-pages/landing-page/crm.svg" width="100%"/>
             </div>
             <div class="descripcionCRM">
-              <h1>Nos especializamos en CRM Omnicanal con WebRTC, Whatsapp y métricas avanzadas, 
+              <h1 style="text-align: left;">Nos especializamos en CRM Omnicanal con WebRTC, Whatsapp y métricas avanzadas, 
                 materializando comunicaciones  en tiempo real desde tu página web.
               </h1>
                <p> Simplifica la gestión de tu canales de comunicación respondiendo a mensajes de Facebook, 
@@ -289,7 +348,7 @@
            
           </div>
 
-        <div class="PList">
+        <div class="PList" id="productos">
           <div class="listaProductos">
             <img id="nuestroProductos" src="assets/img/front-pages/icons/nuestrosProductos.svg" />
             <a href="pages/bestcallcenter.html">
@@ -978,10 +1037,10 @@
 
   
 
-      <!-- Real customers reviews: Start -->
-      <!-- Real customers reviews: Start -->
+      
+      <!--
       <section id="landingReviews" class="section-py bg-body landing-reviews pb-0">
-        <!-- What people say slider: Start -->
+       
         <div style="width: 100%; margin: 20px  auto;text-align: center;">
           <span  
         style="font-size: 2.1em; font-family: 'Open Sans', sans-serif;font-weight: bolder;color: #7eb83b !important;text-align: center;line-height: 1.1rem;">
@@ -1192,10 +1251,9 @@
               </div>
             </div>
           </div>
-       
-        <!-- What people say slider: End -->
+       -->
+        <!--  
         <hr class="m-0" />
-        <!-- Logo slider: Start -->
         <div class="container">
           <div class="swiper-logo-carousel py-4 my-lg-2">
             <div class="swiper" id="swiper-clients-logos">
@@ -1224,8 +1282,7 @@
                   <img
                   src="assets/img/front-pages/branding/logo_1-light.png"
                   alt="client logo"
-                  class="client-logo"
-          />
+                  class="client-logo"/>
                 </div>
           
                 
@@ -1233,21 +1290,11 @@
             </div>
           </div>
         </div>
+      -->
+
         <!-- Logo slider: End -->
       </section>
-      <!-- Real customers reviews: End -->
-
-      <!-- Our great team: Start -->
       
-      <!-- Our great team: End -->
-
-      <!-- Pricing plans: Start -->
-   
-      <!-- Pricing plans: End -->
-
-      <!-- Fun facts: Start -->
-      
-      <!-- Fun facts: End -->
 
       <!-- FAQ: Start -->
       <section id="landingFAQ" class="section-py bg-body landing-faq">
@@ -1255,7 +1302,7 @@
           <div class="text-center mb-3 pb-1">
            
           </div>
-          <h3 class="text-center mb-1" style="color: #74ac58">PREGUNTAS FRECUENTES</h3>
+          <h3 class="text-center mb-1" style="color: #74ac58; font-weight: bolder;">PREGUNTAS FRECUENTES</h3>
           
           <div class="row gy-5">
             <div class="col-lg-5">
@@ -1278,13 +1325,13 @@
                       data-bs-target="#accordionOne"
                       aria-expanded="true"
                       aria-controls="accordionOne"
-                      style=" font-family: 'Montserrat', 'sans-serif'; font-weight: bolder;">
+                      style=" font-family: 'Montserrat', 'sans-serif'; font-weight: bolder;font-size: 1.2rem;">
                       Do you charge for each upgrade?
                     </button>
                   </h2>
 
                   <div id="accordionOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-                    <div class="accordion-body" style=" font-family: 'Montserrat', 'sans-serif'; font-weight: 200;">
+                    <div class="accordion-body" style=" font-family: 'Montserrat', 'sans-serif'; font-weight: normal;font-size: 1.2rem;">
                       Lemon drops chocolate cake gummies carrot cake chupa chups muffin topping. Sesame snaps icing
                       marzipan gummi bears macaroon dragée danish caramels powder. Bear claw dragée pastry topping
                       soufflé. Wafer gummi bears marshmallow pastry pie.
@@ -1300,7 +1347,7 @@
                       data-bs-target="#accordionTwo"
                       aria-expanded="false"
                       aria-controls="accordionTwo"
-                      style=" font-family: 'Montserrat', 'sans-serif'; font-weight: bolder;">
+                      style=" font-family: 'Montserrat', 'sans-serif'; font-weight: bolder;font-size: 1.2rem">
                     
                       Do I need to purchase a license for each website?
                     </button>
@@ -1310,7 +1357,7 @@
                     class="accordion-collapse collapse"
                     aria-labelledby="headingTwo"
                     data-bs-parent="#accordionExample">
-                    <div class="accordion-body" style=" font-family: 'Montserrat', 'sans-serif'; font-weight: 200;">
+                    <div class="accordion-body" style=" font-family: 'Montserrat', 'sans-serif'; font-weight: normal;font-size: 1.2rem;">
                       Dessert ice cream donut oat cake jelly-o pie sugar plum cheesecake. Bear claw dragée oat cake
                       dragée ice cream halvah tootsie roll. Danish cake oat cake pie macaroon tart donut gummies. Jelly
                       beans candy canes carrot cake. Fruitcake chocolate chupa chups.
@@ -1326,7 +1373,7 @@
                       data-bs-target="#accordionThree"
                       aria-expanded="false"
                       aria-controls="accordionThree"
-                      style=" font-family: 'Montserrat', 'sans-serif'; font-weight: bolder;">
+                      style=" font-family: 'Montserrat', 'sans-serif'; font-weight: bolder;font-size: 1.2rem">
                       What is regular license?
                     </button>
                   </h2>
@@ -1335,7 +1382,7 @@
                     class="accordion-collapse collapse"
                     aria-labelledby="headingThree"
                     data-bs-parent="#accordionExample">
-                    <div class="accordion-body" style=" font-family: 'Montserrat', 'sans-serif'; font-weight: 200;">
+                    <div class="accordion-body" style=" font-family: 'Montserrat', 'sans-serif'; font-weight: normal;font-size: 1.2rem;">
                       Regular license can be used for end products that do not charge users for access or service(access
                       is free and there will be no monthly subscription fee). Single regular license can be used for
                       single end product and end product can be used by you or your client. If you want to sell end
@@ -1354,7 +1401,7 @@
                       data-bs-target="#accordionFour"
                       aria-expanded="false"
                       aria-controls="accordionFour"
-                      style=" font-family: 'Montserrat', 'sans-serif'; font-weight: bolder;">
+                      style=" font-family: 'Montserrat', 'sans-serif'; font-weight: bolder;font-size: 1.2rem">
                       What is extended license?
                     </button>
                   </h2>
@@ -1363,7 +1410,7 @@
                     class="accordion-collapse collapse"
                     aria-labelledby="headingFour"
                     data-bs-parent="#accordionExample">
-                    <div class="accordion-body" style=" font-family: 'Montserrat', 'sans-serif'; font-weight: 200;">
+                    <div class="accordion-body" style=" font-family: 'Montserrat', 'sans-serif'; font-weight: normal;font-size: 1.2rem;">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis et aliquid quaerat possimus maxime!
                       Mollitia reprehenderit neque repellat delenibx delectus architecto dolorum maxime, blanditiis
                       earum ea, incidunt quam possimus cumque.
@@ -1379,7 +1426,7 @@
                       data-bs-target="#accordionFive"
                       aria-expanded="false"
                       aria-controls="accordionFive"
-                      style=" font-family: 'Montserrat', 'sans-serif'; font-weight: bolder;">
+                      style=" font-family: 'Montserrat', 'sans-serif'; font-weight: bolder;font-size: 1.2rem">
                       Which license is applicable for SASS application?
                     </button>
                   </h2>
@@ -1388,7 +1435,7 @@
                     class="accordion-collapse collapse"
                     aria-labelledby="headingFive"
                     data-bs-parent="#accordionExample">
-                    <div class="accordion-body" style=" font-family: 'Montserrat', 'sans-serif'; font-weight: 200;">
+                    <div class="accordion-body" style=" font-family: 'Montserrat', 'sans-serif'; font-weight: normal;font-size: 1.2rem;">
                       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi molestias exercitationem ab cum
                       nemo facere voluptates veritatis quia, eveniet veniam at et repudiandae mollitia ipsam quasi
                       labore enim architecto non!
@@ -1408,32 +1455,70 @@
 
       <!-- Contact Us: Start -->
        <!-- Contact Us: Start -->
-      <div style="width: 75%; margin: auto;" id="landingContact">
+      <div style="width: 85%; margin: auto;" id="landingContact">
        <section style="width: 100%; display: flex; justify-content: center; align-items: center; flex-direction: column; margin-top: 30px; padding: 0 15px;">
         
         
        
         <div>
+         
           <div class="imagenContacto">
+           
             <img src="assets/img/front-pages/landing-page/contacto.svg"/>
+            <div class="col-md-6 col-lg-12 col-xl-6">
+              <div class="d-flex align-items-center">
+                <div><i class='bx bxs-envelope' style="color:#5579b7; font-size: 3em;margin: 5px;"></i></div>
+                <div>
+                  <p class="mb-0">Correo</p>
+                  <h5 class="mb-0">
+                    <a class="text-heading">info@bestvoiper.com.co</a>
+                  </h5>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-12 col-xl-6">
+              <div class="d-flex align-items-center">
+                <div>
+                  <i class='bx bxs-phone' style="color:#5579b7; font-size: 3em;margin: 5px;" ></i>
+                </div>
+                <div>
+                  
+                  <p class="mb-0">Teléfonos:</p>
+                  <h5 class="mb-0">
+                    <a class="text-heading" style="font-size: 12px;">(+57)3330333014 (+57)312 456 0009</a>
+                  </h5>
+                </div>
+              </div>
+            </div>
           </div>
+          <div>
+            <br/>
+          <h4 class="mb-1 text-center">¡Escríbenos!</h4>
+          <p class="mb-4 text-center" style="width: 90%;margin: auto; margin-bottom: 10px;">
+            ¡No dudes en contáctarnos!<br class="d-none d-lg-block" />
+            Resolveremos todas las dudas que tengas
+          </p>
           <form action="../mail/enviarMail.php" method="POST" id="contactForm">
            
             <input type="hidden" name="product_name" value="Home Page">
-            <input
+            <div style="display: flex; justify-content: space-between; flex-wrap: wrap; ">
+              <input
                 id="nombres"
                 type="text"
                 placeholder="Nombre y Apellido"
                 name="nombres"
                 required
-            />
-            <input
+              
+              />
+              <input
                 id="email"
                 type="email"
                 placeholder="Correo"
                 name="email"
+              
                 required
-            />
+              />
+            </div>
             <input
                 id="telefono"
                 type="number"
@@ -1450,19 +1535,22 @@
             <div id="respuestaEnviado" style="display: none;">
                 <p id="respuestaTexto"></p>
             </div>
-            <p class="registro">Teléfonos: (+57)3330333014 || (+57)312 456 0009</p>
-            <p class="olvido">info@bestvoiper.com.co</p>
+            <p class="registro">Con BESTVOIPER crecemos juntos</p>
+            
         </form>
-        
+      </div>
 
       </div>
     </section>
+
+
     
       <!-- Contact Us: End -->
    
       <!-- Contact Us: End -->
     </div>
-
+    
+   
     <!-- / Sections:End -->
 
     <!-- Footer: Start -->

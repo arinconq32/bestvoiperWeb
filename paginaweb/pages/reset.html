@@ -111,8 +111,56 @@
                 <li class="nav-item">
                   <a class="nav-link fw-medium" href="index.html#somos">¿Quienes somos?</a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link fw-medium" href="index.html#productos">Nuestros Productos</a>
+                <li class="nav-item mega-dropdown">
+                  <a
+                    href="javascript:void(0);"
+                    class="nav-link dropdown-toggle navbar-ex-14-mega-dropdown mega-dropdown fw-medium"
+                    aria-expanded="false"
+                    data-bs-toggle="mega-dropdown"
+                    data-trigger="hover">
+                    <span data-i18n="Pages">Nuestros Productos</span>
+                  </a>
+                  <div class="dropdown-menu p-4">
+                    <div class="row gy-4">
+                      <div class="col-12 col-lg">
+                        
+                        <ul class="nav flex-column">
+                          <li class="nav-item">
+                            <a class="nav-link mega-dropdown-link" href="pages/bestcontactcenter.html">
+                              <i class="bx bx-radio-circle me-2"></i>
+                              <span data-i18n="Pricing">Best Contact Center Pro</span>
+                            </a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link mega-dropdown-link" href="pages/bestcallcenter.html">
+                              <i class="bx bx-radio-circle me-2"></i>
+                              <span data-i18n="Payment">Best Call Center Pro</span>
+                            </a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link mega-dropdown-link" href="pages/bestdid.html">
+                              <i class="bx bx-radio-circle me-2"></i>
+                              <span data-i18n="Checkout">Best DID</span>
+                            </a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link mega-dropdown-link" href="pages/bestiptrunk.html">
+                              <i class="bx bx-radio-circle me-2"></i>
+                              <span data-i18n="Help Center">Best IpTrunk</span>
+                            </a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link mega-dropdown-link" href="pages/masivos.html">
+                              <i class="bx bx-radio-circle me-2"></i>
+                              <span data-i18n="Help Center">SMS Masivos</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                     
+                     
+                    </div>
+                  </div>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link fw-medium" href="index.html#landingFAQ">FAQ</a>
@@ -132,8 +180,8 @@
             <ul class="navbar-nav flex-row align-items-center ms-auto">
               <!-- navbar button: Start -->
               <li>
-                <a href="../vertical-menu-template/auth-login-cover.html" class="btn btn-primary" target="_blank"
-                  ><span class="tf-icons bx bx-user me-md-1"></span
+                <a href="pages/admin.html" class="btn btn-primary" style="background-color: #74ac58;border: 1px solid #74ac58;" target="_blank">
+                  <span class="tf-icons bx bx-user me-md-1"></span
                   ><span class="d-none d-md-block">Login/Register</span></a
                 >
               </li>
@@ -144,36 +192,54 @@
         </div>
       </nav>
 
-      <div style="margin-top: 10%;">
-    
-        <div class="imagenContacto">
-          <img src="../assets/img/front-pages/landing-page/reset.svg"/>
-        </div>
+      <section style="width: 100%; display: flex; justify-content: center; 
+        align-items: center;margin-top: 10%;">
 
-
-        <form action="../mail/enviarMail.php" method="POST" id="contactForm" >
-         
-                <p class="tituloForm">RECUPERAR CONTRASEÑA</p>
+         <div>
+          
+           <div class="imagenContacto">
+            
+             <img src="../assets/img/front-pages/landing-page/reset.svg"/>
+           
+           </div>
+           <div>
+             <br/>
+           <h4 class="mb-1 text-center">RECUPERAR CONTRASEÑA</h4>
+           <p class="mb-4 text-center" style="width: 90%;margin: auto; margin-bottom: 10px;">
+              <br class="d-none d-lg-block" />
+            
+           </p>
+           <form action="../mail/recuperar.php" method="POST" id="contactForm">
+            
+             <input type="hidden" name="product_name" value="Home Page">
+             
+              <input
+              id="email"
+              type="email"
+              placeholder="Correo"
+              name="correo"
+              style="width: 100%;min-width: 380px;"
+              required
+            />
               
-                <input
-                  onchange="handle(event)"
-                  type="email"
-                  placeholder="correo"
-                  name="email"
-                />
-                
-                <p id="error-message" class="error" style="display: none;"></p>
-                
-                <input type="submit" value="ENVIAR" name="enviar" />
-                
-                <a href="/login" class="noUnderline">
-                  <p class="registro">Iniciar Sesión</p>
-                </a>
-              </form>
-        
-
-
-    </div>
+          
+             
+            
+             <input type="submit" value="RECUPERAR CONTRASEÑA" name="enviar" />
+             <div id="respuestaEnviado" style="display: none;">
+                 <p id="respuestaTexto"></p>
+             </div>
+             <div style="text-align: center;">
+              <a  href="admin.html"  style="cursor: pointer;color:#5579b7; text-decoration: none;">Iniciar Sesión</a>
+              <br/>
+              <a href="registro.html" style="cursor: pointer;color:#5579b7; text-decoration: none;">Registrarse</a>
+             </div>
+           
+         </form>
+       </div>
+ 
+       </div>
+     </section>
 
 
 

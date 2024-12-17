@@ -1496,7 +1496,7 @@ video {
 }
 
 .imagenContacto{
-  width: 350px;
+  width: 500px;
   justify-content: center;
   margin: -20px auto;
   
@@ -1504,15 +1504,14 @@ video {
 .imagenContacto img{
   width: 100%;
 }
+
 form {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
-  width: 80vw;
   margin: auto;
-  box-shadow: 2px 2px 2px 1px rgb(0 0 0 / 20%);
-  background-color: white;
-  padding: 20px;
+  width: 100%;
+  padding: 10px;
   border-radius: 20px;
   align-self: center;
 }
@@ -1527,11 +1526,21 @@ form input[type=email]{
   border: 0px solid transparent;
   color: black;
   outline: none; 
+  width: 45%; margin-bottom: 10px;
+ 
 }
-
+.text{
+  background-color: rgba(164, 193, 242, 0.299);
+  padding: 10px;
+  border: 0px solid transparent;
+  font-family: 'Montserrat', 'sans-serif'; 
+  font-weight: normal;
+  border-radius: 100px;
+}
 input[type=email]:focus {
   border: 1px solid #3d5785;  
-  outline: none;
+  background-color: rgba(164, 193, 242, 0.299);
+
 }
 form input[type=text]{
   background-color: rgba(197, 218, 254, 0.229);
@@ -1541,6 +1550,8 @@ form input[type=text]{
   border: 0px solid transparent;
   color: black;
   outline: none; 
+  width: 45%; margin-bottom: 10px;
+
   
 }
 input[type=text]:focus {
@@ -1555,6 +1566,7 @@ form input[type=number]{
   border: 0px solid transparent;
   color: black;
   outline: none; 
+  
 }
 input[type=number]:focus {
   border: 1px solid #3d5785;  
@@ -1569,6 +1581,7 @@ form textarea{
   color: black;
   outline: none; 
   margin: 5px;
+  width: 100%;
 }
 form textarea:focus{
   border: 1px solid #3d5785;  
@@ -2503,6 +2516,7 @@ form input[type=email]{
   padding: 10px;
   border: 0px solid transparent;
   font-family: 'Montserrat', 'sans-serif'; 
+  width: 100%;
   
 }
 form input[type=text]{
@@ -2510,6 +2524,7 @@ form input[type=text]{
   padding: 10px;
   border: 0px solid transparent;
   font-family: 'Montserrat', 'sans-serif'; 
+  width: 100%;
   
 }
 form input[type=number]{
@@ -2517,6 +2532,8 @@ form input[type=number]{
   padding: 10px;
   border: 0px solid transparent;
   font-family: 'Montserrat', 'sans-serif'; 
+  width: 100%;
+  
   
 }
 form textarea{
@@ -2667,7 +2684,26 @@ form input[type=password]{
 
 /* Media query para pantallas muy pequeñas (320px o más) */
 @media (min-width: 320px) and (max-width: 750px) {
-
+  .imagenContacto{
+    width: 350px;
+    justify-content: center;
+    margin: -20px auto;
+    
+  }
+  .imagenContacto img{
+    width: 100%;
+  }
+  
+  form {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    margin: auto;
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px;
+    align-self: center;
+  }
   .robot {
     display: flex;
     flex-flow: column wrap;
@@ -2819,13 +2855,13 @@ form input[type=password]{
 }
 
 .descripcionCRM h1{
-  font-size: 1.5em;
+  font-size: 3vh;
   font-family: 'Montserrat', 'sans-serif'; 
   font-weight: bolder;
   text-align: justify;
 }
 .descripcionCRM h2{
-  font-size: 1.3em;
+  font-size: 2.7vh;
   font-family: 'Montserrat', 'sans-serif'; 
   font-weight: 500;
   text-align: justify;
@@ -2848,7 +2884,12 @@ form input[type=password]{
   background-color: #60ad07;
   transform: scale(1);
 }
-
+.descripcionCRM ul li{
+  font-size: 2.5vh;
+  font-family: 'Montserrat', 'sans-serif';
+  font-weight: 300;
+  color: gray;
+}
 
 /* Estilo general para cada sección */
 .fixed-container {
@@ -2883,26 +2924,26 @@ form input[type=password]{
 .descripcionC p {
   opacity: 1;
   transition: opacity 1s ease-in-out;
-  font-size: 1.2rem;
+  font-size: 2.4vh;
   color: #000;
   font-weight: 300;
   line-height: 1em;
 }
 
 .descripcionC h1{
-  font-size: 1.3rem;
+  font-size: 2.7vh;
   font-family: 'Montserrat', 'sans-serif'; 
   font-weight: bolder;
   text-align: center;
 }
 .descripcionC h2{
-  font-size: 1.2rem;
+  font-size: 2.6vh;
   font-family: 'Montserrat', 'sans-serif'; 
   font-weight: 500;
   text-align: center;
 }
 .descripcionC h3{
-  font-size: 1.2rem;
+  font-size: 2.5vh;
   font-family: 'Montserrat', 'sans-serif'; 
   font-weight: 500;
   text-align: center;

@@ -2063,9 +2063,8 @@ progress {
   line-height: 1.53;
   color: #697a8d;
   appearance: none;
-  background-color: #fff;
+  background-color: rgba(120, 164, 239, 0.355);
   background-clip: padding-box;
-  border: var(--bs-border-width) solid #d9dee3;
   border-radius: var(--bs-border-radius);
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
@@ -2172,6 +2171,12 @@ progress {
 
 textarea.form-control {
   min-height: calc(1.53em + 0.875rem + calc(var(--bs-border-width) * 2));
+  background-color: rgba(197, 218, 254, 0.229);
+  padding: 10px;
+  border-radius: 20px;
+  font-family: 'Montserrat', 'sans-serif'; 
+  border: 0px solid transparent;
+  color: black;
 }
 textarea.form-control-sm {
   min-height: calc(1.53em + 0.5rem + calc(var(--bs-border-width) * 2));

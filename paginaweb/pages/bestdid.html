@@ -347,8 +347,56 @@ window.addEventListener('resize', () => {
               <li class="nav-item">
                 <a class="nav-link fw-medium" href="index.html#somos">¿Quienes somos?</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link fw-medium" href="index.html#productos">Nuestros Productos</a>
+              <li class="nav-item mega-dropdown">
+                <a
+                  href="javascript:void(0);"
+                  class="nav-link dropdown-toggle navbar-ex-14-mega-dropdown mega-dropdown fw-medium"
+                  aria-expanded="false"
+                  data-bs-toggle="mega-dropdown"
+                  data-trigger="hover">
+                  <span data-i18n="Pages">Nuestros Productos</span>
+                </a>
+                <div class="dropdown-menu p-4">
+                  <div class="row gy-4">
+                    <div class="col-12 col-lg">
+                      
+                      <ul class="nav flex-column">
+                        <li class="nav-item">
+                          <a class="nav-link mega-dropdown-link" href="pages/bestcontactcenter.html">
+                            <i class="bx bx-radio-circle me-2"></i>
+                            <span data-i18n="Pricing">Best Contact Center Pro</span>
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link mega-dropdown-link" href="pages/bestcallcenter.html">
+                            <i class="bx bx-radio-circle me-2"></i>
+                            <span data-i18n="Payment">Best Call Center Pro</span>
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link mega-dropdown-link" href="pages/bestdid.html">
+                            <i class="bx bx-radio-circle me-2"></i>
+                            <span data-i18n="Checkout">Best DID</span>
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link mega-dropdown-link" href="pages/bestiptrunk.html">
+                            <i class="bx bx-radio-circle me-2"></i>
+                            <span data-i18n="Help Center">Best IpTrunk</span>
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link mega-dropdown-link" href="pages/masivos.html">
+                            <i class="bx bx-radio-circle me-2"></i>
+                            <span data-i18n="Help Center">SMS Masivos</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                   
+                   
+                  </div>
+                </div>
               </li>
               <li class="nav-item">
                 <a class="nav-link fw-medium" href="index.html#landingFAQ">FAQ</a>
@@ -596,8 +644,8 @@ window.addEventListener('resize', () => {
           <ul class="navbar-nav flex-row align-items-center ms-auto">
             <!-- navbar button: Start -->
             <li>
-              <a href="../vertical-menu-template/auth-login-cover.html" class="btn btn-primary" target="_blank"
-                ><span class="tf-icons bx bx-user me-md-1"></span
+              <a href="pages/admin.html" class="btn btn-primary" style="background-color: #74ac58;border: 1px solid #74ac58;" target="_blank">
+                <span class="tf-icons bx bx-user me-md-1"></span
                 ><span class="d-none d-md-block">Login/Register</span></a
               >
             </li>
@@ -633,71 +681,24 @@ window.addEventListener('resize', () => {
       <!-- Hero: End -->
 
       <!-- Useful features: Start -->
-      <section id="somos" class="section-py landing-features">
-        <div class="container">
-          <div class="text-center mb-3 pb-1">
-            
+      <div class="container">
+        <div class="contenedorCRM">
+        
+        <div class="imagenCRM">
+          
+            <img src="../assets/img/front-pages/landing-page/did_2.svg" style="width: 90%; height: 80%;margin: auto;"/>
           </div>
-          <p class="text-center mb-3 mb-md-5 pb-3" >
-            Servicio de numeración telefónica para las principales ciudades del mundo. Permite recibir llamadas 
-            de sus clientes sin importar el país donde se encuentren,generando presencia a nivel mundial
-          </p>
-         <!--<div class="features-icon-wrapper row gx-0 gy-4 g-sm-5">
-            <div class="col-lg-4 col-sm-6 text-center features-icon-box">
-              <div class="text-center mb-3">
-                <img src="assets/img/front-pages/icons/ruedaProductos.svg" alt="laptop charging" />
-              </div>
-              <h5 class="mb-3">Quality Code</h5>
-              <p class="features-icon-description">
-                Code structure that all developers will easily understand and fall in love with.
-              </p>
-            </div>
-            <div class="col-lg-4 col-sm-6 text-center features-icon-box">
-              <div class="text-center mb-3">
-                <img src="assets/img/front-pages/icons/rocket.png" alt="transition up" />
-              </div>
-              <h5 class="mb-3">Continuous Updates</h5>
-              <p class="features-icon-description">
-                Free updates for the next 12 months, including new demos and features.
-              </p>
-            </div>
-            <div class="col-lg-4 col-sm-6 text-center features-icon-box">
-              <div class="text-center mb-3">
-                <img src="assets/img/front-pages/icons/paper.png" alt="edit" />
-              </div>
-              <h5 class="mb-3">Stater-Kit</h5>
-              <p class="features-icon-description">
-                Start your project quickly without having to remove unnecessary features.
-              </p>
-            </div>
-            <div class="col-lg-4 col-sm-6 text-center features-icon-box">
-              <div class="text-center mb-3">
-                <img src="assets/img/front-pages/icons/check.png" alt="3d select solid" />
-              </div>
-              <h5 class="mb-3">API Ready</h5>
-              <p class="features-icon-description">
-                Just change the endpoint and see your own data loaded within seconds.
-              </p>
-            </div>
-            <div class="col-lg-4 col-sm-6 text-center features-icon-box">
-              <div class="text-center mb-3">
-                <img src="assets/img/front-pages/icons/user.png" alt="lifebelt" />
-              </div>
-              <h5 class="mb-3">Excellent Support</h5>
-              <p class="features-icon-description">An easy-to-follow doc with lots of references and code examples.</p>
-            </div>
-            <div class="col-lg-4 col-sm-6 text-center features-icon-box">
-              <div class="text-center mb-3">
-                <img src="assets/img/front-pages/icons/keyboard.png" alt="google docs" />
-              </div>
-              <h5 class="mb-3">Well Documented</h5>
-              <p class="features-icon-description">An easy-to-follow doc with lots of references and code examples.</p>
-            </div>
-          </div>
-        </div>-->
-     
+          <div class="descripcionCRM">
        
+          <p>   Servicio de numeración telefónica para las principales ciudades del mundo. <b style="font-weight: normal;background-color: rgba(116, 172, 88, 0.652); 
+      color:white; line-height: 2.1rem;">Permite recibir llamadas 
+            de sus clientes sin importar el país donde se encuentren,</b> presencia a nivel mundial</p>
           </div>
+          </div>
+        </div>
+
+      <section id="somos" class="section-py landing-features">
+        
           <div style="width: 80%; margin: auto">
             <img src="../assets/img/front-pages/landing-page/diagramadid.svg"/>
           </div>
@@ -749,7 +750,7 @@ window.addEventListener('resize', () => {
      
 
       <section style="width: 100%; display: flex; justify-content: center; align-items: center; flex-direction: column; margin: 0;">
-        <h1 class="text-center mb-1" style="color: #74ac58; font-weight: bolder;">ADQUIERE BEST DID AHORA MISMO</h1>
+        <h1 class="text-center mb-1" style="color: #5579b7; font-weight: bolder;">ADQUIERE BEST DID AHORA MISMO</h1>
         <!--
         <form className="checkout" >
             <script
@@ -772,52 +773,100 @@ window.addEventListener('resize', () => {
         -->
     </section>
       <!-- Contact Us: End -->
-    <div>
-      <div>
-        <div class="imagenContacto">
-          <img src="../assets/img/front-pages/landing-page/contacto.svg"/>
-        </div>
-        <form action="../mail/enviarMail.php" method="POST" id="contactForm">
+      <div style="width: 85%; margin: auto;" id="landingContact">
+        <section style="width: 100%; display: flex; justify-content: center; align-items: center; flex-direction: column; margin-top: 30px; padding: 0 15px;">
          
-          <input type="hidden" name="product_name" value="Best DID">
-          <input
-              id="nombres"
-              type="text"
-              placeholder="Nombre y Apellido"
-              name="nombres"
-              required
-          />
-          <input
-              id="email"
-              type="email"
-              placeholder="Correo"
-              name="email"
-              required
-          />
-          <input
-              id="telefono"
-              type="number"
-              placeholder="Teléfono de Contacto"
-              name="telefono"
-              required
-          />
-          <textarea
-              id="mensaje"
-              placeholder="¿Cómo podemos ayudarte? (opcional)"
-              name="mensaje"
-          ></textarea>
-          <input type="submit" value="ENVIAR MENSAJE" name="enviar" />
-          <div id="respuestaEnviado" style="display: none;">
-              <p id="respuestaTexto"></p>
-          </div>
-          <p class="registro">Teléfonos: (+57)3330333014 || (+57)312 456 0009</p>
-          <p class="olvido">info@bestvoiper.com.co</p>
-      </form>
-      
-
-    </div>
-      <!-- Contact Us: End -->
-    </div>
+         
+        
+         <div>
+          
+           <div class="imagenContacto">
+            
+             <img src="../assets/img/front-pages/landing-page/contacto.svg"/>
+             <div class="col-md-6 col-lg-12 col-xl-6">
+               <div class="d-flex align-items-center">
+                 <div><i class='bx bxs-envelope' style="color:#5579b7; font-size: 3em;margin: 5px;"></i></div>
+                 <div>
+                   <p class="mb-0">Correo</p>
+                   <h5 class="mb-0">
+                     <a class="text-heading">info@bestvoiper.com.co</a>
+                   </h5>
+                 </div>
+               </div>
+             </div>
+             <div class="col-md-6 col-lg-12 col-xl-6">
+               <div class="d-flex align-items-center">
+                 <div>
+                   <i class='bx bxs-phone' style="color:#5579b7; font-size: 3em;margin: 5px;" ></i>
+                 </div>
+                 <div>
+                   
+                   <p class="mb-0">Teléfonos:</p>
+                   <h5 class="mb-0">
+                     <a class="text-heading" style="font-size: 12px;">(+57)3330333014 (+57)312 456 0009</a>
+                   </h5>
+                 </div>
+               </div>
+             </div>
+           </div>
+           <div>
+             <br/>
+           <h4 class="mb-1 text-center">¡Escríbenos!</h4>
+           <p class="mb-4 text-center" style="width: 90%;margin: auto; margin-bottom: 10px;">
+             ¡No dudes en contáctarnos!<br class="d-none d-lg-block" />
+             Resolveremos todas las dudas que tengas
+           </p>
+           <form action="../mail/enviarMail.php" method="POST" id="contactForm">
+            
+             <input type="hidden" name="product_name" value="Home Page">
+             <div style="display: flex; justify-content: space-between; flex-wrap: wrap; ">
+               <input
+                 id="nombres"
+                 type="text"
+                 placeholder="Nombre y Apellido"
+                 name="nombres"
+                 required
+               
+               />
+               <input
+                 id="email"
+                 type="email"
+                 placeholder="Correo"
+                 name="email"
+               
+                 required
+               />
+             </div>
+             <input
+                 id="telefono"
+                 type="number"
+                 placeholder="Teléfono de Contacto"
+                 name="telefono"
+                 required
+             />
+             <textarea
+                 id="mensaje"
+                 placeholder="¿Cómo podemos ayudarte? (opcional)"
+                 name="mensaje"
+             ></textarea>
+             <input type="submit" value="ENVIAR MENSAJE" name="enviar" />
+             <div id="respuestaEnviado" style="display: none;">
+                 <p id="respuestaTexto"></p>
+             </div>
+             <p class="registro">Con BESTVOIPER crecemos juntos</p>
+             
+         </form>
+       </div>
+ 
+       </div>
+     </section>
+ 
+ 
+     
+       <!-- Contact Us: End -->
+    
+       <!-- Contact Us: End -->
+     </div>
     
      
     

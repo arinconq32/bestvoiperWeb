@@ -144,45 +144,64 @@
         </div>
       </nav>
 
-      <div style="margin-top: 10%;">
-    
-        <div class="imagenContacto">
-          <img src="../assets/img/front-pages/landing-page/admin.svg"/>
-        </div>
 
+     
+        <section style="width: 100%; display: flex; justify-content: center; 
+        align-items: center;margin-top: 10%;">
 
-        <form action="../mail/enviarMail.php" method="POST" id="contactForm" >
-         
-          <input
-            onchange="handle(event)"
-            type="email"
-            placeholder="Correo"
-            name="email"
-          />
-          <input
-            onchange="handle(event)"
-            type="password"
-            placeholder="Contraseña"
-            name="pass"
-          />
-          <p id="error-message" class="error" style="display: none;"></p>
-          <input type="submit" value="INGRESAR" name="enviar" />
+         <div>
           
-      
-          
-          <a href="registro.html" class="noUnderline">
-            <p class="registro">Registrate</p>
-          </a>
-          
-          <a href="reset.html" class="noUnderline">
-            <p class="olvido">¿Olvidaste tu contraseña?</p>
-          </a>
-        </form>
-
-
-    </div>
-
-
+           <div class="imagenContacto">
+            
+             <img src="../assets/img/front-pages/landing-page/admin.svg"/>
+           
+           </div>
+           <div>
+             <br/>
+           <h4 class="mb-1 text-center">PANEL ADMINISTRADOR</h4>
+           <p class="mb-4 text-center" style="width: 90%;margin: auto; margin-bottom: 10px;">
+             Encuentra tutoriales <br class="d-none d-lg-block" />
+             y más.
+           </p>
+           <form action="../mail/iniciarSesion.php" method="POST" id="contactForm">
+            
+             <input type="hidden" name="product_name" value="Home Page">
+            
+              <input
+              id="email"
+              type="email"
+              placeholder="Correo"
+              name="correo"
+              style="width: 100%;min-width: 380px;"
+              required
+            />
+               <input
+                 id="pass"
+                 type="password"
+                 placeholder="Contraseña"
+                 name="pass"
+                 style="width: 100%;min-width: 380px;"
+                 required
+               />
+             
+             
+            
+             <input type="submit" value="INGRESAR" name="enviar" />
+             <div id="respuestaEnviado" style="display: none;">
+                 <p id="respuestaTexto"></p>
+             </div>
+             <div style="text-align: center;">
+              <a  href="registro.html"  style="cursor: pointer;color:#5579b7; text-decoration: none;">Registrarse</a>
+              <br/>
+              <a href="reset.html" style="cursor: pointer;color:#5579b7; text-decoration: none;">Olvidé Contraseña</a>
+             </div>
+           
+         </form>
+       </div>
+ 
+       </div>
+     </section>
+ 
 
   <script src="login.js"></script>
   <script>
