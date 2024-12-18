@@ -1,0 +1,145 @@
+<?php
+
+session_start();
+
+
+if (!isset($_SESSION['usuario_id'])) {
+    header("Location: login.php"); 
+    exit();
+}
+?>
+
+<!doctype html>
+<html lang="en" class="light-style layout-navbar-fixed layout-wide" dir="ltr" data-theme="theme-default" data-assets-path="assets/" data-template="front-pages-no-customizer">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+    <title>Servicios de Telefonía VoIP para Empresas en Colombia - BestVoIPer</title>
+    <meta name="description" content="Descubra soluciones avanzadas en telefonía VoIP e IP para su empresa en Colombia. Mejore sus comunicaciones con BestVoIPer, su aliado tecnológico." />
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../assets/img/favicon/favicon.ico" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/vendor/fonts/boxicons.css" />
+    <!-- Core CSS -->
+    <link rel="stylesheet" href="../assets/vendor/css/rtl/core.css" />
+    <link rel="stylesheet" href="../assets/vendor/css/rtl/theme-default.css" />
+    <link rel="stylesheet" href="../assets/css/demo.css" />
+    <link rel="stylesheet" href="../assets/vendor/css/pages/front-page.css" />
+    <!-- Vendors CSS -->
+    <link rel="stylesheet" href="../assets/vendor/libs/nouislider/nouislider.css" />
+    <link rel="stylesheet" href="../assets/vendor/libs/swiper/swiper.css" />
+    <!-- Helpers -->
+    <script src="../assets/vendor/js/helpers.js"></script>
+    <script src="../assets/js/front-config.js"></script>
+</head>
+<body>
+    <div>
+        <nav class="layout-navbar shadow-none py-0">
+            <div class="container">
+                <div class="navbar navbar-expand-lg landing-navbar px-3 px-md-4">
+                    <div class="navbar-brand app-brand demo d-flex py-0 me-4">
+                        <button class="navbar-toggler border-0 px-0 me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <i class="tf-icons bx bx-menu bx-sm align-middle"></i>
+                        </button>
+                        <a href="/paginaweb/paginaweb/index.html" class="app-brand-link">
+                            <span class="app-brand-logo demo">
+                                <img src="../assets/img/branding/LOGOBESTVOIPER.png" width="35"/>
+                            </span>
+                            <span class="app-brand-text demo menu-text fw-bold ms-2 ps-1">Bestvoiper</span>
+                        </a>
+                    </div>
+
+                    <div class="collapse navbar-collapse landing-nav-menu" id="navbarSupportedContent">
+                        <button class="navbar-toggler border-0 text-heading position-absolute end-0 top-0 scaleX-n1-rtl" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <i class="tf-icons bx bx-x bx-sm"></i>
+                        </button>
+                        <ul class="navbar-nav me-auto">
+                            <li class="nav-item">
+                                <a class="nav-link fw-medium" aria-current="page" href="index.html#inicio">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link fw-medium" href="index.html#somos">¿Quienes somos?</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link fw-medium" href="index.html#landingFAQ">FAQ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link fw-medium" href="index.html#landingContact">Contáctanos</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <ul class="navbar-nav flex-row align-items-center ms-auto">
+                        <!-- Cerrar sesión: formulario corregido -->
+                        <li>
+                            <form action="../mail/cerrarSesion.php" method="POST">
+                                <button type="submit" class="btn btn-danger">Cerrar sesión</button>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <p class="tituloTutoriales" style="margin-top: 5%;">TUTORIALES</p>
+
+        <!-- Mostrar nombre del usuario logueado -->
+        <p class="user">Bienvenido, <?php echo htmlspecialchars($_SESSION['usuario_nombre']); ?></p>
+
+        <div class="tutoriales">
+            <div class="itemTutorial">
+                <div>
+                    <video controls>
+                        <source src="ruta-del-video.mp4" type="video/mp4" />
+                    </video>
+                </div>
+                <div>
+                    <p><b>Tutorial:</b> Entrar a la plataforma</p>
+                </div>
+            </div>
+            <!-- Más tutoriales aquí... -->
+        </div>
+    </div>
+
+    <footer class="landing-footer bg-body footer-text">
+        <div class="footer-top position-relative overflow-hidden z-1">
+            <div class="container">
+                <div class="row gx-0 gy-4 g-md-5">
+                    <div class="d-flex justify-content-between align-items-center w-100">
+                        <a href="index.html" class="app-brand-link mb-4 d-flex align-items-center">
+                            <span class="app-brand-logo demo">
+                                <img src="../assets/img/branding/LOGOBESTVOIPER.png" width="35" />
+                            </span>
+                            <span class="app-brand-text demo footer-link fw-bold ms-2 ps-1">Bestvoiper</span>
+                            <span class="footer-text" style="margin-right: 20px;">
+                                ©
+                                <script>
+                                    document.write(new Date().getFullYear());
+                                </script>
+                            </span>
+                        </a>
+                        <!-- Redes sociales -->
+                        <div class="d-flex align-items-center">
+                            <a href="https://github.com/themeselection" class="footer-link me-3" target="_blank">
+                                <img src="../assets/img/front-pages/icons/github-light.png" alt="github icon" />
+                            </a>
+                            <a href="https://www.facebook.com/ThemeSelections/" class="footer-link me-3" target="_blank">
+                                <img src="../assets/img/front-pages/icons/facebook-light.png" alt="facebook icon" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../assets/vendor/libs/popper/popper.js"></script>
+    <script src="../assets/vendor/js/bootstrap.js"></script>
+    <script src="../assets/js/front-main.js"></script>
+    <script src="../assets/js/front-page-landing.js"></script>
+</body>
+</html>
