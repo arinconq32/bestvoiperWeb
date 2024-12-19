@@ -53,7 +53,7 @@
   </head>
 
 
-  <body>
+  
    
     <script src="../assets/vendor/js/dropdown-hover.js"></script>
     <script src="../assets/vendor/js/mega-dropdown.js"></script>
@@ -128,7 +128,7 @@ window.addEventListener('resize', () => {
   height: auto;
   margin: auto;
   overflow: hidden;
-  margin: 30px auto;
+  margin: 0px auto;
 }
 
 #slider {
@@ -217,6 +217,7 @@ window.addEventListener('resize', () => {
 
 /* Pantallas pequeñas (móviles) */
 @media (max-width: 850px) {
+ 
   body {
     background-color: lightblue;
   }
@@ -225,8 +226,10 @@ window.addEventListener('resize', () => {
   transition: transform 0.5s ease-in-out;
   display: block;
   padding: 10px;
+  height: 100vh;
   transform: scale(0.8); /* Reduce el tamaño de todos los slides inicialmente */
   opacity: 0.8; /* Hace los slides laterales un poco más transparentes */
+  margin-top:10%;
 }
 .slide1 {
   min-width: 100%; /* Mostrar tres slides a la vez */
@@ -296,6 +299,8 @@ window.addEventListener('resize', () => {
 }
 }
 </style>
+<body>
+<div >
     <!-- Navbar: Start -->
     <nav class="layout-navbar shadow-none py-0">
       <div class="container">
@@ -317,7 +322,7 @@ window.addEventListener('resize', () => {
             <a href="index.php" class="app-brand-link">
               <span class="app-brand-logo demo">
                 
-               <img src="../../assets/img/branding/LOGOBESTVOIPER.png" width="35" alt="bestvoiper comunicaciones"/>
+               <img src="../../assets/img/branding/LOGOBESTVOIPER.png" width="35"/>
               </span>
               <span class="app-brand-text demo menu-text fw-bold ms-2 ps-1">Bestvoiper</span>
             </a>
@@ -337,251 +342,18 @@ window.addEventListener('resize', () => {
             </button>
             <ul class="navbar-nav me-auto">
               <li class="nav-item">
-                <a class="nav-link fw-medium" aria-current="page" href="index.php#landingHero">Inicio</a>
+                <a class="nav-link fw-medium" aria-current="page" href="../../index.php">Inicio</a>
               </li>
+             
+             
+            
+             
               <li class="nav-item">
-                <a class="nav-link fw-medium" href="index.php#somos">¿Quienes somos?</a>
+                <a class="nav-link fw-medium" href="../contacto.php">Contáctanos</a>
               </li>
+            
               <li class="nav-item">
-                <a class="nav-link fw-medium" href="index.php#productos">Nuestros Productos</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link fw-medium" href="index.php#landingFAQ">FAQ</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link fw-medium" href="index.php#landingContact">Contáctanos</a>
-              </li>
-              <li class="nav-item mega-dropdown">
-                <a
-                  href="javascript:void(0);"
-                  class="nav-link dropdown-toggle navbar-ex-14-mega-dropdown mega-dropdown fw-medium"
-                  aria-expanded="false"
-                  data-bs-toggle="mega-dropdown"
-                  data-trigger="hover">
-                  <span data-i18n="Pages">Páginas</span>
-                </a>
-                <div class="dropdown-menu p-4">
-                  <div class="row gy-4">
-                    <div class="col-12 col-lg">
-                      <div class="h6 d-flex align-items-center mb-2 mb-lg-3">
-                        <div class="avatar avatar-sm flex-shrink-0 me-2">
-                          <span class="avatar-initial rounded bg-label-primary"><i class="bx bx-grid-alt"></i></span>
-                        </div>
-                        <span class="ps-1">Other</span>
-                      </div>
-                      <ul class="nav flex-column">
-                        <li class="nav-item">
-                          <a class="nav-link mega-dropdown-link" href="pricing-page.php">
-                            <i class="bx bx-radio-circle me-2"></i>
-                            <span data-i18n="Pricing">Pricing</span>
-                          </a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link mega-dropdown-link" href="payment-page.php">
-                            <i class="bx bx-radio-circle me-2"></i>
-                            <span data-i18n="Payment">Payment</span>
-                          </a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link mega-dropdown-link" href="checkout-page.php">
-                            <i class="bx bx-radio-circle me-2"></i>
-                            <span data-i18n="Checkout">Checkout</span>
-                          </a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link mega-dropdown-link" href="help-center-landing.php">
-                            <i class="bx bx-radio-circle me-2"></i>
-                            <span data-i18n="Help Center">Help Center</span>
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="col-12 col-lg">
-                      <div class="h6 d-flex align-items-center mb-2 mb-lg-3">
-                        <div class="avatar avatar-sm flex-shrink-0 me-2">
-                          <span class="avatar-initial rounded bg-label-primary"><i class="bx bx-lock-open"></i></span>
-                        </div>
-                        <span class="ps-1">Auth Demo</span>
-                      </div>
-                      <ul class="nav flex-column">
-                        <li class="nav-item">
-                          <a
-                            class="nav-link mega-dropdown-link"
-                            href="../vertical-menu-template/auth-login-basic.php"
-                            target="_blank">
-                            <i class="bx bx-radio-circle me-2"></i>
-                            Login (Basic)
-                          </a>
-                        </li>
-                        <li class="nav-item">
-                          <a
-                            class="nav-link mega-dropdown-link"
-                            href="../vertical-menu-template/auth-login-cover.php"
-                            target="_blank">
-                            <i class="bx bx-radio-circle me-2"></i>
-                            Login (Cover)
-                          </a>
-                        </li>
-                        <li class="nav-item">
-                          <a
-                            class="nav-link mega-dropdown-link"
-                            href="../vertical-menu-template/auth-register-basic.php"
-                            target="_blank">
-                            <i class="bx bx-radio-circle me-2"></i>
-                            Register (Basic)
-                          </a>
-                        </li>
-                        <li class="nav-item">
-                          <a
-                            class="nav-link mega-dropdown-link"
-                            href="../vertical-menu-template/auth-register-cover.php"
-                            target="_blank">
-                            <i class="bx bx-radio-circle me-2"></i>
-                            Register (Cover)
-                          </a>
-                        </li>
-                        <li class="nav-item">
-                          <a
-                            class="nav-link mega-dropdown-link"
-                            href="../vertical-menu-template/auth-register-multisteps.php"
-                            target="_blank">
-                            <i class="bx bx-radio-circle me-2"></i>
-                            Register (Multi-steps)
-                          </a>
-                        </li>
-                        <li class="nav-item">
-                          <a
-                            class="nav-link mega-dropdown-link"
-                            href="../vertical-menu-template/auth-forgot-password-basic.php"
-                            target="_blank">
-                            <i class="bx bx-radio-circle me-2"></i>
-                            Forgot Password (Basic)
-                          </a>
-                        </li>
-                        <li class="nav-item">
-                          <a
-                            class="nav-link mega-dropdown-link"
-                            href="../vertical-menu-template/auth-forgot-password-cover.php"
-                            target="_blank">
-                            <i class="bx bx-radio-circle me-2"></i>
-                            Forgot Password (Cover)
-                          </a>
-                        </li>
-                        <li class="nav-item">
-                          <a
-                            class="nav-link mega-dropdown-link"
-                            href="../vertical-menu-template/auth-reset-password-basic.php"
-                            target="_blank">
-                            <i class="bx bx-radio-circle me-2"></i>
-                            Reset Password (Basic)
-                          </a>
-                        </li>
-                        <li class="nav-item">
-                          <a
-                            class="nav-link mega-dropdown-link"
-                            href="../vertical-menu-template/auth-reset-password-cover.php"
-                            target="_blank">
-                            <i class="bx bx-radio-circle me-2"></i>
-                            Reset Password (Cover)
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="col-12 col-lg">
-                      <div class="h6 d-flex align-items-center mb-2 mb-lg-3">
-                        <div class="avatar avatar-sm flex-shrink-0 me-2">
-                          <span class="avatar-initial rounded bg-label-primary"><i class="bx bx-image-alt"></i></span>
-                        </div>
-                        <span class="ps-1">Other</span>
-                      </div>
-                      <ul class="nav flex-column">
-                        <li class="nav-item">
-                          <a
-                            class="nav-link mega-dropdown-link"
-                            href="../vertical-menu-template/pages-misc-error.php"
-                            target="_blank">
-                            <i class="bx bx-radio-circle me-2"></i>
-                            Error
-                          </a>
-                        </li>
-                        <li class="nav-item">
-                          <a
-                            class="nav-link mega-dropdown-link"
-                            href="../vertical-menu-template/pages-misc-under-maintenance.php"
-                            target="_blank">
-                            <i class="bx bx-radio-circle me-2"></i>
-                            Under Maintenance
-                          </a>
-                        </li>
-                        <li class="nav-item">
-                          <a
-                            class="nav-link mega-dropdown-link"
-                            href="../vertical-menu-template/pages-misc-comingsoon.php"
-                            target="_blank">
-                            <i class="bx bx-radio-circle me-2"></i>
-                            Coming Soon
-                          </a>
-                        </li>
-                        <li class="nav-item">
-                          <a
-                            class="nav-link mega-dropdown-link"
-                            href="../vertical-menu-template/pages-misc-not-authorized.php"
-                            target="_blank">
-                            <i class="bx bx-radio-circle me-2"></i>
-                            Not Authorized
-                          </a>
-                        </li>
-                        <li class="nav-item">
-                          <a
-                            class="nav-link mega-dropdown-link"
-                            href="../vertical-menu-template/auth-verify-email-basic.php"
-                            target="_blank">
-                            <i class="bx bx-radio-circle me-2"></i>
-                            Verify Email (Basic)
-                          </a>
-                        </li>
-                        <li class="nav-item">
-                          <a
-                            class="nav-link mega-dropdown-link"
-                            href="../vertical-menu-template/auth-verify-email-cover.php"
-                            target="_blank">
-                            <i class="bx bx-radio-circle me-2"></i>
-                            Verify Email (Cover)
-                          </a>
-                        </li>
-                        <li class="nav-item">
-                          <a
-                            class="nav-link mega-dropdown-link"
-                            href="../vertical-menu-template/auth-two-steps-basic.php"
-                            target="_blank">
-                            <i class="bx bx-radio-circle me-2"></i>
-                            Two Steps (Basic)
-                          </a>
-                        </li>
-                        <li class="nav-item">
-                          <a
-                            class="nav-link mega-dropdown-link"
-                            href="../vertical-menu-template/auth-two-steps-cover.php"
-                            target="_blank">
-                            <i class="bx bx-radio-circle me-2"></i>
-                            Two Steps (Cover)
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="col-lg-4 d-none d-lg-block">
-                      <div class="bg-body nav-img-col p-2">
-                        <img
-                          src="assets/img/front-pages/misc/nav-item-col-img.png"
-                          alt="nav item col image"
-                          class="w-100" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link fw-medium" href="../vertical-menu-template/index.php" target="_blank">Admin</a>
+                <a class="nav-link fw-medium" href="../admin.php" target="_blank">Admin</a>
               </li>
             </ul>
           </div>
@@ -591,9 +363,12 @@ window.addEventListener('resize', () => {
           <ul class="navbar-nav flex-row align-items-center ms-auto">
             <!-- navbar button: Start -->
             <li>
-              <a href="../vertical-menu-template/auth-login-cover.php" class="btn btn-primary" target="_blank"
-                ><span class="tf-icons bx bx-user me-md-1"></span
-                ><span class="d-none d-md-block">Login/Register</span></a
+              <a href="../admin.php" class="btn btn-primary" target="_blank"
+                >
+                <span class="tf-icons bx bx-user me-md-1"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: white;transform: ;msFilter:;"><path d="M12 2C6.579 2 2 6.579 2 12s4.579 10 10 10 10-4.579 10-10S17.421 2 12 2zm0 5c1.727 0 3 1.272 3 3s-1.273 3-3 3c-1.726 0-3-1.272-3-3s1.274-3 3-3zm-5.106 9.772c.897-1.32 2.393-2.2 4.106-2.2h2c1.714 0 3.209.88 4.106 2.2C15.828 18.14 14.015 19 12 19s-3.828-.86-5.106-2.228z"></path></svg></span>
+                               
+                
+                <span class="d-none d-md-block">Login/Register</span></a
               >
             </li>
             <!-- navbar button: End -->
@@ -602,42 +377,48 @@ window.addEventListener('resize', () => {
         </div>
       </div>
     </nav>
-    <h1 style="font-size: 40px; text-align: center;font-family: 'Open Sans', sans-serif;font-weight: bolder;color:#74ac58; margin-bottom: 1%;margin-top: 8%;">FUNCIONALIDADES GENERALES</h1>
    
-    
+        
+        
+
+
         <div id="slider-container">
           <div id="slider">
+         
             <!-- Duplicar los slides al principio y al final para crear un efecto infinito -->
             <div class="slide">
-              <img src="../../assets/img/front-pages/landing-page/FUNCIONALIDADGENERAL1.svg" alt="Imagen 1" style="width: 100%; height: 800px;">
+              <img src="../../assets/img/front-pages/landing-page/FUNCIONALIDADGENERAL1.svg" alt="Integración de canales como facebook, whatsapp, twitter, telegram, webchat, appmovil, sms, correo electronico" style="width: 100%; height: 800px;">
             </div>
         
             <div class="slide">
-              <img src="../../assets/img/front-pages/landing-page/FUNCIONALIDADGENERAL2.svg" alt="Imagen 2" style="width: 100%; height: 800px;">
+              <img src="../../assets/img/front-pages/landing-page/FUNCIONALIDADGENERAL2.svg" alt="Respuestas predefinidas por opciones de menu" style="width: 100%; height: 800px;">
             </div>
         
             <div class="slide">
-              <img src="../../assets/img/front-pages/landing-page/FUNCIONALIDADGENERAL3.svg" alt="Imagen 3" style="width: 100%; height: 800px;">
+              <img src="../../assets/img/front-pages/landing-page/FUNCIONALIDADGENERAL3.svg" alt="Transferencia de las conversaciones a los agentes cuando si se requiera" style="width: 100%; height: 800px;">
             </div>
         
             <div class="slide">
-              <img src="../../assets/img/front-pages/landing-page/FUNCIONALIDADGENERAL4.svg" alt="Imagen 4" style="width: 100%; height: 800px;">
+              <img src="../../assets/img/front-pages/landing-page/FUNCIONALIDADGENERAL4.svg" alt="Soporte de conversaiones en multiiples idiomas" style="width: 100%; height: 800px;">
             </div>
         
             <div class="slide">
-              <img src="../../assets/img/front-pages/landing-page/FUNCIONALIDADGENERAL5.svg" alt="Imagen 5" style="width: 100%; height: 800px;">
+              <img src="../../assets/img/front-pages/landing-page/FUNCIONALIDADGENERAL5.svg" alt="Capacidad de procesar mensajes de voz" style="width: 100%; height: 800px;">
             </div>
         
             <!-- Duplicamos los slides para crear un efecto infinito -->
             <div class="slide">
-              <img src="../../assets/img/front-pages/landing-page/FUNCIONALIDADGENERAL6.svg" alt="Imagen 1" style="width: 100%; height: 800px;">
+              <img src="../../assets/img/front-pages/landing-page/FUNCIONALIDADGENERAL6.svg" alt="Autenticación de clientes a traves de sms, email o biometria" style="width: 100%; height: 800px;">
             </div>
         
             <div class="slide">
-              <img src="../../assets/img/front-pages/landing-page/FUNCIONALIDADGENERAL7.svg" alt="Imagen 2" style="width: 100%; height: 800px;">
+              <img src="../../assets/img/front-pages/landing-page/FUNCIONALIDADGENERAL7.svg" alt="Agendamiento de citas" style="width: 100%; height: 800px;">
             </div>
             <div class="slide">
-                <img src="../../assets/img/front-pages/landing-page/FUNCIONALIDADGENERAL8.svg" alt="Imagen 2" style="width: 100%; height: 800px;">
+                <img src="../../assets/img/front-pages/landing-page/FUNCIONALIDADGENERAL8.svg" alt="Reconocimiento de información a traves de patrones en imagenes" style="width: 100%; height: 800px;">
+              </div>
+              <div class="slide">
+                <img src="../../assets/img/front-pages/landing-page/FUNCIONALIDADGENERAL9.svg" alt="Campañas de marketing para envio de mensajes masivos" style="width: 100%; height: 800px;">
               </div>
               <div class="slide">
                 <img src="../../assets/img/front-pages/landing-page/FUNCIONALIDADGENERAL9.svg" alt="Imagen 2" style="width: 100%; height: 800px;">
@@ -651,10 +432,11 @@ window.addEventListener('resize', () => {
           <button class="next" onclick="moveSlide(1)">&#10095;</button>
         
       </div>
-  
-    <title>Document</title>
-</head>
-<body>
+      </div>
+     
+      
+</div>
+</div>
     
 </body>
 </html>

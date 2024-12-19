@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+    <style>
+       /* Estilo para el contenedor principal */
+.contenedor {
+    position: absolute;
+    display: flex; /* Usamos flexbox para centrar */
+    flex-direction: column; /* Las cajas estarán en columna */
+    justify-content: center; /* Centra las cajas verticalmente */
+    align-items: center; /* Centra las cajas horizontalmente */
+    min-height: 100vh; /* Asegura que ocupe toda la altura de la ventana */
+    margin: 0;
+    width: 100%;
+    padding: 0px;
+}
+
+/* Estilo para el contenedor interno */
+.contenedor_interno {
+    width: 100%;
+    max-width: 600px; /* Limita el ancho máximo a 600px */
+}
+
+/* Estilo para la primera caja */
+.caja1, .caja2 {
+    width: 100%; /* El ancho es el 100% */
+}
+
+.caja1 {
+    background-color: #204780FF;
+    display: flex; /* Usamos flexbox para centrar la imagen */
+    justify-content: center; /* Centra la imagen horizontalmente */
+    align-items: center; /* Centra la imagen verticalmente */
+    flex-direction: column;
+}
+
+.caja1 img {
+    max-width: 100%; /* La imagen ocupa el 100% del contenedor */
+    height: auto; /* Mantiene la relación de aspecto */
+}
+
+/* Estilo para la caja 2 */
+.caja2 {
+    background-color: #204780FF;
+    flex-direction: column; /* Las cajas estarán en columna */
+}
+
+/* Estilo para pantallas pequeñas */
+@media (max-width: 900px) {
+    .contenedor_interno {
+        width: 100%; /* Ocupa el 100% del ancho en pantallas pequeñas */
+    }
+
+    .caja1 img {
+        max-width: 100%; /* La imagen ocupa el 100% del ancho disponible */
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="contenedor_interno">
+        <div class="contenedor_info">
+        <div class="caja1">
+            <img
+                alt="Imagen centrada"
+                src="https://storage-masivdrive.masivapp.com/5541/2e910e56-7e8b-4508-bdc9-5dc2d3577ea3.jpg"
+            />
+            <div
+                style="width: 80%;margin: auto; text-align:center;line-height:0rem"
+              >
+                <p
+                  style="text-align:left; color:white;&#10;   font-family: 'Montserrat', sans-serif;font-size:19px; &#10;   font-weight:bolder"
+                >
+                  Hola, {COL3}
+                </p>
+                <hr style="border-color: rgb(108, 198, 234)" />
+                <p
+                style="font-family: 'Montserrat', sans-serif;color:white;font-size:3vh;word-wrap:break-word"
+                >
+                  TE RECORDAMOS QUE
+                </p>
+                <p
+                style="font-family: 'Montserrat', sans-serif;color:white;font-weight:bolder;font-size:3vh;word-wrap:break-word"
+                >
+                  TU FACTURA VENCE HOY
+                </p>
+                <hr style="border-color: rgb(108, 198, 234)" />
+              </div>
+              <div
+              style="border: 2px solid  rgb(108, 198, 234); border-radius: 30px;width: 70%;height: 50%; margin:auto;padding: 10px;padding-bottom: -10px;padding-left: 20px;"
+            >
+            <table align="center" class="MsoTable15Grid1LightAccent4" style="border-collapse:collapse; border:none; margin:auto;">
+                <tbody>
+                  <tr>
+                    <td
+                      style="border-bottom:0px solid #156082; width:auto;height: auto; padding-left: 30px; padding-right: 1em; text-align:left; vertical-align:middle;"
+                      valign="top">
+                      <p class="MsoNoSpacing" style="font-size: 2vh; font-weight: bolder; font-family: 'Montserrat', sans-serif; line-height: 1.2; word-break: break-word; margin: 0;">
+                        <span style="color:#ffffff;font-size: 2vh;">FECHA LIMITE DE PAGO:</span>
+                      </p>
+                    </td>
+                    <td
+                      style="border-bottom:0px solid #156082; width:241px; height: auto; padding-left: 30px; text-align:left; vertical-align:middle;"
+                      valign="top">
+                      <p class="MsoNoSpacing" style="font-size: 2vh; font-weight: bolder; font-family: 'Montserrat', sans-serif; line-height: 1.2; margin: 0;">
+                        <span style="color:#ffffff; font-size: 2vh;">{COL4}</span>
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      style="border-bottom:0px solid #156082; width:241px; height: auto; padding-left: 30px; padding-right: 1em; text-align:left; vertical-align:middle;"
+                      valign="top">
+                      <p class="MsoNoSpacing" style="font-size: 2vh; font-weight: bolder; font-family: 'Montserrat', sans-serif; line-height: 1.2; margin: 0;">
+                        <span style="color:#ffffff;font-size: 2vh;">VALOR DE PAGO:</span>
+                      </p>
+                    </td>
+                    <td
+                      style="border-bottom:0px solid #156082; width:241px; height: auto; padding-left: 30px; text-align:left; vertical-align:middle;"
+                      valign="top">
+                      <p class="MsoNoSpacing" style="font-size: 2vh; font-weight: bolder; font-family: 'Montserrat', sans-serif; line-height: 1.2; margin: 0;">
+                        <span style="color:#ffffff; font-size: 2vh;">{COL5}</span>
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      style="border-bottom:0px solid #156082; width:241px; height: auto; padding-left: 30px; padding-right: 1em; text-align:left; vertical-align:middle;"
+                      valign="top">
+                      <p class="MsoNoSpacing" style="font-size: 2vh; font-weight: bolder; font-family: 'Montserrat', sans-serif; line-height: 1.2; margin: 0;">
+                        <span style="color:#ffffff;font-size: 2vh;">REFERENCIA DE PAGO:</span>
+                      </p>
+                    </td>
+                    <td
+                      style="border-bottom:0px solid #156082; width:241px; height: auto; padding-left: 30px; text-align:left; vertical-align:middle;"
+                      valign="top">
+                      <p class="MsoNoSpacing" style="font-size: 2vh; font-weight: bolder; font-family: 'Montserrat', sans-serif; line-height: 1.2; word-break: break-word; margin: 0;">
+                        <span style="color:#ffffff; font-size: 2vh; word-break: break-word;">{COL6}</span>
+                      </p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div style="width: 80%; margin: auto; text-align: center;">
+                <a
+                  align=""
+                  href="https://etb.com/pagos/"
+                  target="_blank"
+                  style="&#10;    color: #FFFFFF;&#10;    font-size: 13px;&#10;    font-weight: bold;&#10;    font-family: Arial, sans-serif;&#10;    background: #234581;&#10;    border-top-left-radius: 0px;&#10;    border-top-right-radius: 0px;&#10;    border-bottom-right-radius: 20px;&#10;    border-bottom-left-radius: 20px;&#10;    border-top: 2px solid transparent;&#10;    border: 2px solid #FFFFFF; /* Borde blanco */&#10;    padding: 10px 20px; /* Ajuste de padding para mejor apariencia */&#10;    text-decoration: none; /* Elimina subrayado */&#10;    display: inline-block; /* Asegura que el enlace se vea como un bloque */&#10;    cursor: pointer;&#10;    border: 2px solid rgb(108, 198, 234);&#10;  "
+                  >CONSULTALA AQUÍ</a
+                >
+              </div>
+        </div>
+        <div class="caja2">
+            <div
+            class="responsive"
+              style="
+              
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        
+        color: white;
+        width: 100%;
+        overflow: hidden;
+        margin: 0 auto;
+        padding: 10px;
+      
+      border: 0px solid transparent;"
+            >
+              <div style="line-height: 1.5em; ">
+                <p
+                  style="
+            font-size: 20px;
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;"
+                >
+                  SIGUE DISFRUTANDO DE NUESTROS SERVICIOS
+                </p>
+                <p
+                  style="
+            font-size: 20px;
+            font-weight: bolder;
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;"
+                >
+                  NO NECESITAS IMPRIMIR LA FACTURA
+                </p>
+              </div>
+              <div style="margin: 10px 0;">
+                <button
+                  style="
+            background-color: #00ffff;
+            color: #204780FF;
+            font-size: 23px;
+            font-family: 'Arial';
+            font-weight: bolder;
+            border-radius: 0 0 30px 30px;
+            border: none;
+            padding: 5px 15px;"
+                >
+                  <a
+                    style="text-decoration: none; color: #204780FF;"
+                    href="https://etb.com/pagos/"
+                    >PAGA EN LÍNEA AQUÍ</a
+                  >
+                </button>
+              </div>
+              <br />
+              <div style="width: 80%;margin: auto;">
+              <p
+                style="
+          font-size: 13px;
+          font-family: 'Montserrat', sans-serif;
+          width: 100%;
+          margin: auto;
+          letter-spacing: 0.18em;"
+              >
+                Pagar oportunamente evita la suspensión del servicio y
+                cobros por reconexión
+              </p>
+              <p
+                style="
+          font-size: 11px;
+          font-family: 'Montserrat', sans-serif;
+          letter-spacing: 0.18em;
+          width: 100%;"
+              >
+                Si tus servicios se encuentran al día, haz caso omiso a este
+                mensaje.
+              </p>
+              <p
+                style="
+          font-size: 11px;
+          font-family: 'Montserrat', sans-serif;
+          letter-spacing: 0.18em;
+          width: 100%;"
+              >
+                Aplican términos y condiciones en etb.com/tyc
+              </p>
+            </div>
+            </div>
+
+            
+        </div>
+    </div>
+</div>
+<div id="unsubscribe-container">
+    <p
+      style="text-align: center;font-size: 12px;font-family: Helvetica;color: #3F4254;"
+    >
+      Te informamos que tus datos personales son tratados solo por nuestra
+      empresa y cuya finalidad es remitirte, información sobre nuestros
+      productos y servicios. Puedes ejercitar tus derechos de acceso,
+      cancelación y oposición solicitándolo por escrito a:
+    </p>
+    <p
+      style="text-align: center;font-size: undefinedpx;font-family: Helvetica;color: #3F4254;font-family: Helvetica,Arial,sans-serif;&#10;      "
+    >
+      BESTVOIPER S.A.S 900925991-9AV CL 26 102 20 OF 303 11001 BOGOTA
+    </p>
+    <p style="text-align: center;">
+      <a
+        id="unsusbcribeLink"
+        style="color: #00a4bd;"
+        class="temp-disable-link-action"
+        href="[unsubscribe_link]"
+        target="_blank"
+        contenteditable="false"
+        >Darse de baja</a
+      >
+    </p>
+  </div>
+    </div>
+</body>
+</html>
