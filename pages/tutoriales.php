@@ -3,8 +3,8 @@
 session_start();
 
 
-if (!isset($_SESSION['usuario_id'])) {
-    header("Location: login.php"); 
+if (!isset($_SESSION['correo'])) {
+    header("Location: /paginaweb/pages/admin.php"); 
     exit();
 }
 ?>
@@ -87,7 +87,7 @@ if (!isset($_SESSION['usuario_id'])) {
         <p class="tituloTutoriales" style="margin-top: 5%;">TUTORIALES</p>
 
         <!-- Mostrar nombre del usuario logueado -->
-        <p class="user">Bienvenido, <?php echo htmlspecialchars($_SESSION['usuario_nombre']); ?></p>
+        <p class="user">Bienvenido, <?php echo htmlspecialchars($_SESSION['correo']); ?></p>
 
         <div class="tutoriales">
             <div class="itemTutorial">

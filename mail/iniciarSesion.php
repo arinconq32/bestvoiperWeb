@@ -2,6 +2,7 @@
 // Incluir el archivo de conexión a la base de datos
 include('../config/connection.php');
 
+
 // Verificar si se ha enviado el formulario por el método POST
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     
@@ -33,7 +34,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         
                 // Redirigir a la página de tutoriales
                 header("Location: /paginaweb/pages/tutoriales.php");
-                exit();
+               
+               
             } else {
                 // Si la contraseña es incorrecta, redirigimos con el mensaje en la URL
                 header("Location: /paginaweb/pages/admin.php?error=contraseña_incorrecta");
