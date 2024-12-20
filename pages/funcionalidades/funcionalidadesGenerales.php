@@ -129,6 +129,7 @@ window.addEventListener('resize', () => {
   margin: auto;
   overflow: hidden;
   margin: 0px auto;
+  margin: 3%;
 }
 
 #slider {
@@ -244,6 +245,7 @@ window.addEventListener('resize', () => {
   width: 100%;
   overflow: hidden;
   margin-top: -100px;
+  margin: -3%;
 }
 #slider-container1 {
   position: relative;
@@ -319,7 +321,7 @@ window.addEventListener('resize', () => {
               <i class="tf-icons bx bx-menu bx-sm align-middle"></i>
             </button>
             <!-- Mobile menu toggle: End-->
-            <a href="index.php" class="app-brand-link">
+            <a href="../../index.php" class="app-brand-link">
               <span class="app-brand-logo demo">
                 
                <img src="../../assets/img/branding/LOGOBESTVOIPER.png" width="35"/>

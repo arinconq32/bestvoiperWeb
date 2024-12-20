@@ -15,8 +15,7 @@
 
     <title>Bestvoiper Comunicaciones</title>
 
-    <meta name="description" content="Descubra soluciones avanzadas en telefonía VoIP e 
-    IP para su empresa en Colombia. Mejore sus comunicaciones con BestVoIPer, su aliado tecnológico." />
+    <meta name="description" content="Es un sistema profesional que centraliza todos los canales de comunicación cliente-empresa, y empresa-cliente" />
     <meta name="keywords" content="comunicaciones, especialistas, CRM, voip, telefonía, call center, omnicalidad, call center, telefonia voip" />
 
     <!-- Favicon -->
@@ -494,44 +493,51 @@ window.addEventListener('resize', () => {
           <a href="funcionalidades/funcionalidadesGenerales.php">
           <img
             src="../assets/img/front-pages/landing-page/BESTCONTACTICON1.svg"
-            style="width: 350px"
-            alt="Funcionalidades Generales" />
+            style="width: 350px;"
+            alt="Funcionalidades Generales"
+            class="funcionalidad" />
           </a>
           <a href="funcionalidades/funcionalidadesRetail.php">
           <img
             src="../assets/img/front-pages/landing-page/BESTCONTACTICON2.svg"
             style="width: 350px"
-            alt="Funcionalidades para Retail" />
+            alt="Funcionalidades para Retail"
+            class="funcionalidad" />
           </a>
           <a href="funcionalidades/funcionalidadesServiciosFinancieros.php">
           <img
             src="../assets/img/front-pages/landing-page/BESTCONTACTICON3.svg"
             style="width: 350px"
-            alt="Funcionalidades servicios financieros" />
+            alt="Funcionalidades servicios financieros" 
+            class="funcionalidad"/>
           </a>
           <a href="funcionalidades/funcionalidadesSeguros.php">
           <img
             src="../assets/img/front-pages/landing-page/BESTCONTACTICON4.svg"
             style="width: 350px"
-            alt="Funcionalidades seguros" />
+            alt="Funcionalidades seguros"
+            class="funcionalidad" />
           </a>
           <a href="funcionalidades/funcionalidadesSalud.php">
           <img
             src="../assets/img/front-pages/landing-page/BESTCONTACTICON5.svg"
             style="width: 350px"
-            alt="Funcionalidades salud" />
+            alt="Funcionalidades salud"
+            class="funcionalidad" />
           </a>
           <a href="funcionalidades/funcionalidadesTurismo.php">
             <img
             src="../assets/img/front-pages/landing-page/BESTCONTACTICON6.svg"
             style="width: 350px"
-            alt="Funcionalidades Turismo" />
+            alt="Funcionalidades Turismo"
+            class="funcionalidad" />
             </a>
             <a href="funcionalidades/funcionalidadesSoporte.php">
             <img
             src="../assets/img/front-pages/landing-page/BESTCONTACTICON7.svg"
             style="width: 350px"
-            alt="Funcionalidades Soporte Técnico" />
+            alt="Funcionalidades Soporte Técnico"
+            class="funcionalidad" />
           </a>
         </div>
       </section>
@@ -540,8 +546,10 @@ window.addEventListener('resize', () => {
 <div class="contenedorCRM">
 <div class="descripcionCRM">
 <h1 style="font-size: 3em; text-align: center; font-family: 'Open Sans', sans-serif; font-weight: bolder; color: #74ac58; margin-bottom: 20px;">PAGOS</h1>
-<p >Nuestro sistema de integra a pasarelas de pago, para mejorar la experiencia de usuario y aumentar la efectividad de cierre de ventas. 
-  El usuario mantiene la experiencia en el chatbot y recibe el comprobante de la transacción en este canal.</p>
+<p >Nuestro sistema de <b style="font-weight: normal;background-color: rgba(116, 172, 88, 0.652); 
+      color:white; line-height: 2.1rem;">integra a pasarelas de pago,</b> para mejorar la experiencia de usuario y aumentar la efectividad de cierre de ventas. 
+  El usuario mantiene la <b style="font-weight: normal;background-color: rgba(116, 172, 88, 0.652); 
+      color:white; line-height: 2.1rem;">experiencia en el chatbot </b> y recibe el comprobante de la transacción en este canal.</p>
 </div>
 <div class="imagenCRM">
   <lottie-player src="https://lottie.host/ad62a7b7-e5f9-48c6-a734-3cd6d840b536/b4pGlLeT0g.json" background="##ffffff" 
@@ -561,7 +569,8 @@ window.addEventListener('resize', () => {
   <h1 style="font-size: 3em; text-align: center; font-family: 'Open Sans', sans-serif; font-weight: bolder; color: #74ac58; margin-bottom: 20px;">
     GEOLOCALIZACIÓN DE PUNTOS DE ATENCIÓN</h1>
   <p >A través del asistente puede compartir con sus clientes información de la ubicación GPS del
-     teléfono móvil.En pocos segundos el usuario conocerá en un mapa los puntos más cercanos y detalles de su ubicación.</p>
+     teléfono móvil.En<b style="font-weight: normal;background-color: rgba(116, 172, 88, 0.652); 
+      color:white; line-height: 2.1rem;"> pocos segundos el usuario conocerá en un mapa los puntos más cercanos y detalles de su ubicación.</b></p>
   </div>
  
 </div>
@@ -572,8 +581,10 @@ window.addEventListener('resize', () => {
     <div class="descripcionCRM">
     <h1 style="font-size: 3em; text-align: center; font-family: 'Open Sans', sans-serif; font-weight: bolder; color: #74ac58; margin-bottom: 20px;">
       RASTREO DE PEDIDOS</h1>
-    <p >El asistente cuenta con el módulo de gestión de pedidos, el cual hace seguimiento al ciclo 
-      de vida del producto o servicio hasta su entrega final. Mantiene al usuario informado de cada cambio de estado.</p>
+    <p >El asistente cuenta con el <b style="font-weight: normal;background-color: rgba(116, 172, 88, 0.652); 
+      color:white; line-height: 2.1rem;">módulo de gestión de pedidos,</b> el cual hace seguimiento al ciclo 
+      de vida del producto o servicio hasta su entrega final. <b style="font-weight: normal;background-color: rgba(116, 172, 88, 0.652); 
+      color:white; line-height: 2.1rem;">Mantiene al usuario informado de cada cambio de estado.</b></p>
     </div>
     <div class="imagenCRM">
       <lottie-player src="https://lottie.host/4cac5aaf-6990-4531-9920-eca80246254e/EtRbvR187Y.json" background="##FFFFFF" speed="1" 

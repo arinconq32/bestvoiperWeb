@@ -129,6 +129,7 @@ window.addEventListener('resize', () => {
   margin: auto;
   overflow: hidden;
   margin: 30px auto;
+  margin: 3%;
 }
 
 #slider {
@@ -241,6 +242,7 @@ window.addEventListener('resize', () => {
   width: 100%;
   overflow: hidden;
   margin-top: -100px;
+  margin: -3%;
 }
 #slider-container1 {
   position: relative;
@@ -314,7 +316,7 @@ window.addEventListener('resize', () => {
               <i class="tf-icons bx bx-menu bx-sm align-middle"></i>
             </button>
             <!-- Mobile menu toggle: End-->
-            <a href="index.php" class="app-brand-link">
+            <a href="../../index.php" class="app-brand-link">
               <span class="app-brand-logo demo">
                 
                <img src="../../assets/img/branding/LOGOBESTVOIPER.png" width="35"/>
@@ -376,34 +378,34 @@ window.addEventListener('resize', () => {
           <div id="slider">
             <!-- Duplicar los slides al principio y al final para crear un efecto infinito -->
             <div class="slide">
-              <img src="../../assets/img/front-pages/landing-page/FUNCIONALIDADSEGUROS8.svg" alt="Agendamiento de citas" style="width: 100%; height: 800px;">
+              <img src="../../assets/img/front-pages/landing-page/FUNCIONALIDADSALUD1.svg" alt="Agendamiento de citas" style="width: 100%; height: 800px;">
             </div>
         
             <div class="slide">
-              <img src="../../assets/img/front-pages/landing-page/FUNCIONALIDADSALUD1.svg" alt="Autorización de órdenes" style="width: 100%; height: 800px;">
+              <img src="../../assets/img/front-pages/landing-page/FUNCIONALIDADSALUD2.svg" alt="Autorización de órdenes" style="width: 100%; height: 800px;">
             </div>
         
             <div class="slide">
-              <img src="../../assets/img/front-pages/landing-page/FUNCIONALIDADSALUD2.svg" alt="Solicitud de certificados" style="width: 100%; height: 800px;">
+              <img src="../../assets/img/front-pages/landing-page/FUNCIONALIDADSALUD3.svg" alt="Solicitud de certificados" style="width: 100%; height: 800px;">
             </div>
         
             <div class="slide">
-              <img src="../../assets/img/front-pages/landing-page/FUNCIONALIDADSALUD3.svg" alt="Afiliaciones, descarga de formularios" style="width: 100%; height: 800px;">
+              <img src="../../assets/img/front-pages/landing-page/FUNCIONALIDADSALUD4.svg" alt="Afiliaciones, descarga de formularios" style="width: 100%; height: 800px;">
             </div>
         
             <!-- Duplicamos los slides para crear un efecto infinito -->
             <div class="slide">
-              <img src="../../assets/img/front-pages/landing-page/FUNCIONALIDADSALUD4.svg" alt="Directorio Clinico" style="width: 100%; height: 800px;">
+              <img src="../../assets/img/front-pages/landing-page/FUNCIONALIDADSALUD5.svg" alt="Directorio Clinico" style="width: 100%; height: 800px;">
             </div>
         
             <div class="slide">
-              <img src="../../assets/img/front-pages/landing-page/FUNCIONALIDADSALUD5.svg" alt="Pagos de servicios en linea" style="width: 100%; height: 800px;">
+              <img src="../../assets/img/front-pages/landing-page/FUNCIONALIDADSALUD6.svg" alt="Pagos de servicios en linea" style="width: 100%; height: 800px;">
             </div>
             <div class="slide">
-              <img src="../../assets/img/front-pages/landing-page/FUNCIONALIDADFINANCIEROS8.svg" alt="Más funcionalidades" style="width: 100%; height: 800px;">
+              <img src="../../assets/img/front-pages/landing-page/FUNCIONALIDADSALUD7.svg" alt="Más funcionalidades" style="width: 100%; height: 800px;">
             </div>
             <div class="slide">
-              <img src="../../assets/img/front-pages/landing-page/FUNCIONALIDADFINANCIEROS8.svg" alt="Imagen 2" style="width: 100%; height: 800px;">
+              <img src="../../assets/img/front-pages/landing-page/FUNCIONALIDADSALUD7.svg" alt="Imagen 2" style="width: 100%; height: 800px;">
             </div>
            
             

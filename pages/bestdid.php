@@ -15,8 +15,7 @@
 
     <title>Bestvoiper Comunicaciones</title>
 
-    <meta name="description" content="Descubra soluciones avanzadas en telefonía VoIP e 
-    IP para su empresa en Colombia. Mejore sus comunicaciones con BestVoIPer, su aliado tecnológico." />
+    <meta name="description" content="Servicio de numeración telefónica para las principales ciudades del mundo. Permite recibir llamadas de sus clientes sin importar el país donde se encuentren, presencia a nivel mundial" />
     <meta name="keywords" content="comunicaciones, especialistas, CRM, voip, telefonía, call center, omnicalidad,llamadas internacionales, voip" />
 
     <!-- Favicon -->

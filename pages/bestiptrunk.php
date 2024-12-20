@@ -15,9 +15,8 @@
 
     <title>Bestvoiper Comunicaciones</title>
 
-    <meta name="description" content="Descubra soluciones avanzadas en telefonía VoIP e 
-    IP para su empresa en Colombia. Mejore sus comunicaciones con BestVoIPer, su aliado tecnológico." />
-    <meta name="keywords" content="comunicaciones, especialistas, CRM, voip, telefonía, call center, omnicalidad," />
+    <meta name="description" content="Servicio de troncales IP que permite conectividad a través del protocolo SIP a cualquier destino en el mundo,con la más alta calidad y confiabilidad. Contamos con sistema automático de backend, para garantizar una operación con disponibilidad del 99,9%" />
+    <meta name="keywords" content="comunicaciones, especialistas, CRM, voip, telefonía, call center, omnicalidad, telemarketing, soporte, telefonía internacional, telefonia voip" />
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="../assets/img/favicon/favicon.ico" alt="bestvoiper comunicaciones" />

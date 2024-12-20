@@ -15,8 +15,7 @@
 
     <title>Bestvoiper Comunicaciones</title>
 
-    <meta name="description" content="Descubra soluciones avanzadas en telefonía VoIP e 
-    IP para su empresa en Colombia. Mejore sus comunicaciones con BestVoIPer, su aliado tecnológico." />
+    <meta name="description" content="Nuestra plataforma podrá enviar información de forma masiva, mejorando la experiencia de contacto con sus clientes.Marketing masivo en SMS personalizado y automatizado." />
     <meta name="keywords" content="comunicaciones, especialistas, CRM, voip, telefonía, call center, omnicalidad, sms, sms masivos, marketing, telemarketing" />
 
     <!-- Favicon -->

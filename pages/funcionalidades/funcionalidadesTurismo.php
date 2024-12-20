@@ -129,6 +129,7 @@ window.addEventListener('resize', () => {
   margin: auto;
   overflow: hidden;
   margin: 30px auto;
+  margin: 3%;
 }
 
 #slider {
@@ -241,6 +242,7 @@ window.addEventListener('resize', () => {
   width: 100%;
   overflow: hidden;
   margin-top: -100px;
+  margin: -3%;
 }
 #slider-container1 {
   position: relative;
@@ -314,7 +316,7 @@ window.addEventListener('resize', () => {
               <i class="tf-icons bx bx-menu bx-sm align-middle"></i>
             </button>
             <!-- Mobile menu toggle: End-->
-            <a href="index.php" class="app-brand-link">
+            <a href="../../index.php" class="app-brand-link">
               <span class="app-brand-logo demo">
                 
                <img src="../../assets/img/branding/LOGOBESTVOIPER.png" width="35"/>
@@ -376,38 +378,33 @@ window.addEventListener('resize', () => {
           <div id="slider">
             <!-- Duplicar los slides al principio y al final para crear un efecto infinito -->
             <div class="slide">
-              <img src="../../assets/img/front-pages/landing-page/FUNCIONALIDADSALUD6.svg" alt="Reservas" style="width: 100%; height: 800px;">
+              <img src="../../assets/img/front-pages/landing-page/FUNCIONALIDADTURISMO1.svg" alt="Reservas" style="width: 100%; height: 800px;">
             </div>
         
             <div class="slide">
-              <img src="../../assets/img/front-pages/landing-page/FUNCIONALIDADSALUD7.svg" alt="Pagos en linea" style="width: 100%; height: 800px;">
+              <img src="../../assets/img/front-pages/landing-page/FUNCIONALIDADTURISMO2.svg" alt="Pagos en linea" style="width: 100%; height: 800px;">
             </div>
         
             <div class="slide">
-              <img src="../../assets/img/front-pages/landing-page/FUNCIONALIDADTURISMO1.svg" alt="Información de productos y servicios" style="width: 100%; height: 800px;">
+              <img src="../../assets/img/front-pages/landing-page/FUNCIONALIDADTURISMO3.svg" alt="Información de productos y servicios" style="width: 100%; height: 800px;">
             </div>
         
             <div class="slide">
-              <img src="../../assets/img/front-pages/landing-page/FUNCIONALIDADTURISMO2.svg" alt="Suscripciones a planes turisticos" style="width: 100%; height: 800px;">
+              <img src="../../assets/img/front-pages/landing-page/FUNCIONALIDADTURISMO4.svg" alt="Suscripciones a planes turisticos" style="width: 100%; height: 800px;">
             </div>
         
             <div class="slide">
-              <img src="../../assets/img/front-pages/landing-page/FUNCIONALIDADTURISMO3.svg" alt="Canje de millas" style="width: 100%; height: 800px;">
+              <img src="../../assets/img/front-pages/landing-page/FUNCIONALIDADTURISMO5.svg" alt="Canje de millas" style="width: 100%; height: 800px;">
             </div>
         
             <!-- Duplicamos los slides para crear un efecto infinito -->
             <div class="slide">
-              <img src="../../assets/img/front-pages/landing-page/FUNCIONALIDADTURISMO4.svg" alt="Más funcionalidades" style="width: 100%; height: 800px;">
+              <img src="../../assets/img/front-pages/landing-page/FUNCIONALIDADTURISMO6.svg" alt="Más funcionalidades" style="width: 100%; height: 800px;">
             </div>
             <div class="slide">
-              <img src="../../assets/img/front-pages/landing-page/FUNCIONALIDADTURISMO4.svg" alt="Más funcionalidades" style="width: 100%; height: 800px;">
+              <img src="../../assets/img/front-pages/landing-page/FUNCIONALIDADTURISMO6.svg" alt="Más funcionalidades" style="width: 100%; height: 800px;">
             </div>
-            <div class="slide">
-              <img src="../../assets/img/front-pages/landing-page/FUNCIONALIDADFUNCIONALIDAD8.svg" alt="PRUEBA2" style="width: 100%; height: 800px;">
-            </div>
-            <div class="slide">
-              <img src="../../assets/img/front-pages/landing-page/FUNCIONALIDADFUNCIONALIDAD8.svg" alt="PRUEBA2" style="width: 100%; height: 800px;">
-            </div>
+         
          
             
           </div>

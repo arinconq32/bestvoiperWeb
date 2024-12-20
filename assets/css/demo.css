@@ -8,6 +8,13 @@
   src: url('../fonts/Montserrat/Montserrat-VariableFont_wght.ttf') format('ttf');
   font-display: swap;
 }
+.funcionalidad{
+  transition: transform 0.3s ease;
+}
+.funcionalidad:hover{
+  transform: scale(1.07);
+  
+}
 .icon-container {
   display: flex;
   flex-wrap: wrap;

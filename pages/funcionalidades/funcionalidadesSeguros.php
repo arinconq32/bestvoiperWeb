@@ -129,6 +129,7 @@ window.addEventListener('resize', () => {
   margin: auto;
   overflow: hidden;
   margin: 30px auto;
+  margin: 3%;
 }
 
 #slider {
@@ -241,6 +242,7 @@ window.addEventListener('resize', () => {
   width: 100%;
   overflow: hidden;
   margin-top: -100px;
+  margin: -3%;
 }
 #slider-container1 {
   position: relative;
@@ -314,7 +316,7 @@ window.addEventListener('resize', () => {
               <i class="tf-icons bx bx-menu bx-sm align-middle"></i>
             </button>
             <!-- Mobile menu toggle: End-->
-            <a href="index.php" class="app-brand-link">
+            <a href="../../index.php" class="app-brand-link">
               <span class="app-brand-logo demo">
                 
                <img src="../../assets/img/branding/LOGOBESTVOIPER.png" width="35"/>
@@ -408,9 +410,7 @@ window.addEventListener('resize', () => {
             <div class="slide">
               <img src="../../assets/img/front-pages/landing-page/FUNCIONALIDADFINANCIEROS8.svg" alt="Imagen 2" style="width: 100%; height: 800px;">
             </div>
-            <div class="slide">
-              <img src="../../assets/img/front-pages/landing-page/FUNCIONALIDADFINANCIEROS8.svg" alt="Imagen 2" style="width: 100%; height: 800px;">
-            </div>
+          
           </div>
         
           <!-- Botones de navegación -->

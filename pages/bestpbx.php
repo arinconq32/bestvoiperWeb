@@ -15,8 +15,7 @@
 
     <title>Bestvoiper Comunicaciones</title>
 
-    <meta name="description" content="Descubra soluciones avanzadas en telefonía VoIP e 
-    IP para su empresa en Colombia. Mejore sus comunicaciones con BestVoIPer, su aliado tecnológico." />
+    <meta name="description" content="Sistema para pequeñas empresas que deben grabar llamadas y autogestionar sus extensiones." />
     <meta name="keywords" content="comunicaciones, especialistas, CRM, voip, telefonía, call center, omnicalidad,pbx, comunicaciones empresariales" />
 
     <!-- Favicon -->
